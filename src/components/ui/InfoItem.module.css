@@ -1,0 +1,24 @@
+.language-importance-item{
+    /*width: 48%;*/
+    flex: 1 1 calc(50% - 1rem);
+    margin-bottom: 1rem;
+}
+
+.language-importance-item > h4 {
+    color: var(--light-black);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.language-importance-item > p {
+    color: var(--black);
+    letter-spacing: 0;
+}
+
+
+@media (max-width: 425px) {
+    .language-importance-item {
+        flex: 1 1 100%;
+    }
+}
