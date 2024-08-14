@@ -1,6 +1,5 @@
 import styles from "@/app/language/page.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import LanguageHeroImage from "/public/languageHeroImage.webp";
 import InfoItem from "@/components/ui/InfoItem";
 import Card from "@/components/ui/Card";
@@ -11,7 +10,7 @@ export default function Language() {
             <section className={styles["language-hero-container"]}>
                 <div className={styles["language-text-container"]}>
                     <h1>Language</h1>
-                    <p>The soul of Uttarakhand resides in its languages Kumaoni, Garhwali, and Jaunsari - let's keep them breathing</p>
+                    <p>The soul of Uttarakhand resides in its languages Kumaoni, Garhwali, and Jaunsari - let&apos;s keep them breathing</p>
                 </div>
                 <div className={styles["language-img-container"]}>
                     <Image src={LanguageHeroImage} alt="Language Map" width="538" height={"500"} loading={"eager"}  priority={true}/>
