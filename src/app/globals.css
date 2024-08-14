@@ -7,8 +7,9 @@
 
   --black: #3B3D41;
   --grey: #A0A5AC;
-  --light-grey: #E1E4E8;
-  --light-black: #667085;
+  --cloud-grey: #E1E4E8;
+  --slate-black: #667085;
+  --mist-grey: #F2F2F2
 }
 
 
@@ -51,12 +52,6 @@ button, [role="button"] {
 }
 
 /*  reset anchor style*/
-a {
-  cursor: pointer;
-  color: inherit;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
 
 p{
   font-family: "system-ui", "-apple-system", "BlinkMacSystemFont",sans-serif;
@@ -91,4 +86,9 @@ h1{
   text-transform: none;
 }
 
-
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
