@@ -21,11 +21,15 @@ export default function Home() {
 
 
                 <div className={styles["why-built-it-container"]}>
-                    <div><Image src={Srinagar} alt="TREKKING" width="300" height={"211"} loading={"eager"}
-                                priority={true}/></div>
-                    <div>
-                        <p id={"why-built-it-title"}>WHY WE BUILD IT</p>
-                        <p>A concerning trend is emerging in Uttarakhand, where the younger generation is gradually
+                    <div className={styles["built-image-container"]}>
+                        <Image src={Srinagar} alt="TREKKING" width="300" height={"211"} loading={"eager"}
+                                priority={true}/>
+                        <p className={styles["journey-image-description"]}>A Painting of a Rope bridge across Alaknanda River,
+                            Srinagar, in the times of Garhwal Kingdom, 1784-94. Photo Src: British Library</p>
+                    </div>
+                    <div className={styles["built-text-container"]}>
+                        <p className={styles["why-built-it-title"]}>WHY WE BUILD IT</p>
+                        <p className={styles["built-description-container"]}>A concerning trend is emerging in Uttarakhand, where the younger generation is gradually
                             forgetting their cultural heritage and traditional rituals. This decline in cultural
                             knowledge is evident across generations, with each successive generation possessing less
                             knowledge than the previous one. For instance, the amount of cultural knowledge possessed by
@@ -34,13 +38,6 @@ export default function Home() {
                             continues, there is a risk that the cultural heritage of Uttarakhand may eventually
                             disappear from the society. This loss would not only erase the region&apos;s rich cultural
                             identity but also deprive future generations of their cultural roots and traditions.</p>
-
-                        <p>To address this problem, we have come up with a solution to digitize this cultural knowledge.
-                            Since today&apos;s generation is more comfortable with technology, we aim to provide a
-                            platform where they can learn about their cultural heritage using their devices, from
-                            anywhere in the world. By doing so, we hope to make cultural knowledge more accessible and
-                            engaging for the younger generation, and thus help preserve the rich cultural heritage of
-                            Uttarakhand.</p>
                     </div>
                 </div>
 
@@ -51,29 +48,23 @@ export default function Home() {
 
                         <div className={styles["journey-left-container"]}>
                             <div><h3>EXPLORE UTTARAKAHND</h3></div>
-                            <div><p>To address this problem, we have come up with a solution to digitize this cultural
+                            <div><p className={styles["built-description-container"]}>To address this problem, we have come up with a solution to digitize this cultural
                                 knowledge. Since today&apos;s generation is more comfortable with technology, we aim to
                                 provide a platform where they can learn about their cultural heritage using their
                                 devices, from anywhere in the world. By doing so, we hope to make cultural knowledge
                                 more accessible and engaging for the younger generation, and thus help preserve the rich
                                 cultural heritage of Uttarakhand.</p></div>
-                            <Link href={"/"}>Start Your Journey</Link>
+                            <Link href={"/explore"}>Start Your Journey</Link>
                         </div>
 
                         <div className={styles["journey-right-container"]}>
                             <Image src={GoriGanga} alt="TREKKING" width="350" height={"256"} loading={"eager"}
                                    priority={true}/>
+                            <p className={styles["journey-image-description"]}>Water-colour painting of the River Gori in Uttar Pradesh by James Manson (1791-1862), c.1826. </p>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <div className={styles["div"]}>
-            <Link href={"/trekking"}>Trekking </Link>
-            </div>
-            <div className={styles["div"]}>
-                <Link href={"/language"}> Language</Link>
-            </div>
         </>
     );
 }

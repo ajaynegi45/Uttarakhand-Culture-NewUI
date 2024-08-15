@@ -19,8 +19,8 @@ export default function Card(props: CardProps) {
                 <p className={styles["subTitle"]}>{props.subTitle}</p>
                 <p className={styles["description"]}>{props.description}</p>
                 <div className={styles["link-container"]}>
-                    <div className={styles["link-container1"]} ><Link href={""}>READ MORE</Link></div>
-                    <div className={styles["link-container2"]}><Link href={""}>VIEW LOCATION</Link></div>
+                    <div className={styles["link-container1"]} ><Link href={"#"}>READ MORE</Link></div>
+                    <div className={styles["link-container2"]}><Link href={"#"}>VIEW LOCATION</Link></div>
                 </div>
             </div>
             <div className={styles["image-container"]} >
