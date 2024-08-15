@@ -54,7 +54,7 @@ button, [role="button"] {
 /*  reset anchor style*/
 
 p{
-  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont",sans-serif;
+  font-family: --myCustomFont,"system-ui", "-apple-system", "BlinkMacSystemFont",sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;

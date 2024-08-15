@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-top: 1px solid var(--light-grey);
+    border-top: 1px solid var(--cloud-grey);
     padding-top: 4rem;
     margin-top: 4rem;
 }

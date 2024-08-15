@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeroMapImage from "/public/heroMapImage.webp"
 import Srinagar from "/public/Srinagar.webp"
 import GoriGanga from "/public/goriGanga.webp"
+import FestivalCard from "@/components/ui/FestivalCard";
 export default function Home() {
     return (
         <>
@@ -65,6 +66,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+
+            <FestivalCard/>
         </>
     );
 }
