@@ -6,6 +6,7 @@
 Welcome to the Uttarakhand Culture Preservation Project! We're dedicated to saving and promoting the rich cultural heritage of Uttarakhand. Our platform digitally documents and celebrates the region's culture, history, and natural beauty, making it accessible to the younger generation and preserving it for future generations.
 
 <a href="https://uttarakhand-culture.vercel.app/" target="_blank">Live link</a>
+<a href="https://www.figma.com/design/o82aPjIzHairrkqhem3S1Q/New-UI?node-id=252-38&t=pnd9LeK6OUwhckbh-1" target="_blank">Figma Design</a>
 
 
 ### Problem
