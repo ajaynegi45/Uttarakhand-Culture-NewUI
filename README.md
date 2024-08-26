@@ -82,9 +82,9 @@ This project wouldn't be possible without the contributions of our amazing commu
  <br/>
 <!--   <a href="https://star-history.com/#ajaynegi45/Uttarakhand-Culture-Preservation-Project&Date"> -->
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Uttarakhand-Culture/New-UI&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Uttarakhand-Culture/New-UI&type=Date" />
-      <img align="center" alt="Star History Chart" src="https://api.star-history.com/svg?repos=Uttarakhand-Culture/New-UI&type=Date" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ajaynegi45/Uttarakhand-Culture-NewUI&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ajaynegi45/Uttarakhand-Culture-NewUI&type=Date" />
+      <img align="center" alt="Star History Chart" src="https://api.star-history.com/svg?repos=ajaynegi45/Uttarakhand-Culture-NewUI&type=Date" />
     </picture>
 <!--   </a> -->
 </p>
