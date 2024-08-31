@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import GheeSankranti from "/public/Ghee_Sankranti.jpeg"
 import Bagwal from "/public/bagwal.jpg"
+import Nanda_Sunanda from "/public/Nanda-Sunanda.webp"
 
 export default function FestivalCard() {
     return (
@@ -43,11 +44,12 @@ export default function FestivalCard() {
 
                 <div>
                     <div className={styles[""]}>
-                        <h2 className={styles["title"]}>Devidhura Mela </h2>
+                        <h2 className={styles["title"]}>Nanda Devi Mahotsav</h2>
 
-                        <p className={styles["subTitle"]}>8 AUGUST - 19 AUGUST · DEVIDHURA, CHAMPAWAT</p>
+                        <p className={styles["subTitle"]}>8 SEPTEMBER - 19 SEPTEMBER · NAINITAL</p>
 
-                        <p className={styles["description"]}>The Devidhura Mela is deeply rooted in mythology and tradition. It is primarily associated with the Varahi Devi Temple, which is dedicated to Varahi Devi, an incarnation of Goddess Durga. Legend has it that the temple and the festival date back to the time of the Pandavas from the Mahabharata. According to folklore, the festival began as a ritual to appease the goddess and seek her blessings for a bountiful harvest and protection from evil forces.</p>
+                        <p className={styles["description"]}>
+                            The Nanda Devi Mahotsav is a grand celebration dedicated to Goddess Nanda Devi, the revered deity of the Kumaon region. This vibrant festival, which takes place annually in Nainital, is deeply ingrained in the cultural fabric of Uttarakhand. It is believed to have started centuries ago to honor Nanda Devi, who is considered the protector of the region. The festival is marked by colorful processions, traditional dance performances, and rituals that attract devotees and tourists alike. The highlight of the event is the ‘Nanda Jaat Yatra,’ where a grand procession of devotees carries a palanquin of the goddess through the scenic landscapes of Uttarakhand, symbolizing her journey to her maternal home.                        </p>
                         <div className={styles["link-container"]}>
                             <div className={styles["link-container1"]}><Link href={"#"}>READ MORE</Link></div>
                             <div className={styles["link-container2"]}><Link href={"https://www.google.com/maps/place/Devidhura,+Uttarakhand+263128/@29.3431585,79.4357138,15.41z/data=!4m6!3m5!1s0x39a09f6b22f4a44d:0x7f02252e2ae6a3ed!8m2!3d29.3473853!4d79.4460938!16s%2Fg%2F12hyszj84?entry=ttu"} target="_blank" rel="noopener noreferrer" >VIEW LOCATION</Link></div>
@@ -56,7 +58,7 @@ export default function FestivalCard() {
                     </div>
 
                     <div className={styles["image-container"]}>
-                    <Image src={Bagwal} alt={""} width={300} height={200} placeholder={"blur"}/>
+                    <Image src={Nanda_Sunanda} alt={""} width={300} height={200} placeholder={"blur"}/>
                     </div>
                 </div>
             </section>
