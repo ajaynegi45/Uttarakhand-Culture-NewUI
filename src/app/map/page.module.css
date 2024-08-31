@@ -1,0 +1,43 @@
+.map-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.map-image-container{
+    width: 1440px;
+    height: auto;
+    max-width: 100vw;
+    overflow: scroll;
+}
+.map-container > div > img{
+    width: 100%;
+    height: auto;
+}
+
+.map-button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.map-button-container > button {
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    background-color: var(--black);
+}
+
+.map-button-container > button:hover {
+    color: var(--black);
+    background-color: var(--mist-grey);
+}
+
+
+.image {
+
+    width: 100%;
+    height:20rem;
+    background-image: radial-gradient(88% 100% at top, hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, 0));
+}
