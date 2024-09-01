@@ -18,10 +18,10 @@ body:
     attributes:
       label: Bug Description
       description: Please provide a clear description of the issue. You can explain it in your own way if preferred.
-      value: |
-        <!-- Please describe the bug in detail. For example: 
+      placeholder: |
+        Please describe the bug in detail. For example: 
         - What happened?
-        - Where did it happen? -->
+        - Where did it happen?
     validations:
       required: true
 
