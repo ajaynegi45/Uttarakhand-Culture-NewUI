@@ -23,17 +23,159 @@
 }
 .img-container{
     overflow: hidden;
-
-    /*border: 1px solid red;*/
-
 }
+
 
 .img-container > img{
     filter: drop-shadow(0 0 0.40rem #A0A5AC);
 
 }
 
-@media (max-width: 1350px) {
+
+/* Why we Build it */
+
+
+.home-story-container{
+    width: 95%;
+    margin-top: 10rem;
+    /*border-top: 1px solid var(--cloud-grey)*/
+}
+
+.why-built-it-title{
+    font-size: 12px;
+    margin-bottom: 2.2rem;
+
+
+}
+.built-image-container{
+    width: 100%;
+    max-width: 40vw;
+    margin-top: 8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.built-image-container > img {
+    filter: drop-shadow(0 0 0.40rem #A0A5AC);
+}
+.built-image-container > p{
+    margin-top: 5px;
+    width: 300px;
+}
+
+.built-text-container{
+    width: 100%;
+    max-width: 60vw;
+
+}
+
+.why-built-it-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.built-description-container{
+    color: var(--black);
+}
+
+/* Explore Uttarakhand */
+.journey-container{
+    border-top: 1px solid var(--cloud-grey);
+    padding-top: 1rem;
+    margin-top: 3rem;
+}
+.journey-container > p{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    width: 100vw;
+}
+.journey-container > div{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+}
+
+.journey-left-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 70vw;
+}
+
+.journey-right-container{
+    width: 100%;
+    max-width: 30vw;
+}
+.journey-left-container > div > h3 {
+    font-size: 1.5rem;
+    width: max-content;
+}
+
+
+.journey-left-container a {
+    color: white;
+    background-color: var(--black);
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-transform: none;
+    width: max-content;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 9px;
+        height: 1px;
+        width: 78%;
+        left: 17px;
+        background-color: var(--black);
+        transition: 0.3s ease-in-out;
+        transform: scale(0, 1);
+        transform-origin: 0 100%;
+    }
+
+    &:hover::after {
+        transform: scale(1, 1);
+    }
+
+    &:hover {
+        color: var(--slate-black);
+        background-color: var(--mist-grey);
+    }
+}
+
+
+.journey-right-container > img {
+    filter: drop-shadow(0 0 0.40rem #A0A5AC);
+    /*border-radius: 8px;*/
+}
+
+.journey-image-description {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: var(--grey);
+    text-decoration: none;
+    text-transform: none;
+    line-height: 15px;
+    margin-top: 5px;
+}
+
+
+@media  (max-width: 1350px) {
     .text-container > h1 {
         font-size: 45px;
         letter-spacing: 2px;
@@ -66,8 +208,55 @@
     }
 }
 
+@media (max-width: 800px) {
+    .why-built-it-container{
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .built-image-container{
+        width: 100%;
+        margin-top: 3.5rem;
+    }
+
+    .home-story-container{
+        margin-top: 5rem;
+    }
+
+    .built-text-container{
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .built-text-container > p:nth-of-type(3) {
+        margin-top: 1.5rem;
+    }
+
+    .why-built-it-title{
+        margin-bottom: 1rem;
+    }
+
+    .journey-left-container{
+        max-width: 100vw;
+
+    }
+
+    .journey-container > div{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .journey-right-container{
+        max-width: 100vw;
+    }
+
+
+}
+
 @media (max-width: 700px) {
-    .hero-container{
+    .hero-container {
         flex-direction: column-reverse;
         padding: 0 0 0 0;
         margin-top: 2.5rem;
@@ -78,77 +267,101 @@
     }
 
     .img-container > img{
-       rotate: -30deg;
+        rotate: -30deg;
         width: 300px;
         height: 278px;
         margin-bottom: 1rem;
         padding-left: 15px;
     }
+
+    /*.journey-container > div {*/
+    /*    flex-direction: column-reverse;*/
+    /*    gap: 2rem;*/
+    /*}*/
+
+
+    .journey-right-container > img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+    }
+
+
+
 }
 
-/*@media (max-width: 324px) {*/
-/*    .img-container > img{*/
-/*        rotate: -30deg;*/
-/*        width: 200px;*/
-/*        height: 185px;*/
-/*        margin-bottom: 1rem;*/
-/*    }*/
+
+
+@media (max-width: 500px) {
+    .journey-container > p{
+        font-size: 10px;
+    }
+    .built-image-container{
+        max-width: 100%;
+    }
+    .built-image-container > p{
+        width: 100%;
+    }
+    .built-image-container > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .journey-left-container > div > h3 {
+        width: 100%;
+       text-align: center;
+    }
+
+    .journey-left-container > a {
+        width: 100%;
+        text-align: center;
+        padding: 18px 20px;
+
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!* Enable hover only on non-touch devices *!*/
+/*@media (hover: hover) and (pointer: fine) {*/
 /*}*/
 
+/*@media (prefers-reduced-motion) {*/
+/*}*/
 
+/*!* Mobile *!*/
+/*@media (max-width: 700px) {*/
 
+/*}*/
 
+/*!* Tablet and Smaller Desktop *!*/
+/*@media (min-width: 701px) and (max-width: 1120px) {*/
 
-
-
-
-
-
-.div{
-    width: max-content;
-    border: 1px solid red;
-    margin-top: 20rem;
-    padding: 0.8rem  1rem;
-    border-radius: 5px;
-    float: right;
-    transition-duration: 1s;
-}
-.div:hover{
-    background-color: dodgerblue;
-    text-decoration-line: underline;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-}
-
-@media (prefers-reduced-motion) {
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-
-}
+/*}*/

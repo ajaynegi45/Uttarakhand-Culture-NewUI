@@ -1,11 +1,15 @@
 # Uttarakhand Culture New UI
-This is the new UI for this website <a href="https://ukculture.netlify.app/" target="_blank">Live link</a>
+
 
 ### Introduction
 
 Welcome to the Uttarakhand Culture Preservation Project! We're dedicated to saving and promoting the rich cultural heritage of Uttarakhand. Our platform digitally documents and celebrates the region's culture, history, and natural beauty, making it accessible to the younger generation and preserving it for future generations.
 
-<a href="https://www.uttarakhandculture.co/" target="_blank">Live link 01</a>
+<a href="https://uttarakhand-culture.vercel.app/" target="_blank">New UI link</a>
+<a href="https://ukculture.netlify.app/" target="_blank">Old UI link</a>
+<br/>
+<a href="https://www.figma.com/design/o82aPjIzHairrkqhem3S1Q/New-UI?node-id=252-38&t=pnd9LeK6OUwhckbh-1" target="_blank">Figma Design</a>
+
 
 ### Problem
 A concerning trend is emerging in Uttarakhand, where the younger generation is gradually forgetting their cultural heritage and traditional rituals. This decline in cultural knowledge is evident across generations, with each successive generation possessing less knowledge than the previous one. For instance, the amount of cultural knowledge possessed by grandparents is significantly more than that of their children, and the cultural knowledge of today's youth is likely to be even less than that of their parents. If this trend continues, there is a risk that the cultural heritage of Uttarakhand may eventually disappear from the society. This loss would not only erase the region's rich cultural identity but also deprive future generations of their cultural roots and traditions.
@@ -82,9 +86,9 @@ This project wouldn't be possible without the contributions of our amazing commu
  <br/>
 <!--   <a href="https://star-history.com/#ajaynegi45/Uttarakhand-Culture-Preservation-Project&Date"> -->
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Uttarakhand-Culture/New-UI&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Uttarakhand-Culture/New-UI&type=Date" />
-      <img align="center" alt="Star History Chart" src="https://api.star-history.com/svg?repos=Uttarakhand-Culture/New-UI&type=Date" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ajaynegi45/Uttarakhand-Culture-NewUI&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ajaynegi45/Uttarakhand-Culture-NewUI&type=Date" />
+      <img align="center" alt="Star History Chart" src="https://api.star-history.com/svg?repos=ajaynegi45/Uttarakhand-Culture-NewUI&type=Date" />
     </picture>
 <!--   </a> -->
 </p>

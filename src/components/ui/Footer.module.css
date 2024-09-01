@@ -133,6 +133,7 @@
     color: var(--black);
     font-weight: 600;
 }
+
 .footer-right-link-container > a {
     font-size: 14px;
     font-style: normal;
@@ -232,4 +233,31 @@
     .footer-right-container{
         padding: 0 2rem 0 2rem;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* */
+
+.notify-early-container{
+
+}
+
+.notify-early-banner-container > img {
+    width: 100%;
+    height: auto;
+
+}
+
+#notify-early-image{
+    width: 100%;
+    height: auto;
 }
