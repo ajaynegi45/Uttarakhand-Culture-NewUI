@@ -1,11 +1,9 @@
 ---
 name: Report a bug 🐞
 about: Report an issue to help improve the project.
-title: ''
+title: ""[BUG] <description>"
 labels: ["status: awaiting triage"]
-assignees: ''
 body:
-# Check for duplicates Issue
   - type: checkboxes
     id: duplicates
     attributes:
