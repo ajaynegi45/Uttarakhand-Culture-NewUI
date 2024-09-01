@@ -64,7 +64,7 @@ body:
     id: implementation-plan
     attributes:
       label: Implementation Plan
-      description: If you selected "Yes" above, please describe how you would approach fixing this issue.
+      description: If you selected "Yes" above, please describe how you would approach fixing this issue (Optional).
       placeholder: Provide a brief plan or any initial thoughts on fixing the bug.
     validations:
       required: false

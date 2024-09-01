@@ -10,7 +10,7 @@ body:
       label: Is this feature already requested?
       description: Ensure this feature hasn't been suggested before.
       options:
-        - label: I have checked "open" and "closed" issues and this is not a duplicate.
+        - label: I have checked "open" and "closed" issues, and this is not a duplicate.
           required: true
 
   - type: textarea
@@ -18,16 +18,16 @@ body:
     attributes:
       label: Problem or Missing Functionality
       description: Briefly describe the problem or the missing functionality that this feature would address.
-      placeholder: "Example: I'm frustrated when I can't [describe the issue]. This feature would help by [explain how]."
+      placeholder: "For ex: I often encounter [specific problem] when using [current feature or lack thereof]. Implementing this feature would improve [specific aspect or workflow] by [explain how it will help]."
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: solution
     attributes:
-      label: Proposed Solution
+      label: Feature Description
       description: Describe the feature you're suggesting and how it would solve the problem. Include any relevant details or references.
-      placeholder: "Example: I propose adding [describe feature] that would [explain how it solves the problem]. For reference, [mention any similar features in other projects]."
+      placeholder: "For ex: I suggest adding [describe the feature] that will [explain its impact]. This feature could be similar to [mention any known implementations or inspirations], which helps by [describe how it benefits the users]."
     validations:
       required: true
 
@@ -36,7 +36,7 @@ body:
     attributes:
       label: Screenshots (Optional)
       description: Attach any screenshots that might help illustrate the feature or its need.
-      placeholder: "Drag and drop images here or click to upload."
+      placeholder: "If applicable, drag and drop images here or click to upload. Screenshots can help clarify your suggestion by showing the current issue or how the feature might look."
     validations:
       required: false
 
@@ -53,9 +53,9 @@ body:
   - type: textarea
     id: implementation_plan
     attributes:
-      label: Implementation Plan (Optional)
-      description: If you selected "Yes" above, briefly describe how you plan to implement this feature.
-      placeholder: "Example: I plan to start by [outline steps], and I will use [mention any tools, libraries, or code]."
+      label: Implementation Plan
+      description: If you selected "Yes" above, briefly describe how you plan to implement this feature (Optional).
+      placeholder: "For example: I plan to start by [outline your steps], using [mention any tools, libraries, or frameworks]. This will help ensure the feature is developed efficiently and meets the intended purpose."
     validations:
       required: false
 
