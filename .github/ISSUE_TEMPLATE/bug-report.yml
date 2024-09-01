@@ -57,14 +57,10 @@ body:
       label: Would you like to work on this issue?
       options:
         - "Select an option"  # Default placeholder option
-        - "No"
-        - "Yes"
-      default: "Select an option"  # Forces the user to select either Yes or No
+        - Yes
+        - No
     validations:
       required: true
-    custom:
-      message: "Please select an option"  # This message will prompt the user if they try to submit without selecting Yes or No
-
 
   - type: textarea
     id: implementation-plan
