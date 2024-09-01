@@ -13,19 +13,20 @@ body:
         - label: I have searched "open" and "closed" issues, and this is not a duplicate.
           required: true
 
+  - type: markdown
+    attributes:
+      value: "## Bug Description"
 
   - type: textarea
     id: description
     attributes:
-      label: "## Bug Description"
+      label: Bug Description
       description: Please provide a clear description of the issue. You can explain it in your own way if preferred.
       value: |
         <!-- Please describe the bug in detail. For example: -->
         - What happened?
         - Where did it happen?
         - What were you expecting to happen?
-        
-
     validations:
       required: true
 
@@ -65,10 +66,14 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: "## Implementation Plan"
+
   - type: textarea
     id: implementation-plan
     attributes:
-      label: "## Implementation Plan"
+      label: Implementation Plan
       description: If you selected "Yes" above, please describe how you would approach fixing this issue.
       value: "<!--   Provide a brief plan or any initial thoughts on fixing the bug.   -->"
     validations:
@@ -78,4 +83,3 @@ body:
     attributes:
       value: |
         Thank you for reporting this bug! Please ensure you've filled out all the required sections to help us address the issue as efficiently as possible.
-
