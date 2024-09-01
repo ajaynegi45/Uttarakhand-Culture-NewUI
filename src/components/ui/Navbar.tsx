@@ -12,7 +12,7 @@ export default function Navbar() {
                 </nav>
             </div>
             <div className={styles["fade-navbar-effect"]}></div>
-            <div className={styles["empty-navbar"]}>
+            <div className={styles["empty-navbar"]}></div>
         </>
     );
 }
