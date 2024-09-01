@@ -56,9 +56,9 @@ body:
     attributes:
       label: Would you like to work on this issue?
       options:
-#        - "Select an option"  # Default placeholder option
-        - Yes
-        - No
+        - "Select an option"
+        - "Yes"
+        - "No"
     validations:
       required: true
 
