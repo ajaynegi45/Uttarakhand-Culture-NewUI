@@ -35,7 +35,7 @@ body:
       label: Steps to Reproduce (if known)
       description: Outline the steps to reproduce the issue. If unsure, just provide any relevant details.
       value: |
-        <! --  If you know the steps, you can follow this format:
+        <!--  If you know the steps, you can follow this format:
         
         1. Go to [page or feature]
         2. [Describe action taken]
@@ -50,7 +50,7 @@ body:
     attributes:
       label: Screenshots (if applicable)
       description: Attach any screenshots that might help clarify the issue.
-      value: "Upload or drag and drop images here."
+      value: "<!--   Upload or drag and drop images here.   -->"
     validations:
       required: false
 
@@ -70,7 +70,7 @@ body:
     attributes:
       label: Implementation Plan (if applicable)
       description: If you selected "Yes" above, please describe how you would approach fixing this issue.
-      value: "Provide a brief plan or any initial thoughts on fixing the bug."
+      value: "<!--   Provide a brief plan or any initial thoughts on fixing the bug.   -->"
     validations:
       required: false
 
