@@ -17,10 +17,10 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Bug Description
+      label: "## Bug Description"
       description: Please provide a clear description of the issue. You can explain it in your own way if preferred.
       value: |
-        <! -- Please describe the bug in detail. For example: -->
+        <!-- Please describe the bug in detail. For example: -->
         - What happened?
         - Where did it happen?
         - What were you expecting to happen?
@@ -32,7 +32,7 @@ body:
   - type: textarea
     id: steps-to-reproduce
     attributes:
-      label: Steps to Reproduce (if known)
+      label: Steps to Reproduce
       description: Outline the steps to reproduce the issue. If unsure, just provide any relevant details.
       value: |
         <!--  If you know the steps, you can follow this format:
@@ -48,8 +48,8 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots (if applicable)
-      description: Attach any screenshots that might help clarify the issue.
+      label: Screenshots
+      description: Attach any screenshots that might help clarify the issue (if applicable).
       value: "<!--   Upload or drag and drop images here.   -->"
     validations:
       required: false
@@ -68,7 +68,7 @@ body:
   - type: textarea
     id: implementation-plan
     attributes:
-      label: Implementation Plan (if applicable)
+      label: "## Implementation Plan"
       description: If you selected "Yes" above, please describe how you would approach fixing this issue.
       value: "<!--   Provide a brief plan or any initial thoughts on fixing the bug.   -->"
     validations:
