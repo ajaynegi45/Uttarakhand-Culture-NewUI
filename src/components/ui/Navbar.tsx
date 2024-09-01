@@ -8,7 +8,7 @@ export default function Navbar() {
                     <Link href="/" className={styles["heading"]}>
                         <h3 className={styles["title"]}>UTTARAKHAND CULTURE</h3>
                     </Link>
-                    <Link href="/login" className={styles.link}>LOGIN</Link>
+                    <Link href="/" className={styles.link}>LOGIN</Link>
                 </nav>
             </div>
             <div className={styles["fade-navbar-effect"]}></div>
