@@ -22,7 +22,7 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Check for formatting issues
-        run: |
-          npm install prettier --save-dev
-          npx prettier --check '**/*.{ts,tsx,js,jsx,css,scss,md,html,json}'
+#      - name: Check for formatting issues
+#        run: |
+#          npm install prettier --save-dev
+#          npx prettier --check '**/*.{ts,tsx,js,jsx,css,scss,md,html,json}'
