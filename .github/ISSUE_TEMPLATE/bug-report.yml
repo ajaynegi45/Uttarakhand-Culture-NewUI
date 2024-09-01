@@ -30,14 +30,14 @@ body:
     attributes:
       label: Steps to Reproduce
       description: Outline the steps to reproduce the issue. If unsure, just provide any relevant details.
-      value: |
-        <!--  If you know the steps, you can follow this format:
+      placeholder: |
+        If you know the steps, you can follow this format:
         
         1. Go to [page or feature]
         2. [Describe action taken]
         3. [Describe what went wrong]
         
-        If unsure, you can explain what you were doing or what you expected to happen. -->
+        If unsure, you can explain what you were doing or what you expected to happen.
     validations:
       required: false
 
@@ -46,7 +46,7 @@ body:
     attributes:
       label: Screenshots
       description: Attach any screenshots that might help clarify the issue (if applicable).
-      value: "<!--   Upload or drag and drop images here.   -->"
+      placeholder: Upload or drag and drop images here.
     validations:
       required: false
 
@@ -57,7 +57,6 @@ body:
       options:
         - "Yes"
         - "No"
-      description: "Select an option"
     validations:
       required: true
 
@@ -66,7 +65,7 @@ body:
     attributes:
       label: Implementation Plan
       description: If you selected "Yes" above, please describe how you would approach fixing this issue.
-      value: "<!--   Provide a brief plan or any initial thoughts on fixing the bug.   -->"
+      placeholder: Provide a brief plan or any initial thoughts on fixing the bug.
     validations:
       required: false
 
