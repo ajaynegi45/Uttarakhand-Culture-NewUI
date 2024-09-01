@@ -56,9 +56,9 @@ body:
     attributes:
       label: Would you like to work on this issue?
       options:
-        - "Select an option"
-        - "No"
         - "Yes"
+        - "No"
+      description: "Select an option"
     validations:
       required: true
 
