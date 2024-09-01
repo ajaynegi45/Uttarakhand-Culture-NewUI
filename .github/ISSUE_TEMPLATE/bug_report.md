@@ -1,7 +1,7 @@
 ---
 name: Report a bug 🐞
 about: Report an issue to help improve the project.
-title: ""[BUG] <description>"
+title: "[BUG] <description>"
 labels: ["status: awaiting triage"]
 body:
   - type: checkboxes
