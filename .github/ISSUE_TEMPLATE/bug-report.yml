@@ -60,9 +60,8 @@ body:
     attributes:
       label: Would you like to work on this issue?
       options:
-        - "Yes"
         - "No"
-      default: 1
+        - "Yes"
     validations:
       required: true
 
