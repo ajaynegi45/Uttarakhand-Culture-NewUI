@@ -1,69 +1,70 @@
 ---
-name: Report a bug 🐞
-about: Report an issue to help improve the project.
-title: "[BUG] <description>"
+name: Report a Bug 🐞
+about: Help us improve by reporting an issue.
+title: "[BUG] Brief description"
 labels: ["status: awaiting triage"]
 body:
   - type: checkboxes
     id: duplicates
     attributes:
-        label: Has this bug been raised before?
-        description: Increase the chances of your issue being accepted by making sure it has not been raised before.
-        options:
-            - label: I have checked "open" AND "closed" issues and this is not a duplicate
-              required: true
-              
-# Description
+      label: Is this a new issue?
+      description: Please confirm you've checked that this issue hasn't been reported before.
+      options:
+        - label: I have searched "open" and "closed" issues, and this is not a duplicate.
+          required: true
+
   - type: textarea
     id: description
     attributes:
-        label: Description
-        description: A clear description of the bug you have found. Please include relevant information and resources (for example the steps to reproduce the bug)
+      label: Bug Description
+      description: Provide a clear and concise description of the issue.
     validations:
-        required: true
-        
-# Ask for screenshots if applicable.
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps to reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: Describe what actually happened.
+    validations:
+      required: true
+
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots
-      description: Please add screenshots if applicable
+      label: Screenshots (if applicable)
+      description: Attach screenshots to help explain your issue.
     validations:
       required: false
-      
-# Ask if the issue creator wants to work on it.
+
   - type: dropdown
     id: assignee
     attributes:
       label: Do you want to work on this issue?
-      multiple: false
       options:
+        - "Yes"
         - "No"
-        - "Yes"
-      default: 0
-    validations:
-      required: true
+      validations:
+        required: true
 
-  - type: dropdown
-    id: assign
-    attributes:
-      label: "Would you like to work on this issue?"
-      options:
-        - "Yes"
-        
-
-        
   - type: markdown
     attributes:
       value: |
-        Please fill out the sections below to help everyone identify and fix the bug
-        
-  - type: upload
-    id: description
-    attributes:
-      label: Describe your issue
-      placeholder: When I click here this happens
-    validations:
-      required: true
-
+        Thank you for taking the time to report this bug! Please make sure to fill out all the sections to help us address the issue effectively.
 ---
