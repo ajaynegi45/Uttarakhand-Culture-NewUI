@@ -21,8 +21,7 @@ body:
       value: |
         <!-- Please describe the bug in detail. For example: 
         - What happened?
-        - Where did it happen?
-        - What were you expecting to happen? -->
+        - Where did it happen? -->
     validations:
       required: true
 
