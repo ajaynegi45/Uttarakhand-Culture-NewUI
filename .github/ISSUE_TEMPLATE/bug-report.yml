@@ -20,10 +20,12 @@ body:
       label: Bug Description
       description: Please provide a clear description of the issue. You can explain it in your own way if preferred.
       value: |
-        Please describe the bug in detail. For example:
+        <! -- Please describe the bug in detail. For example: -->
         - What happened?
         - Where did it happen?
         - What were you expecting to happen?
+        
+
     validations:
       required: true
 
@@ -33,13 +35,13 @@ body:
       label: Steps to Reproduce (if known)
       description: Outline the steps to reproduce the issue. If unsure, just provide any relevant details.
       value: |
-        If you know the steps, you can follow this format:
+        <! --  If you know the steps, you can follow this format:
         
         1. Go to [page or feature]
         2. [Describe action taken]
         3. [Describe what went wrong]
         
-        If unsure, you can explain what you were doing or what you expected to happen.
+        If unsure, you can explain what you were doing or what you expected to happen. -->
     validations:
       required: false
 
@@ -69,15 +71,6 @@ body:
       label: Implementation Plan (if applicable)
       description: If you selected "Yes" above, please describe how you would approach fixing this issue.
       value: "Provide a brief plan or any initial thoughts on fixing the bug."
-    validations:
-      required: false
-
-  - type: textarea
-    id: extra-info
-    attributes:
-      label: Additional Information (Optional)
-      description: If there's anything else you'd like to add, please do so here.
-      value: "Add any extra details or context that might be helpful."
     validations:
       required: false
 
