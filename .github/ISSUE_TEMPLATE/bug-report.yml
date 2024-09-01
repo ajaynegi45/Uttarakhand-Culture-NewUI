@@ -56,7 +56,7 @@ body:
     attributes:
       label: Would you like to work on this issue?
       options:
-        - "Select an option"  # Default placeholder option
+#        - "Select an option"  # Default placeholder option
         - Yes
         - No
     validations:
