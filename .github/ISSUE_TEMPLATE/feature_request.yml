@@ -1,4 +1,4 @@
-name: Feature Request
+name: Feature Request 💡
 description: Have a new idea or feature? Let us know...
 title: "[FEATURE] <brief description>"
 labels: ["status: awaiting triage"]
@@ -34,8 +34,8 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots (Optional)
-      description: Attach any screenshots that might help illustrate the feature or its need.
+      label: Screenshots
+      description: Attach any screenshots that might help illustrate the feature or its need  (Optional).
       placeholder: "If applicable, drag and drop images here or click to upload. Screenshots can help clarify your suggestion by showing the current issue or how the feature might look."
     validations:
       required: false
