@@ -1,8 +1,8 @@
 name: Report a Bug 🐞
-description: Help us improve by reporting an issue.
+description: Help us improve by reporting any issues you encounter.
 title: "[BUG] Brief description"
-labels: [ "status: awaiting triage" ]
-
+labels: ["status: awaiting triage"]
+#assignees: ' '
 body:
   - type: checkboxes
     id: duplicates
@@ -13,57 +13,76 @@ body:
         - label: I have searched "open" and "closed" issues, and this is not a duplicate.
           required: true
 
+
   - type: textarea
     id: description
     attributes:
       label: Bug Description
-      description: Provide a clear and concise description of the issue.
+      description: Please provide a clear description of the issue. You can explain it in your own way if preferred.
+      value: |
+        Please describe the bug in detail. For example:
+        - What happened?
+        - Where did it happen?
+        - What were you expecting to happen?
     validations:
       required: true
 
   - type: textarea
     id: steps-to-reproduce
     attributes:
-      label: Steps to Reproduce
-      description: List the steps to reproduce the issue.
+      label: Steps to Reproduce (if known)
+      description: Outline the steps to reproduce the issue. If unsure, just provide any relevant details.
+      value: |
+        If you know the steps, you can follow this format:
+        
+        1. Go to [page or feature]
+        2. [Describe action taken]
+        3. [Describe what went wrong]
+        
+        If unsure, you can explain what you were doing or what you expected to happen.
     validations:
-      required: true
-
-  - type: textarea
-    id: expected-behavior
-    attributes:
-      label: Expected Behavior
-      description: Describe what you expected to happen.
-    validations:
-      required: true
-
-  - type: textarea
-    id: actual-behavior
-    attributes:
-      label: Actual Behavior
-      description: Describe what actually happened.
-    validations:
-      required: true
+      required: false
 
   - type: textarea
     id: screenshots
     attributes:
       label: Screenshots (if applicable)
-      description: Attach screenshots to help explain your issue.
+      description: Attach any screenshots that might help clarify the issue.
+      value: "Upload or drag and drop images here."
     validations:
       required: false
 
   - type: dropdown
     id: assignee
     attributes:
-      label: Do you want to work on this issue?
+      label: Would you like to work on this issue?
       options:
         - "Yes"
         - "No"
+      default: "No"
     validations:
       required: true
+
+  - type: textarea
+    id: implementation-plan
+    attributes:
+      label: Implementation Plan (if applicable)
+      description: If you selected "Yes" above, please describe how you would approach fixing this issue.
+      value: "Provide a brief plan or any initial thoughts on fixing the bug."
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra-info
+    attributes:
+      label: Additional Information (Optional)
+      description: If there's anything else you'd like to add, please do so here.
+      value: "Add any extra details or context that might be helpful."
+    validations:
+      required: false
 
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to report this bug! Please make sure to fill out all the sections to help us address the issue effectively.
+        Thank you for reporting this bug! Please ensure you've filled out all the required sections to help us address the issue as efficiently as possible.
+
