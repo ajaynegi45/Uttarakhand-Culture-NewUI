@@ -76,14 +76,14 @@ body:
       value: |
           Please fill out the sections below to help everyone identify and fix the bug
   - type: textarea
-    id: description
+    id: descriptions
     attributes:
             label: Describe your issue
             placeholder: When I click here this happens
     validations:
             required: true
   - type: textarea
-    id: steps
+    id: stepsss
     attributes:
             label: Steps to reproduce
             placeholder: |
@@ -93,16 +93,16 @@ body:
     validations:
             required: true
   - type: textarea
-    id: expected
+    id: expectedss
     attributes:
             label: What was the expected result?
             placeholder: I expected this to happen
   - type: textarea
-    id: screenshots
+    id: screenshotsss
     attributes:
             label: Put here any screenshots or videos (optional)
   - type: dropdown
-    id: assign
+    id: assignss
     attributes:
             label: "Would you like to work on this issue?"
             options:
