@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className={styles["newsletter-email-container"]}>
                         <form action="">
                             <input id={"email-input"} type="email" placeholder="Enter Your email" required={true}/>
-                            <p>Subscribe</p>`
+                            <p>Subscribe</p>
                         </form>
                     </div>
                     <div><p>Your privacy is important. I never share your email.</p></div>

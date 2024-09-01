@@ -1,12 +1,29 @@
-.card{
+.festival-card {
+    border-top: 1px solid var(--cloud-grey);
+    margin-top: 5rem;
+}
+
+.fair-card {
+    border-top: 1px solid var(--cloud-grey);
+    margin-top: 3rem;
+}
+
+.festival-card > div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-top: 1px solid var(--cloud-grey);
-    padding-top: 4rem;
-    margin-top: 4rem;
+    padding-top: 3rem;
+}
+
+.fair-card > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
 }
 
 .title{
@@ -44,10 +61,10 @@
     padding: 3px 10px 1px 10px;
 }
 .link-container1{
-    border-right: 1px solid #E1E4E8;
+    /*border-right: 1px solid #E1E4E8;*/
 }
 .link-container2{
-
+    border-left: 1px solid #E1E4E8;
 }
 .link-container > div > a{
     text-align: center;
@@ -100,8 +117,6 @@
     max-width: 250px;
     height: auto;
     border-radius: 5px;
-
-
 }
 
 
@@ -109,11 +124,35 @@
 /* Mobile */
 @media (max-width: 700px) {
 
-    .card{
-        width: 96%;
-        padding-top: 3rem;
-        margin-top: 3rem;
+    /*.card{*/
+    /*    width: 96%;*/
+    /*    padding-top: 3rem;*/
+    /*    margin-top: 3rem;*/
+    /*}*/
+
+    .festival-card  {
+        border-top: 1px solid var(--cloud-grey);
+        margin-top: 8rem;
     }
+
+    .fair-card {
+        border-top: 1px solid var(--cloud-grey);
+        margin-top: 5rem;
+    }
+
+
+    .festival-card > div{
+        flex-direction: column-reverse !important;
+        justify-content: space-between;
+    }
+
+    .fair-card > div{
+        flex-direction: column-reverse !important;
+        justify-content: space-between;
+    }
+
+
+
 
     .subTitle{
         font-weight: 300;
@@ -124,11 +163,24 @@
     }
 
     .image-container{
-        display: none;
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 1rem;
     }
     .image-container > img{
-        width: 100px;
-        height: 100%;
+        width: auto;
+        max-width: 250px;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .image-container > img{
+        /*width: 100px;*/
+        /*height: 100%;*/
+
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .link-container > div > a{
