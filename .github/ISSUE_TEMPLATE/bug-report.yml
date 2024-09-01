@@ -1,8 +1,8 @@
----
 name: Report a Bug 🐞
-about: Help us improve by reporting an issue.
+description: Help us improve by reporting an issue.
 title: "[BUG] Brief description"
 labels: ["status: awaiting triage"]
+
 body:
   - type: checkboxes
     id: duplicates
@@ -67,5 +67,3 @@ body:
     attributes:
       value: |
         Thank you for taking the time to report this bug! Please make sure to fill out all the sections to help us address the issue effectively.
----
-
