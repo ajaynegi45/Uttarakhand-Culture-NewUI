@@ -57,8 +57,8 @@ body:
       label: Would you like to work on this issue?
       options:
         - "Select an option"
-        - "Yes"
         - "No"
+        - "Yes"
     validations:
       required: true
 
