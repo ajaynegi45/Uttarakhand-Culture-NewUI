@@ -13,28 +13,16 @@ body:
         - label: I have searched "open" and "closed" issues, and this is not a duplicate.
           required: true
 
-  - type: markdown
-    attributes:
-      value: BUG
-
-  - type: markdown
-    attributes:
-      value: "## Bug"
-
-  - type: markdown
-    attributes:
-      value: "## Bug Description"
-
   - type: textarea
     id: description
     attributes:
       label: Bug Description
       description: Please provide a clear description of the issue. You can explain it in your own way if preferred.
       value: |
-        <!-- Please describe the bug in detail. For example: -->
+        <!-- Please describe the bug in detail. For example: 
         - What happened?
         - Where did it happen?
-        - What were you expecting to happen?
+        - What were you expecting to happen? -->
     validations:
       required: true
 
@@ -68,14 +56,15 @@ body:
     attributes:
       label: Would you like to work on this issue?
       options:
+        - "Select an option"  # Default placeholder option
         - "No"
         - "Yes"
+      default: "Select an option"  # Forces the user to select either Yes or No
     validations:
       required: true
+    custom:
+      message: "Please select an option"  # This message will prompt the user if they try to submit without selecting Yes or No
 
-  - type: markdown
-    attributes:
-      value: "## Implementation Plan"
 
   - type: textarea
     id: implementation-plan
