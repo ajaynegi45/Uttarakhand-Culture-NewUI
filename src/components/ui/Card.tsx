@@ -9,7 +9,7 @@ type CardProps = {
     subTitle: string;
     description: string;
     image: string;
-    readMoreLink: string
+    readMoreLink?: string
 }
 
 export default function Card(props: CardProps) {

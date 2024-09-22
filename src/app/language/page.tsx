@@ -60,16 +60,19 @@ export default function Language() {
                 <Card title={"KUMAONI LANGUAGE"}
                       subTitle={"Almora, Bageshwar, Champawat, Nainital, Pithoragarh, Udham Singh Nagar"}
                       description={"Kumaoni is a Central Pahari language spoken in the Kumaon region of Uttarakhand. It has several dialects, including Kumaoni proper, Johari, and Danpuriya. Kumaoni is known for its distinctive grammar and vocabulary, which reflect the region's unique cultural heritage. With around 2 million speakers, Kumaoni is an important language in Uttarakhand. It has a rich literary tradition, including poetry, folk tales, and songs. Efforts are being made to develop Kumaoni language education and media to promote its use and preservation."}
-                      image={""}/>
+                      image={""}
+                      readMoreLink={""}/>
 
                 <Card title={"GARHWALI LANGUAGE"}
                       subTitle={"Dehradun, Haridwar, Pauri - Tehri Garhwal, Uttarkashi, Chamoli, Rudraprayag"}
                       description={"Garhwali is a Central Pahari language spoken in the Garhwal region of Uttarakhand. It has various dialects, including Badhani, Lohbya, and Majh-Kumaiya. Garhwali is known for its poetic and musical quality, with a rich tradition of folk songs and stories. It is closely tied to the region's culture and identity. With around 2.5 million speakers, Garhwali is a widely spoken language in Uttarakhand. Efforts are being made to preserve and promote Garhwali through language documentation, education, and cultural programs."}
-                      image={""}/>
+                      image={""}
+                      readMoreLink={""}/>
 
                 <Card title={"JAUNSARI LANGUAGE"} subTitle={"Jaunsar - Bawar region of Dehradun"}
                       description={"Jaunsari is a Central Pahari language spoken in the Jaunsar-Bawar region of Dehradun district, Uttarakhand. It is a small language with around 100,000 speakers. Jaunsari is known for its unique dialects, including Jaunsari proper and Bawari. The language is closely tied to the region's culture and traditions. Jaunsari has a rich oral tradition, with stories, songs, and folk tales passed down through generations. Efforts are being made to document and preserve Jaunsari through language education and cultural programs to ensure its survival for future generations."}
-                      image={""}/>
+                      image={""}
+                      readMoreLink={""}/>
             </section>
         </>
     );
