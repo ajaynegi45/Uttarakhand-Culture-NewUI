@@ -63,7 +63,7 @@ Please take a moment to read the [Contributing.md](https://github.com/ajaynegi45
 ## Contact
 If you have any questions or would like to connect, please don't hesitate to reach out. I'd be more than happy to chat and learn from your experiences too.
 <br><br>
-**Email:** [contact me](mailto:ajaynegi3345@gmail.com)
+**Contact Form:** [contact me](https://ukculture.netlify.app/contact)
 
 <!-- LinkedIn -->
 <a href="https://linkedin.com/in/ajaynegi45/" target="blank" rel="noopener noreferrer" >
