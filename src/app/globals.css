@@ -10,7 +10,7 @@
   --line-grey: #E1E4E8;
   --slate-black: #667085;
   --mist-grey: #F2F2F2;
-  
+
   --light-green: #22C55E;
   --light-yellow: #FFC107;
   --light-blue: #3B82F6;
@@ -19,7 +19,6 @@
 
   --green: #2E865F;
   --soil: #EEB27B;
-
 }
 
 
@@ -64,7 +63,7 @@ button, [role="button"] {
 /*  reset anchor style*/
 
 p{
-  font-family: --myCustomFont, "-apple-system", "BlinkMacSystemFont",sans-serif;
+  font-family: --myCustomFont,"system-ui", "-apple-system", "BlinkMacSystemFont",sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
