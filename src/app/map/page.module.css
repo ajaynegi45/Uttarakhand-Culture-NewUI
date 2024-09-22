@@ -1,0 +1,262 @@
+.uttarakhand-map{
+    margin: 8em  0;
+}
+.uttarakhand-map-heading{
+    text-align: center;
+    color: #FF9800;
+}
+.uttarakhand-map-container {
+    background: white;
+    padding: 0;
+    margin: 1em;
+    overflow: auto;
+    aspect-ratio: 10800/6930;
+    overflowX: 'auto';
+
+
+    /* GPU-accelerated transform and will-change properties */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    transform: transale3d(0,0,0);
+    /* will-change: transform; */
+}
+.uttarakhand-map-container > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 10800/6900;
+    object-fit: cover;
+    cursor: grab;
+    background-color: white;
+
+    transition: transform 0.3s ease-out;
+
+    /* GPU-accelerated transform and will-change properties */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    transform: transale3d(0,0,0);
+    /* will-change: transform; */
+}
+
+@keyframes fade-in {
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+.zoom-button-container{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 1em 0 1em 0;
+}
+.zoom-level-button {
+    color: var(--black);
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 2px solid var(--green);
+}
+.zoom-level-button:hover{
+    background-color: var(--green);
+    color: var(--light-yellow);
+    cursor: pointer;
+}
+.uttarakhand-map > p{
+    font-weight: bold;
+    text-align: center;
+    color: grey;
+}
+
+@media only screen and (max-width: 500px) {
+    .uttarakhand-map-container{
+        margin: 0.1em;
+    }
+    .uttarakhand-map > p{
+        margin-top: 0.5em;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-align: center;
+        color: grey;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.uttarakhand-map-container {
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.map-image {
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+/* Optional: Show scrollbar on hover */
+.uttarakhand-map-container:hover {
+    scrollbar-width: auto;
+    -ms-overflow-style: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** New Code ***/
+
+
+/*.uttarakhand-map {*/
+/*    margin: 8em 0;*/
+/*}*/
+
+/*.uttarakhand-map-heading {*/
+/*    text-align: center;*/
+/*    color: #FF9800;*/
+/*}*/
+
+/*.uttarakhand-map-container {*/
+/*    background: white;*/
+/*    padding: 0;*/
+/*    margin: 1em;*/
+/*    overflow: hidden;*/
+/*    aspect-ratio: 10800/6930;*/
+/*    transform: translateZ(0); !* Ensure GPU acceleration *!*/
+/*    transition: transform 0.3s ease-out; !* Smooth transition for zoom *!*/
+/*    will-change: transform;*/
+/*}*/
+
+/*.map-image {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    object-fit: cover;*/
+/*    cursor: grab;*/
+/*    transform: translateZ(0); !* Ensure GPU acceleration *!*/
+/*    transition: transform 0.3s ease-out; !* Smooth zoom transitions *!*/
+/*    will-change: transform;*/
+/*}*/
+
+/*.zoom-button-container {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    gap: 2em;*/
+/*    margin: 1em 0;*/
+/*}*/
+
+/*.zoom-level-button {*/
+/*    color: var(--black);*/
+/*    padding: 5px 10px;*/
+/*    border-radius: 3px;*/
+/*    border: 2px solid var(--green);*/
+/*}*/
+
+/*.zoom-level-button:hover {*/
+/*    background-color: var(--green);*/
+/*    color: var(--light-yellow);*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.uttarakhand-map > p {*/
+/*    font-weight: bold;*/
+/*    text-align: center;*/
+/*    color: grey;*/
+/*}*/
+
+/*@media only screen and (max-width: 500px) {*/
+/*    .uttarakhand-map-container {*/
+/*        margin: 0.1em;*/
+/*    }*/
+
+/*    .uttarakhand-map > p {*/
+/*        margin-top: 0.5em;*/
+/*        font-size: 0.8em;*/
+/*        font-weight: bold;*/
+/*        text-align: center;*/
+/*        color: grey;*/
+/*    }*/
+/*}*/
+
+/*!* Scrollable container *!*/
+/*.uttarakhand-map-container {*/
+/*    width: 100%;*/
+/*    overflow-x: scroll;*/
+/*    scroll-snap-type: x mandatory;*/
+/*    scrollbar-width: none; !* Hide scrollbar *!*/
+/*    -ms-overflow-style: none; !* Hide scrollbar for IE and Edge *!*/
+/*}*/
+
+/*.map-image {*/
+/*    width: 100%;*/
+/*    scroll-snap-align: start;*/
+/*}*/
+
+/*!* Optional: Show scrollbar on hover *!*/
+/*.uttarakhand-map-container:hover {*/
+/*    scrollbar-width: auto;*/
+/*    -ms-overflow-style: auto;*/
+/*}*/

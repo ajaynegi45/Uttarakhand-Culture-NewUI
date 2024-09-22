@@ -4,7 +4,7 @@ import React from "react";
 import localFont from "next/font/local";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const customFont = localFont(
     {
@@ -29,7 +29,7 @@ export default function RootLayout({
     <main>
         <Navbar/>
         {children}
-        <SpeedInsights />
+        {/*<SpeedInsights />*/}
         <Footer/>
     </main>
     </body>

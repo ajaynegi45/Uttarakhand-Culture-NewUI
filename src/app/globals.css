@@ -7,9 +7,18 @@
 
   --black: #3B3D41;
   --grey: #A0A5AC;
-  --cloud-grey: #E1E4E8;
+  --line-grey: #E1E4E8;
   --slate-black: #667085;
-  --mist-grey: #F2F2F2
+  --mist-grey: #F2F2F2;
+
+  --light-green: #22C55E;
+  --light-yellow: #FFC107;
+  --light-blue: #3B82F6;
+  --light-red: #FF3737;
+  --light-red2: #FF69B4;
+
+  --green: #2E865F;
+  --soil: #EEB27B;
 }
 
 
