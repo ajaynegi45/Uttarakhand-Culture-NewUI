@@ -34,7 +34,6 @@
 
 /* Why we Build it */
 
-
 .home-story-container{
     width: 95%;
     margin-top: 10rem;
@@ -82,9 +81,11 @@
     color: var(--black);
 }
 
+
+
 /* Explore Uttarakhand */
 .journey-container{
-    border-top: 1px solid var(--cloud-grey);
+    border-top: 1px solid var(--line-grey);
     padding-top: 1rem;
     margin-top: 3rem;
 }
@@ -324,8 +325,220 @@
 
 
 
+/* Notify Banner */
+
+.notifyBannerContainer {
+    position: relative;
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 100%;
+    height: auto;
+}
+.colorBlend{
+    position: absolute;
+    background: linear-gradient(to bottom, #ffffff, #E9F4F6);
+    background-size: cover;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    top: -10px;
+    /*border :1px solid red;*/
+}
+
+.notifyBannerImageContainer {
+    position: relative; /* This will act as the base for the absolute positioning of the text */
+}
+
+.notifyBannerImageContainer img {
+    max-width: 100%; /* Ensures the image covers the container */
+    height: auto;
+}
+
+.notifyBannerTextContainer {
+    position: absolute; /* Place the text container on top of the image */
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to the center */
+    color: white; /* Set text color to white for contrast */
+    z-index: 2; /* Ensure text is on top */
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.notifyBannerHeading {
+    font-size: 60px;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+}
+
+.notifyBannerMessage {
+    font-size: 18px;
+    color: var(--black);
+    font-weight: 450;
+    margin-bottom: 1rem;
+}
+
+.notifyBannerButtonContainer {
+    margin-top: 1.5rem;
+}
+
+.notifyBannerButtonText {
+    font-size: 14px;
+    color: white;
+    background-color: var(--black);
+    padding: 10px 12px;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-weight: normal;
+
+    box-shadow: 0 .7065919983928324px .7065919983928324px -.625px #00000026,0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,0 30px 30px -3.75px #0000000d;
+
+}
 
 
+
+.notifyBannerButtonText:hover {
+    background-color: var(--green);
+}
+
+.greenText{
+    color: var(--green);
+}
+
+.soilText{
+    color: var(--soil);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+
+    .notifyBannerTextContainer {
+        gap: 0;
+        top: 40% ;
+
+    }
+
+    .colorBlend{
+        height: 60px;
+        top: -10px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .notifyBannerHeading {
+        font-size: 45px !important;
+    }
+
+    .notifyBannerButtonText {
+        font-size: 12px;
+        padding: 8px 10px;
+        border-radius: 5px;
+    }
+
+
+    .notifyBannerMessage {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    .colorBlend{
+        height: 50px;
+        top: -30px;
+    }
+
+    .notifyBannerTextContainer {
+        gap: 0;
+        top: 38% !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .notifyBannerHeading {
+        font-size: 30px !important;
+    }
+
+    .notifyBannerMessage {
+        font-size: 14px;
+        margin-bottom: -0.5rem !important;
+    }
+
+    .notifyBannerTextContainer {
+        top: 35% !important; /* Center the text vertically */
+
+    }
+}
+
+@media (max-width: 600px) {
+    .notifyBannerImageContainer img {
+        scale: 1.2;
+    }
+}
+
+@media (max-width: 550px) {
+    .notifyBannerHeading {
+        font-size: 30px !important;
+    }
+
+    .notifyBannerMessage {
+        font-size: 13.5px;
+    }
+    .notifyBannerImageContainer img {
+        scale: 1.5;
+        height: 160px;
+    }
+
+    .colorBlend{
+        height: 50px;
+        top: -50px;
+    }
+
+    .notifyBannerButtonText {
+        font-size: 10px !important;
+        padding: 6px 8px !important;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .notifyBannerHeading {
+        font-size: 20px !important;
+    }
+
+    .notifyBannerMessage {
+        font-size: 13px;
+    }
+    .notifyBannerImageContainer img {
+        scale: 1.5;
+        height: 160px;
+    }
+
+    .colorBlend{
+        height: 50px;
+        top: -50px;
+    }
+
+
+
+}
 
 
 
