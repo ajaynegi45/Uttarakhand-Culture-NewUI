@@ -53,7 +53,7 @@ You can also support us by contributing content or ideas. Fill out our contact f
 
 You can be a valuable part of our mission to showcase the rich culture, history, and nature of Uttarakhand. We welcome contributions in both code and non-code forms.
 
-Please take a moment to read the [Contributing.md](https://github.com/ajaynegi45/Uttarakhand-Culture-Preservation-Project/blob/main/contributing.md) file before making any contributions to the project. Your understanding and adherence to these guidelines are greatly appreciated
+Please take a moment to read the [Contributing.md](https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/blob/main/contributing.md) file before making any contributions to the project. Your understanding and adherence to these guidelines are greatly appreciated
 
 <a href="https://ajaynegi.notion.site/Resources-f92bcb910d0544a1a8db50cc3ef79cfe" target="_blank"> Check Resources for Contribution</a>
 
