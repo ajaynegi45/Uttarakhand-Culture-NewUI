@@ -5,11 +5,10 @@
 
 Welcome to the Uttarakhand Culture Preservation Project! We're dedicated to saving and promoting the rich cultural heritage of Uttarakhand. Our platform digitally documents and celebrates the region's culture, history, and natural beauty, making it accessible to the younger generation and preserving it for future generations.
 
-<a href="https://uttarakhand-culture.vercel.app/" target="_blank">New UI link</a>
+<a href="https://uttarakhand-culture.vercel.app/" target="_blank">This UI Link</a> 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;
 <a href="https://ukculture.netlify.app/" target="_blank">Old UI link</a>
-<br/>
+<br/><br/>
 <a href="https://www.figma.com/design/o82aPjIzHairrkqhem3S1Q/New-UI?node-id=252-38&t=pnd9LeK6OUwhckbh-1" target="_blank">Figma Design</a>
-
 
 ### Problem
 A concerning trend is emerging in Uttarakhand, where the younger generation is gradually forgetting their cultural heritage and traditional rituals. This decline in cultural knowledge is evident across generations, with each successive generation possessing less knowledge than the previous one. For instance, the amount of cultural knowledge possessed by grandparents is significantly more than that of their children, and the cultural knowledge of today's youth is likely to be even less than that of their parents. If this trend continues, there is a risk that the cultural heritage of Uttarakhand may eventually disappear from the society. This loss would not only erase the region's rich cultural identity but also deprive future generations of their cultural roots and traditions.
@@ -55,6 +54,9 @@ You can also support us by contributing content or ideas. Fill out our contact f
 You can be a valuable part of our mission to showcase the rich culture, history, and nature of Uttarakhand. We welcome contributions in both code and non-code forms.
 
 Please take a moment to read the [Contributing.md](https://github.com/ajaynegi45/Uttarakhand-Culture-Preservation-Project/blob/main/contributing.md) file before making any contributions to the project. Your understanding and adherence to these guidelines are greatly appreciated
+
+<a href="https://ajaynegi.notion.site/Resources-f92bcb910d0544a1a8db50cc3ef79cfe" target="_blank"> Check Resources for Contribution</a>
+
 
 <br>
 
