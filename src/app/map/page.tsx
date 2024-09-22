@@ -1,89 +1,190 @@
-// 'use client'
 
+// "use client";
+//
+// import { useRef } from 'react';
+// import map from "/public/mapUk.svg";
+// import styles from "./page.module.css";
+// import Image from "next/image";
+//
+// const Map = () => {
+//     console.log("Map.tsx");
+//
+//     const zoomLevelRef = useRef<number>(1);
+//     const marginLeftLevelRef = useRef<number>(0);
+//     const marginTopLevelRef = useRef<number>(0);
+//     const mapImageRef = useRef<HTMLImageElement | null>(null);
+//     const mapBoxHeightRef = useRef<HTMLDivElement | null>(null);
+//     const increaseMapBoxHeightRef = useRef<number>(6930);
+//
+//     const handleZoomIn = () => {
+//         if (mapBoxHeightRef.current) {
+//             mapBoxHeightRef.current.style.aspectRatio = `10800/${increaseMapBoxHeightRef.current += 3000}`;
+//         }
+//         zoomLevelRef.current += 1;
+//         marginLeftLevelRef.current += 46.2;
+//         marginTopLevelRef.current += 29;
+//         updateMapStyle();
+//     };
+//
+//     const handleZoomOut = () => {
+//         if (increaseMapBoxHeightRef.current > 6930 && mapBoxHeightRef.current) {
+//             mapBoxHeightRef.current.style.aspectRatio = `10800/${increaseMapBoxHeightRef.current -= 3000}`;
+//         }
+//         if (zoomLevelRef.current > 1) {
+//             zoomLevelRef.current -= 1;
+//             marginLeftLevelRef.current -= 46.2;
+//             marginTopLevelRef.current -= 29;
+//             updateMapStyle();
+//         }
+//     };
+//
+//     const updateMapStyle = () => {
+//         if (mapImageRef.current) {
+//             mapImageRef.current.style.transform = `scale(${zoomLevelRef.current})`;
+//             mapImageRef.current.style.marginTop = `${marginTopLevelRef.current}vw`;
+//             mapImageRef.current.style.marginLeft = `${marginLeftLevelRef.current}vw`;
+//         }
+//     };
+//
+//     return (
+//         <div>
+//             <div className={styles["uttarakhand-map"]}>
+//                 <h1 className={styles["uttarakhand-map-heading"]}>Map of Uttarakhand</h1>
+//                 <p>Detailed map of Uttarakhand</p>
+//                 <div ref={mapBoxHeightRef} className={styles["uttarakhand-map-container"]}>
+//                     <Image className={styles["map-image"]} ref={mapImageRef} src={map} alt="Important Map of Uttarakhand" decoding="async" />
+//                 </div>
+//                 <div className={styles["zoom-button-container"]}>
+//                     <p onClick={handleZoomIn} className={styles["zoom-level-button"]}>+</p>
+//                     <p onClick={handleZoomOut} className={styles["zoom-level-button"]}>-</p>
+//                 </div>
+//                 <p>Zoom to view Map</p>
+//             </div>
+//         </div>
+//     );
+// };
+//
+// export default Map;
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** New Logic is here ***/
+
+
+
+"use client";
+
+import { useRef } from 'react';
+import map from "/public/mapUk.svg";
+import styles from "./page.module.css";
 import Image from "next/image";
-import MapImage from "/public/map-uttarakhand.svg";
-import styles from "@/app/map/page.module.css";
-// import {useRef} from "react";
 
+const Map = () => {
+    console.log("Map.tsx");
 
+    const zoomLevelRef = useRef<number>(1);
+    const marginLeftLevelRef = useRef<number>(0);
+    const marginTopLevelRef = useRef<number>(0);
+    const mapImageRef = useRef<HTMLImageElement | null>(null);
+    const mapBoxHeightRef = useRef<HTMLDivElement | null>(null);
+    const increaseMapBoxHeightRef = useRef<number>(6930);
+    const animationFrameIdRef = useRef<number | null>(null);
 
-export default function Map() {
+    const updateMapStyle = () => {
+        if (mapImageRef.current) {
+            mapImageRef.current.style.transform = `scale(${zoomLevelRef.current})`;
+            mapImageRef.current.style.marginTop = `${marginTopLevelRef.current}vw`;
+            mapImageRef.current.style.marginLeft = `${marginLeftLevelRef.current}vw`;
+        }
+    };
 
-    // const zoomLevelRef = useRef<number>(1);
-    // const marginLeftLevelRef = useRef<number>(0);
-    // const marginTopLevelRef = useRef<number>(0);
-    // const mapImageRef = useRef<HTMLImageElement>(null);
-    // const mapBoxHeightRef = useRef<HTMLDivElement>(null);
-    // const increaseMapBoxHeightRef = useRef<number>(6930);
-    //
-    // const handleZoomIn = () => {
-    //     if (mapImageRef.current && mapBoxHeightRef.current) {
-    //         mapBoxHeightRef.current.style.aspectRatio = `10800/${increaseMapBoxHeightRef.current += 3000}`;
-    //     }
-    //     zoomLevelRef.current += 1;
-    //     marginLeftLevelRef.current += 46.2;
-    //     marginTopLevelRef.current += 29;
-    //     updateMapStyle();
-    // };
-    //
-    // const handleZoomOut = () => {
-    //     if (increaseMapBoxHeightRef.current > 6930) {
-    //         if (mapBoxHeightRef.current) {
-    //             mapBoxHeightRef.current.style.aspectRatio = `10800/${increaseMapBoxHeightRef.current -= 3000}`;
-    //         }
-    //     }
-    //     if (zoomLevelRef.current > 1) {
-    //         zoomLevelRef.current -= 1;
-    //         marginLeftLevelRef.current -= 46.2;
-    //         marginTopLevelRef.current -= 29;
-    //         updateMapStyle();
-    //     }
-    // };
-    //
-    // const updateMapStyle = () => {
-    //     if (mapImageRef.current) {
-    //         mapImageRef.current.style.transform = `scale(${zoomLevelRef.current})`;
-    //         mapImageRef.current.style.marginTop = `${marginTopLevelRef.current}vw`;
-    //         mapImageRef.current.style.marginLeft = `${marginLeftLevelRef.current}vw`;
-    //     }
-    // };
+    const triggerUpdateMapStyle = () => {
+        if (animationFrameIdRef.current) {
+            cancelAnimationFrame(animationFrameIdRef.current);
+        }
+        animationFrameIdRef.current = requestAnimationFrame(() => {
+            updateMapStyle();
+        });
+    };
+
+    const handleZoomIn = () => {
+        if (mapBoxHeightRef.current) {
+            mapBoxHeightRef.current.style.aspectRatio = `10800/${increaseMapBoxHeightRef.current += 3000}`;
+        }
+        zoomLevelRef.current += 1;
+        marginLeftLevelRef.current += 46.2;
+        marginTopLevelRef.current += 29;
+        triggerUpdateMapStyle();
+    };
+
+    const handleZoomOut = () => {
+        if (increaseMapBoxHeightRef.current > 6930 && mapBoxHeightRef.current) {
+            mapBoxHeightRef.current.style.aspectRatio = `10800/${increaseMapBoxHeightRef.current -= 3000}`;
+        }
+        if (zoomLevelRef.current > 1) {
+            zoomLevelRef.current -= 1;
+            marginLeftLevelRef.current -= 46.2;
+            marginTopLevelRef.current -= 29;
+            triggerUpdateMapStyle();
+        }
+    };
+
     return (
-        <>
-            {/*<div  className={styles["map-container"]}>*/}
-            {/*    <Image src={MapImage} alt={"Map Image"} }/>x*/}
-            {/*</div>*/}
-
-            {/*<div className={styles["zoomButtonContainer"]}>*/}
-            {/*    <p className={styles["zoomLevelButton"]}>+</p>*/}
-            {/*    <p className={styles["zoomLevelButton"]}>-</p>*/}
-            {/*</div>*/}
-
-            <section className={styles["map-container"]}>
-
-                <div className={styles["map-image-container"]}>
-                    <Image src={MapImage} alt={"Map Image"}/>
+        <div>
+            <div className={styles["uttarakhand-map"]}>
+                <h1 className={styles["uttarakhand-map-heading"]}>Map of Uttarakhand</h1>
+                <p>Detailed map of Uttarakhand</p>
+                <div ref={mapBoxHeightRef} className={styles["uttarakhand-map-container"]}>
+                    <Image className={styles["map-image"]} ref={mapImageRef} src={map} alt="Important Map of Uttarakhand" decoding="async" />
                 </div>
-
-                <div className={styles["map-button-container"]} >
-                    <button>+</button>
-                    <button>-</button>
+                <div className={styles["zoom-button-container"]}>
+                    <p onClick={handleZoomIn} className={styles["zoom-level-button"]}>+</p>
+                    <p onClick={handleZoomOut} className={styles["zoom-level-button"]}>-</p>
                 </div>
-
-            </section>
-
-            <div className={styles["image"]}>
-                <h1>ekjbibeif</h1>
+                <p>Zoom to view Map</p>
             </div>
-
-
-            {/*<div ref={mapBoxHeightRef} className={styles["map-container"]}>*/}
-            {/*    <Image src={MapImage} alt={"Map Image"} ref={mapImageRef}/>x*/}
-            {/*</div>*/}
-
-            {/*<div className={styles["zoomButtonContainer"]}>*/}
-            {/*    <p onClick={handleZoomIn} className={styles["zoomLevelButton"]}>+</p>*/}
-            {/*    <p onClick={handleZoomOut} className={styles["zoomLevelButton"]}>-</p>*/}
-            {/*</div>*/}
-        </>
+        </div>
     );
-}
+};
+
+export default Map;
+

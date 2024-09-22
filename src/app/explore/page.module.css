@@ -1,3 +1,41 @@
+.pageHeader{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 5rem 0;
+    color: #ffff;
+}
+
+.pageHeader > h1 {
+    font-weight: bold;
+    color: var(--green);
+}
+.pageHeader > img {
+    position: relative;
+    filter: drop-shadow(0 0 0.40rem #A0A5AC);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: -10vh;
+}
+
+@media (max-width: 700px) {
+    .pageHeader > h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .pageHeader > h1 {
+        font-size: 1.9rem;
+    }
+    /*.pageHeader > img {*/
+    /*    margin-top: -15vh;*/
+    /*}*/
+}
+
+
 .text-container{
     display: flex;
     flex-direction: column;

@@ -9,6 +9,7 @@ type CardProps = {
     subTitle: string;
     description: string;
     image: string;
+    readMoreLink: string
 }
 
 export default function Card(props: CardProps) {
@@ -20,7 +21,7 @@ export default function Card(props: CardProps) {
                 <p className={styles["description"]}>{props.description}</p>
                 <div className={styles["link-container"]}>
                     <div className={styles["link-container1"]} ><Link href={"#"}>READ MORE</Link></div>
-                    <div className={styles["link-container2"]}><Link href={"#"}>VIEW LOCATION</Link></div>
+                    <div className={styles["link-container2"]}><Link href={props.readMoreLink ? props.readMoreLink : '#'}>VIEW LOCATION</Link></div>
                 </div>
             </div>
             <div className={styles["image-container"]} >
