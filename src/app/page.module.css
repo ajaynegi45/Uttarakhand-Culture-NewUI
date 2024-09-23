@@ -1,42 +1,163 @@
-.hero-container{
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 4rem 0 4rem;
-
-}
-
-.text-container{
+.headerContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    justify-content: center;
+    text-align: center;
 }
-.text-container > p {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 1rem;
-}
-.img-container{
-    overflow: hidden;
+.headerImageContainer{
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-
-.img-container > img{
+.headerLeftImageContainer > img{
+    width: auto;
+    transform: rotateY(180deg);
     filter: drop-shadow(0 0 0.40rem #A0A5AC);
-
 }
+.headerCenterImageContainer > img{
+    width: auto;
+    filter: drop-shadow(0 0 0.40rem #A0A5AC);
+}
+.headerRightImageContainer > img{
+    width: auto;
+    filter: drop-shadow(0 0 0.40rem #A0A5AC);
+}
+
+.headerTextContainer{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.headerTextContainer > h1 {
+    font-family: "-apple-system","system-ui";
+    font-size: 5vw;
+    font-weight: bolder;
+}
+
+.headerTextContainer > p {
+    font-size: 16px;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+.headerTextContainer > .headerbuttonLink {
+    font-size: 16px;
+    color: white;
+    margin-top: 3rem;
+    background-color: var(--black);
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 .7065919983928324px .7065919983928324px -.625px #00000026,0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,0 30px 30px -3.75px #0000000d;
+}
+
+.headerTextContainer > .headerbuttonLink:hover {
+    background-color: var(--slate-black);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+@media (min-width: 1440px) {
+    .headerTextContainer > h1 {
+        font-size: 60px;
+    }
+}
+@media (max-width: 950px) {
+    .headerLeftImageContainer > img{
+        height: 400px;
+    }
+    .headerCenterImageContainer > img{
+        height: 250px;
+    }
+    .headerRightImageContainer > img{
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    .headerLeftImageContainer > img{
+        height: 300px;
+    }
+    .headerCenterImageContainer > img{
+        height: 150px;
+    }
+    .headerRightImageContainer > img{
+        height: 300px;
+    }
+    .headerTextContainer > h1 {
+        font-size: 4.8vw;
+    }
+    .headerTextContainer > p {
+        font-size: 14px;
+    }
+    .headerTextContainer > .headerbuttonLink {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
+@media (max-width: 500px) {
+    .headerLeftImageContainer > img{
+        height: 210px;
+    }
+    .headerCenterImageContainer > img{
+        height: 135px;
+    }
+    .headerRightImageContainer > img{
+        height: 210px;
+    }
+    .headerTextContainer > h1 {
+        font-size: 4.47vw;
+    }
+    .headerTextContainer > p {
+        font-size: 12px;
+        margin-top: 1rem;
+    }
+    .headerTextContainer > .headerbuttonLink {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 374px) {
+    .headerLeftImageContainer > img{
+        height: 170px;
+    }
+    .headerCenterImageContainer > img{
+        height: 120px;
+    }
+    .headerRightImageContainer > img{
+        height: 170px;
+    }
+    .headerTextContainer > h1 {
+        font-size: 4vw;
+    }
+    .headerTextContainer > p {
+        font-size: 10px;
+        margin-top: 1rem;
+    }
+    .headerTextContainer > .headerbuttonLink {
+        font-size: 11px;
+        margin-top: 2rem;
+        padding: 10px 14px;
+    }
+}
+
+
+
+
 
 
 /* Why we Build it */
 
 .home-story-container{
     width: 95%;
-    margin-top: 10rem;
+    margin-top: 2rem;
     /*border-top: 1px solid var(--cloud-grey)*/
 }
 
@@ -410,6 +531,7 @@
 
 .notifyBannerButtonText:hover {
     background-color: var(--green);
+    box-shadow: none;
 }
 
 .greenText{
