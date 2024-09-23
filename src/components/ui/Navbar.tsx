@@ -6,9 +6,7 @@ export default function Navbar() {
             <div className={styles["navbar-container"]}>
                 <nav className={styles["navbar"]}>
                     <Link href="/" className={styles["heading"]}>
-                        <h3 className={styles["title"]}>DAGADI</h3>
-
-                        {/*<h3 className={styles["title"]}>UTTARAKHAND CULTURE</h3>*/}
+                        <h3 className={styles["title"]}>UTTARAKHAND CULTURE</h3>
                     </Link>
                     <Link href="/" className={styles.link}>LOGIN</Link>
                 </nav>
