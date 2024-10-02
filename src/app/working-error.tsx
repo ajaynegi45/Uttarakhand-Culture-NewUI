@@ -26,14 +26,14 @@ const Custom404 = () => {
                 marginBottom: '20px',
                 textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)',
             }}>
-                404
+                Sorry!
             </h1>
             <h2 style={{
                 fontSize: '36px',
                 marginBottom: '10px',
                 color: '#333333',
             }}>
-                Page Not Found
+                Page Under Construction
             </h2>
             <p style={{
                 fontSize: '18px',
@@ -42,7 +42,7 @@ const Custom404 = () => {
                 lineHeight: '1.5',
                 color: '#555555',
             }}>
-                Sorry, the page you are looking for does not exist. Please check the URL or return to the home page.
+                Sorry, this page is currently under construction. We’re working hard to get it ready for you.
             </p>
             <Link href="/" style={{
                 padding: '10px 20px',
