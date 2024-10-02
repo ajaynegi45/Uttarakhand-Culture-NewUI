@@ -49,42 +49,35 @@ If you find any errors or inaccuracies, please let us know through our contact f
 You can also support us by contributing content or ideas. Fill out our contact form, and we'll connect with you soon. Your feedback will help us update and enhance our information.
 
 
-## **How to Contribute to this Project** 👨🏻‍💻
+# **How to Contribute to this Project** 👨🏻‍💻
 
 You can be a valuable part of our mission to showcase the rich culture, history, and nature of Uttarakhand. We welcome contributions in both code and non-code forms.
 
-Please take a moment to read the [Contributing.md](https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/blob/main/contributing.md) file before making any contributions to the project. Your understanding and adherence to these guidelines are greatly appreciated
-
-<a href="https://ajaynegi.notion.site/Resources-f92bcb910d0544a1a8db50cc3ef79cfe" target="_blank"> Check Resources for Contribution</a>
-
+Before making any contributions, please read the [Readme.md](https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/blob/main/README.md) file carefully to better understand the project's goals and purpose. This will give you clarity on our mission. Also, make sure to review the [Contributing.md](https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/blob/main/contributing.md) file, which contains important guidelines to make the contribution process smoother, especially for newcomers.
 
 <br>
 
-## Contact
+# Contact
 If you have any questions or would like to connect, please don't hesitate to reach out. I'd be more than happy to chat and learn from your experiences too.
 <br><br>
-**Contact Form:** [contact me](https://ukculture.netlify.app/contact)
 
 <!-- LinkedIn -->
 <a href="https://linkedin.com/in/ajaynegi45/" >
-    
 <img align="center" src="https://img.icons8.com/color/48/linkedin.png" alt="ajaynegi45/" width="40" height="40"  t/>
 </a>
-
+<!-- Twitter -->
 <a href="https://x.com/ajaynegi45" >
-    
 <img align="center" src="https://img.icons8.com/color/48/twitter.png" alt="ajaynegi45/" width="40" height="40"  t/>
-
 </a>
 
 <br>
 
-## Acknowledgements
+# Acknowledgements
 
 This project wouldn't be possible without the contributions of our amazing community. Thank you for being part of our journey! 🙌
 
 <a href = "https://github.com/Uttarakhand-Culture/Frontend/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=Uttarakhand-Culture/Frontend"/>
+  <img src = "https://contrib.rocks/image?repo=ajaynegi45/Uttarakhand-Culture-NewUI"/>
 </a>
 
 <br/>
@@ -113,5 +106,4 @@ We appreciate your interest in preserving Uttarakhandi culture. Together, we can
 
 This project is licensed under the [MIT License](LICENSE).
 
-Made with ❤️ by Ajay Negi
-© 2024 Uttarakhand Culture
+Made with ❤️ by Uttarakhand Culture Community
