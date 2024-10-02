@@ -83,7 +83,7 @@ export default function Home() {
                     <div className={styles["built-text-container"]}>
                         <p className={styles["why-built-it-title"]}>WHY WE BUILD IT</p>
                         <p className={styles["built-description-container"]}>
-                            A concerning trend is emerging in
+                        A concerning trend is emerging in
                             Uttarakhand, where the younger generation is gradually
                             forgetting their cultural heritage and traditional rituals. This decline in cultural
                             knowledge is evident across generations, with each successive generation possessing less
@@ -98,18 +98,18 @@ export default function Home() {
                 </div>
 
                 <div className={styles["journey-container"]}>
-                    <p>Explore, Learn and Discover the Beauty of Uttarakhand&apos;s Culture</p>
+                    <p>Explore, Learn and Discover the Beauty of Uttarakhand's Culture</p>
                     <div>
                         <div className={styles["journey-left-container"]}>
                             <h3>EXPLORE UTTARAKAND</h3>
                             <p className={styles["built-description-container"]}>
-                                To address this problem, we have
+                            To address this problem, we have
                                 come up with a solution to digitize this cultural
                                 knowledge. Since today&apos;s generation is more comfortable with technology, we aim to
                                 provide a platform where they can learn about their cultural heritage using their
                                 devices, from anywhere in the world. By doing so, we hope to make cultural knowledge
                                 more accessible and engaging for the younger generation, and thus help preserve the rich
-                                cultural heritage of Uttarakhand.
+                                cultural heritage of Uttarakhand
                             </p>
                             <Link href={"/explore"}>Start Your Journey</Link>
                         </div>
