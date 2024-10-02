@@ -4,7 +4,11 @@
 
 Welcome to the **Uttarakhand Culture Project**! This platform is dedicated to preserving and celebrating the rich cultural heritage of Uttarakhand. We aim to address the growing concern of the younger generation losing touch with their cultural roots by safeguarding the traditional rituals, deities, and unique practices of Uttarakhand. Together, we can ensure this cultural treasure is passed down to future generations. 🌿
 
-Whether you're a coder or a cultural enthusiast, **we need your help**! Your contributions—big or small—are invaluable in building this platform. Let’s work together to bridge the gap and keep our heritage alive!
+Whether you're a coder or a cultural enthusiast, **we need your help**! Your contributions—big or small—are invaluable in building this platform. Let’s work together to bridge the gap and keep our heritage alive! 🌱✨
+
+If you have any questions, doubts, or suggestions about contributing (or anything else), feel free to ping me on [LinkedIn](https://www.linkedin.com/in/ajaynegi45/) or [Twitter](https://x.com/ajaynegi45) anytime. I'll do my best to reply as quickly as possible. 
+
+We're all about **quality over quantity** here, so even your smallest, meaningful contribution will make a bigger impact than something large but less thoughtful. Let's create something special together! 🙌
 
 ## How You Can Contribute 👀
 
@@ -35,7 +39,9 @@ You don’t need to be a developer to contribute! Here's how you can help:
   Your creativity is welcome! Share design suggestions to improve the website’s aesthetic.
 
 - **Gather Cultural Content**  
-  Choose an aspect of Uttarakhand’s culture—whether it’s history, traditions, or natural beauty—and gather authentic information. Be sure to cite your sources. If the information is personal or local knowledge, please mention that too. 📝
+  Choose an aspect of Uttarakhand’s culture—whether it’s history, traditions, or natural beauty—and gather authentic information. Be sure to cite your sources. If the information is personal or local knowledge, please mention that too. 📝  
+  <a href="https://ajaynegi.notion.site/Resources-f92bcb910d0544a1a8db50cc3ef79cfe" target="_blank">Explore this resource also for gathering cultural information</a>
+
 
 - **Suggest a Name for the Website**  
   We're still on the hunt for the perfect name! We want something meaningful in the local language that reflects the website's mission. Got an idea? Share it via opening an [issue](https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/issues/new?assignees=&labels=status%3A+awaiting+triage&projects=&template=feature_request.yml&title=%5BFEATURE%5D+%3Cbrief+description%3E) or **[Email](mailto:codiescoder@gmail.com)** with the subject line “Website Name Suggestion.” Your creativity could name this entire project!
@@ -44,17 +50,24 @@ You don’t need to be a developer to contribute! Here's how you can help:
 
 <br/>
 
-## Getting Started ✍🏻
+# Getting Started ✍🏻
 
 Even if you’re new to open source, contributing is easy! Follow the steps below to join us:
 
-### Prerequisites
+## Prerequisites 🌐
 
-Ensure you have the following installed on your machine:
+Before diving into the project, make sure you’ve got the following tools ready to go on your machine:
+
 - [npm](https://www.npmjs.com/) (v6 or higher)
 - [Node.js](https://nodejs.org/) (v18.17.1 or higher)
 
-### How to Contribute:
+And hey, while you’re at it, don’t forget to:
+
+- Follow **Uttarakhand Culture** on [LinkedIn](https://www.linkedin.com/company/uttarakhandculture) to stay updated with the latest news, events, and cultural insights.
+- ⭐ Star the [repository](https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI) and show your support for preserving this beautiful heritage!
+
+  
+## How to Contribute:
 
 #### Step 1. Fork the Repository 🍴
 
