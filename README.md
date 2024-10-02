@@ -67,7 +67,12 @@ If you have any questions or would like to connect, please don't hesitate to rea
 
 <!-- LinkedIn -->
 <a href="https://linkedin.com/in/ajaynegi45/" target="blank" rel="noopener noreferrer" >
+    
 <img align="center" src="https://img.icons8.com/color/48/linkedin.png" alt="ajaynegi45/" width="40" height="40"  t/></a>
+
+<a href="https://x.com/ajaynegi45" target="blank" rel="noopener noreferrer" >
+    
+<img align="center" src="https://img.icons8.com/color/48/twitter.png" alt="ajaynegi45/" width="40" height="40"  t/></a>
 
 <br>
 
