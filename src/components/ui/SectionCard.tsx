@@ -3,7 +3,6 @@ import styles from "@/components/ui/sectionCard.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import GheeSankranti from "/public/Ghee_Sankranti.jpeg";
 
 type SectionCardProps = {
   cardTitle: string;
