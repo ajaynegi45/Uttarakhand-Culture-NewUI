@@ -102,3 +102,23 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
+/* Add this to your CSS file */
+@media (max-width: 768px) {
+  .map-container {
+    width: 100%; /* Full width on mobile */
+    max-height: 40vh; /* Full height on mobile */
+  }
+
+  /* Optional: Adjust popup content width */
+  .leaflet-popup-content {
+    width: auto; /* Ensure popups fit well on small screens */
+    max-width: 90%; /* Limit popup width */
+  }
+}
+
+/* General Styles */
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
