@@ -8,7 +8,7 @@ export default function Explore() {
     return (
         <>
             <div className={styles.pageHeader}>
-                <h1> Explore Uttarakhand</h1>
+                <h1> Explore Uttarakhand </h1>
                 <Image src={Mountain} alt={"Mountain Image"}/>
             </div>
 

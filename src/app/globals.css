@@ -102,3 +102,20 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
+.mapSection {
+  padding: 2rem 0;
+  width: 100px;
+}
+
+.mapSection h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
