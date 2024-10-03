@@ -3,14 +3,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { email } = req.body; // Only expect the email
+    const { email } = req.body; 
 
     if (!email) {
       return res.status(400).json({ error: 'Missing email' });
     }
 
     try {
-      // Configure Nodemailer transport (SMTP settings)
       const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com', 
         port: 587,
@@ -21,7 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       });
 
-      // Email data
       const mailOptions = {
         from: process.env.SMTP_USER, 
         to: email, 
@@ -30,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         html: '<p>Thank you for subscribing to our newsletter! Stay tuned for updates.</p>',
       };
 
-      // Send email
+   
       await transporter.sendMail(mailOptions);
       res.status(200).json({ message: 'Email sent successfully' });
 

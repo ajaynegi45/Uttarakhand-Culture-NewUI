@@ -20,7 +20,7 @@ export default function Footer() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }), // Only send the email
+        body: JSON.stringify({ email }), 
       });
 
       const data = await res.json();
