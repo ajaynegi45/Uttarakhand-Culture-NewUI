@@ -1,9 +1,12 @@
 "use client";
 import 'leaflet/dist/leaflet.css';
+import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+
+
 
 import uttarakhandBoundary from '../components/uttarakhand.json'; // existing import
 
