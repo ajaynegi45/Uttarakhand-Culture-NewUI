@@ -42,7 +42,8 @@ body {
   background-color: rgb(255, 255, 255);
   /*font-family: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial",sans-serif;*/
   line-height: 1;
-  text-rendering: optimizeSpeed;
+  /*text-rendering: optimizeSpeed;*/
+  text-rendering: optimizeLegibility;
   display: flex;
   flex-direction: column;
   justify-content: center;

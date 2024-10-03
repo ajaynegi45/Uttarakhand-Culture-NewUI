@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Custom404 = () => {
+const WorkingError = () => {
     return (
         <div style={{
             display: 'flex',
@@ -66,4 +66,4 @@ const Custom404 = () => {
     );
 };
 
-export default Custom404;
+export default WorkingError;

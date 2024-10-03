@@ -16,31 +16,35 @@ const customFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Uttarakhand Culture",
-  description:
-    "Our aim is to ensure that this invaluable heritage is passed down to future generations.",
-  keywords:
-    "Uttarakhand, culture, heritage, festivals, traditions, digital preservation",
-  openGraph: {
-    title: "Uttarakhand Culture",
-    description: "Explore the rich cultural heritage of Uttarakhand.",
-    url: "https://uttarakhand-culture.vercel.app",
-    siteName: "Uttarakhand Culture",
-    images: [
-      {
-        url: "https://uttarakhand-culture.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FheroMapImage.fc8fad10.webp&w=828&q=75",
-        width: 800,
-        height: 600,
-        alt: "Cultural Heritage of Uttarakhand",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+    title: "Uttarakhand Culture - Explore Devbhoomi's Heritage, Traditions, and Natural Beauty",
+    description: "Explore the rich cultural heritage of Uttarakhand, Devbhoomi's vibrant festivals, traditions, folklore, and breathtaking landscapes. Join our mission to preserve and celebrate the heritage of Manaskhand and Kedarkhand for future generations.",
+    keywords: "Uttarakhand, culture, Devbhoomi, Uttarakhand culture, Pahadi culture, Uttarakhand heritage, Manaskhand, Kedarkhand, traditions, festivals, folk music, folk dances, digital preservation, Pahad, Pahadi, Pahadi traditions, Garhwali, Kumaoni, Himalayan culture, Uttarakhand tourism, cultural preservation, spiritual Uttarakhand, pilgrimage, Uttarakhand cuisine, Uttarakhand art, Uttarakhand history, Nanda Devi, Chhota Kailash, Ganga, Yamuna, Himalayan rivers, Uttarakhand flora fauna, mountain culture",
+    openGraph: {
+        title: "Uttarakhand Culture - Explore Devbhoomi's Heritage, Traditions, and Natural Beauty",
+        description: "Discover Uttarakhand's cultural heritage, festivals, traditions, folklore, and stunning natural beauty. Join our mission to digitally preserve and celebrate the vibrant legacy of Devbhoomi for future generations.",
+        url: "https://uttarakhand-culture.vercel.app",
+        siteName: "Uttarakhand Culture",
+        images: [
+            {
+                url: "/SEOIMAGE.webp",
+                alt: "Cultural Heritage of Uttarakhand - Traditions, Festivals, and Natural Beauty",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter:{
+        card: "summary_large_image",
+        site: "https://uttarakhand-culture.vercel.app",
+        creator: "@UttarakhandCulture",
+        title: "Uttarakhand Culture - Explore Devbhoomi's Heritage, Traditions, and Natural Beauty",
+        description:"Discover Uttarakhand's cultural legacy, rich history, festivals, and natural beauty. Help us preserve the traditions of Devbhoomi for future generations.",
+        images: "/SEOIMAGE.webp"
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default async function RootLayout({

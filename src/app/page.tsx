@@ -11,6 +11,7 @@ import Nanda_Sunanda from "/public/Nanda-Sunanda.webp";
 import Notify_Banner from "/public/notify-early-banner.jpg"
 import PahadiWomen from "/public/bhotiaWoman.webp"
 import Screen from "@/components/Screen";
+import Festivals from "@/components/Festivals";
 
 export default function Home() {
 
@@ -144,6 +145,8 @@ export default function Home() {
                 </div>
 
             </section>
+
+            {/*<Festivals />*/}
 
 
         </>
