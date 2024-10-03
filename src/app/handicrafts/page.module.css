@@ -1,0 +1,107 @@
+ .card-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-header {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+  }
+  
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .text-container {
+    flex: 1;
+  }
+  
+  .text-container h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-container p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .img-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .img-container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-crafts {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .featured-crafts h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .craft-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .craft-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+  
+  .craft-item img {
+    margin-bottom: 0.5rem;
+  }
+  
+  .craft-item span {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* .card-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  } */
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .img-container {
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  
+    .craft-icons {
+      justify-content: center;
+    }
+  }
