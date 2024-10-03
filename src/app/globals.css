@@ -122,3 +122,6 @@ a {
   justify-content: center;
   align-items: center;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
