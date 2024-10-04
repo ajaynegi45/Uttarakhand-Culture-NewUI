@@ -1,0 +1,108 @@
+.faq-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: rgb(77, 76, 76);
+  
+}
+
+.faq-heading {
+  text-align: center;
+  margin: 15vh 0px ;
+  font-size: 90px;
+  width: 100%;
+}
+
+.faq-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd; /* Add bottom border for rows */
+}
+
+.faq-question {
+  background-color: #e4e4e4;
+  height: 80px;
+  color: rgb(75, 75, 75); /* Changed to white for better contrast */
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 27px;
+  font-weight: 700;
+   margin-top: 50px;
+  border-radius: 5px;
+}
+
+.faq-answer {
+  padding: 25px;
+  background-color: #f1f1f1;
+  color: rgb(75, 75, 75);
+  max-height: 0; /* Start hidden */
+  overflow: hidden; /* Prevent overflow */
+  transition: max-height 1s ease-in-out; /* Smooth transition */
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  
+  line-height: 1.5;
+
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Adjust as needed */
+}
+
+
+
+.toggle-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  
+  vertical-align: middle; /* Align icon vertically */
+}
+
+
+.contact-section {
+  text-align: center;
+  margin: 15vh;
+ 
+}
+
+.contact-image {
+  max-width: 20%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: for rounded corners */
+  opacity: 0.7;
+}
+
+.contact-text{
+  margin: 50px;
+  font-size: 40px;
+}
+
+
+.contact-button {
+  width: 200px;
+  height: 60px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 25px;
+  color: #ffffff; /* Change as per your theme */
+  background-color: #2c2c2c; /* Change as per your theme */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #005bb5; /* Darker shade for hover effect */
+}

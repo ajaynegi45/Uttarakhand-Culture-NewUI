@@ -12,6 +12,7 @@ import Notify_Banner from "/public/notify-early-banner.jpg"
 import PahadiWomen from "/public/bhotiaWoman.webp"
 import Screen from "@/components/Screen";
 import Festivals from "@/components/Festivals";
+import FAQ from "@/components/ui/FAQ";
 
 export default function Home() {
 
@@ -145,6 +146,11 @@ export default function Home() {
                 </div>
 
             </section>
+
+            
+
+            <FAQ />
+            
 
             {/*<Festivals />*/}
 
