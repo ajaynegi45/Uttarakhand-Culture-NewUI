@@ -94,7 +94,8 @@
   height: 60px;
   margin-top: 20px;
   padding: 10px 20px;
-  font-size: 25px;
+  font-size: 21px;
+  letter-spacing: 2px;
   color: #ffffff; /* Change as per your theme */
   background-color: #2c2c2c; /* Change as per your theme */
   border: none;

@@ -45,7 +45,7 @@ const FAQ: React.FC = () => {
 
   return (
     <div className={styles["faq-container"]}>
-      <h2 className={styles["faq-heading"]}>We're here to answer all your questions</h2>
+      <h2 className={styles["faq-heading"]}>We're here to answer all your questions.</h2>
       <div className={styles["faq-list"]}>
         {faqs.map((faq, index) => (
           <div key={index} className={`${styles["faq-item"]} ${activeIndex === index ? styles.active : ''}`}>
