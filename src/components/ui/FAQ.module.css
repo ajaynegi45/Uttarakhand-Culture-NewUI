@@ -32,12 +32,12 @@
   background-color: #e4e4e4;
   height: auto;
   color: rgb(75, 75, 75);
-  padding: 35px;
+  padding: 25px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem; /* Responsive font size */
+  font-size: 1.4rem; /* Responsive font size */
   font-weight: 700;
   margin-top: 50px;
   border-radius: 5px;
@@ -45,7 +45,7 @@
 
 .faq-answer {
   width: 40vw;
-  padding: 25px;
+  padding: 20px;
   background-color: #f1f1f1;
   color: rgb(75, 75, 75);
   max-height: 0; /* Start hidden */
@@ -53,7 +53,7 @@
   transition: max-height 1s ease-in-out; /* Smooth transition */
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem; /* Responsive font size */
+  font-size: 1.3rem; /* Responsive font size */
   font-weight: 700;
   line-height: 1.5;
 }
@@ -93,11 +93,11 @@
 }
 
 .contact-button {
-  width: 200px;
+  width: 250px;
   height: auto;
   margin-top: 20px;
-  padding: 15px 20px;
-  font-size: 10px; /* Responsive font size */
+  padding: 20px;
+  font-size: 30px; /* Responsive font size */
   letter-spacing: 2px;
   color: #ffffff; /* Change as per your theme */
   background-color: #2c2c2c; /* Change as per your theme */
