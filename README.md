@@ -98,8 +98,5 @@ We appreciate your interest in preserving Uttarakhandi culture. Together, we can
 
 <br/>
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 Made with ❤️ by Uttarakhand Culture Community
