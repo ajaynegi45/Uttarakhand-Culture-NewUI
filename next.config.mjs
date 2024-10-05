@@ -1,33 +1,40 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: "export"
-    reactStrictMode: true,
-
-    // images:{
-    //     // You can use any one
-    //     domain:process.env.NEXT_PUBLIC_DOMAIN, // Here you can give specific image
-    //
-    //     // Here you can give allow all image with that url
-    //     remotePatterns: [{
-    //         protocol: "https",
-    //         hostname: "website url",
-    //     }, {
-    //         protocol: "https",
-    //       hostname: "*.google.com",
-    //     }]
-    // }
-
-    // webpack: (config, { isServer }) => {
-    //     // Handle TypeScript files
-    //     config.module.rules.push({
-    //         test: /\.tsx?$/,
-    //         use: 'ts-loader',
-    //         exclude: /node_modules/,
-    //     });
-    //
-    //     return config;
-    // }
-
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "uttarakhandhaat.com",
+        pathname: "/wp-content/uploads/**",
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.istockphoto.com',
+        pathname: '/id/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.dsource.in',
+        pathname: '/sites/default/files/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.pinimg.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.shutterstock.com',
+        pathname: '/image-photo/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'c1.wallpaperflare.com',
+        pathname: '/preview/992/229/146/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
