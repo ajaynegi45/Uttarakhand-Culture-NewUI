@@ -67,7 +67,7 @@ If you have any questions or would like to connect, please don't hesitate to rea
 </a>
 <!-- Twitter -->
 <a href="https://x.com/ajaynegi45" >
-<img align="center" src="https://img.icons8.com/color/48/twitter.png" alt="ajaynegi45/" width="40" height="40"  t/>
+<img align="center" src="/public/icons8-twitter-60.png" alt="ajaynegi45/" width="30" height="30"  t/>
 </a>
 
 <br>
