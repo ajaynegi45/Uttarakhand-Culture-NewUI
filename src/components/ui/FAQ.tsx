@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import styles from './FAQ.module.css';
 import Image from 'next/image';
-import contactImage from '/public/question.png'; 
+import contactImage from '/public/chat.svg'; 
 import plusIcon from '/public/add.png'; // Update the path to your icon
 import minusIcon from '/public/minus.png'; // Update the path to your icon
 
