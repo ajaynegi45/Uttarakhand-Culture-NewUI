@@ -4,16 +4,14 @@ import { otps } from "@/lib/schema";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
-import { Resend } from 'resend';
 import otpEmailTemplate from "@/lib/templates/otp-template";
 import { auth } from "@/auth";
+import mailer from "@/lib/mailer";
 
 
 
-const resendAPI = process.env.RESEND_API_KEY;
-// `onboarding@resend.dev` email is for development only
-const resendEmail = process.env.RESENDL_EMAIL || "onboarding@resend.dev";
-const resend = new Resend(resendAPI);
+// `onboarding@uk-culture.org` email is for development only
+const senderEmail = process.env.SENDER_EMAIL || "onboarding@uk-culture.org";
 
 
 export async function POST(req: NextRequest) {
@@ -60,16 +58,14 @@ export async function POST(req: NextRequest) {
 
 
 
-    const res = await resend.emails.send({
-      from: `Uttarakhand Culture <${resendEmail}>`,
+
+    await mailer.sendMail({
+      from: `Uttarakhand Culture <${senderEmail}>`,
       to: [userWithEmail.email!],
       subject: 'Verify you email with OTP',
       html: otpEmailTemplate(userWithEmail.name!, otp),
-    });
+    })
 
-    if (res.error) {
-      console.log(res.error)
-    }
 
 
 

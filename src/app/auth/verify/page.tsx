@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import React, { useEffect, useState } from "react";
 import OtpInput from "react-otp-input";
-import toast from "react-hot-toast";
+import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 const OtpPage: React.FC = () => {
   const [otp, setOtp] = useState<string>("");

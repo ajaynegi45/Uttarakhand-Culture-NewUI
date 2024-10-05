@@ -22,7 +22,6 @@ export default auth((req) => {
   headers.set("x-current-path", req.nextUrl.pathname);
 
 
-  console.log(req.auth)
 
   if (isApiAuthRoute) {
     return;
