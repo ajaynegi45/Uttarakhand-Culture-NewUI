@@ -42,13 +42,17 @@ export default function Auth() {
                   if (res.status !== 200) {
                     reject(new Error(ms.error));
                   } else {
-                    resolve(
-                      signIn("credentials", {
-                        loginIdentifier: data.email,
-                        password: data.password,
-                        redirect: false,
+                    signIn("credentials", {
+                      loginIdentifier: data.email,
+                      password: data.password,
+                      redirect: false,
+                    })
+                      .then((m) => {
+                        if (m?.error) throw Error();
+                        router.push("/auth/verify");
+                        resolve("");
                       })
-                    );
+                      .catch(reject);
                   }
                 })
                 .catch(reject);
@@ -59,11 +63,6 @@ export default function Auth() {
         toast.promise(handler, {
           loading: "Loading...",
           success: () => {
-            if (callback) {
-              router.push(callback);
-            } else {
-              router.push("/");
-            }
             return "User registered, Verify Email.";
           },
           error: (err) => `${err}`,
@@ -82,13 +81,20 @@ export default function Auth() {
 
           signIn("credentials", {
             ...data,
-            redirect: false,
+            redirect: true,
+            redirectTo: callback || "/",
           })
             .then((res) => {
               if (res?.error) {
-                reject(new Error("Invalid credentials"));
+                throw Error("Invalid credentials");
               } else {
-                resolve("");
+                if (callback) {
+                  router.push(callback);
+                  resolve("");
+                } else {
+                  router.push("/");
+                  resolve("");
+                }
               }
             })
             .catch(reject);
@@ -97,11 +103,6 @@ export default function Auth() {
         toast.promise(handler, {
           loading: "Loading...",
           success: () => {
-            if (callback) {
-              router.push(callback);
-            } else {
-              router.push("/");
-            }
             return "Login success.";
           },
           error: (err) => `${err}`,

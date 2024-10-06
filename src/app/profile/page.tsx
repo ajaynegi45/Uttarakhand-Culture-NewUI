@@ -2,6 +2,7 @@
 import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import styles from "./profile.module.css";
+import Link from "next/link";
 
 export default function Profile() {
   const { data: session, status } = useSession();
@@ -15,11 +16,6 @@ export default function Profile() {
     router.push("/auth"); // Redirect to login if unauthenticated
     return null;
   }
-
-  const handleLogout = async () => {
-    await signOut({ redirect: false });
-    router.push("/");
-  };
 
   return (
     <div className={styles["profile-container"]}>
@@ -37,9 +33,9 @@ export default function Profile() {
           <strong>Email:</strong> {session?.user?.email || "N/A"}
         </p>
       </div>
-      <button onClick={handleLogout} className={styles["logout-button"]}>
+      <Link href={"/auth/logout"} className={styles["logout-button"]}>
         Logout
-      </button>
+      </Link>
     </div>
   );
 }

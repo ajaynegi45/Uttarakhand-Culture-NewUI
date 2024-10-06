@@ -29,7 +29,9 @@ export default auth((req) => {
 
   if (isAuthRoute) {
     if (isLoggedIn) {
-      return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl));
+      const callbackUrl = nextUrl.searchParams.get("CallbackUrl") || DEFAULT_LOGIN_REDIRECT;
+      console.log("CALLBACK:", callbackUrl)
+      return Response.redirect(new URL(callbackUrl, nextUrl));
     }
     return NextResponse.next({ headers });
   }

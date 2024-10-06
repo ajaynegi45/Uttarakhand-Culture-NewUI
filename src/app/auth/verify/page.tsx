@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import React, { useEffect, useState } from "react";
 import OtpInput from "react-otp-input";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 const OtpPage: React.FC = () => {
   const [otp, setOtp] = useState<string>("");
   const [isResending, setIsResending] = useState<boolean>(false);
@@ -13,6 +13,9 @@ const OtpPage: React.FC = () => {
   const handleChange = (otp: string) => {
     setOtp(otp);
   };
+
+  const searchParams = useSearchParams();
+  const callback = searchParams.get("callbackUrl");
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
@@ -32,7 +35,12 @@ const OtpPage: React.FC = () => {
       if (response.status != 200) throw new Error(data.error);
 
       toast.success("Email Verified!");
-      router.push("/explore");
+
+      if (callback) {
+        router.push(`${callback}`);
+      } else {
+        router.push("/");
+      }
     } catch (error: any) {
       console.log(error);
       toast.error(error.message);
