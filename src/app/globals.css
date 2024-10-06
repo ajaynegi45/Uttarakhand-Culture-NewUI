@@ -5,25 +5,26 @@
   /*"Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",*/
   /*"Fira Mono", "Droid Sans Mono", "Courier New", monospace;*/
 
-  --black: #3B3D41;
-  --grey: #A0A5AC;
-  --line-grey: #E1E4E8;
+  --black: #3b3d41;
+  --grey: #a0a5ac;
+  --line-grey: #e1e4e8;
   --slate-black: #667085;
-  --mist-grey: #F2F2F2;
+  --mist-grey: #f2f2f2;
 
-  --light-green: #22C55E;
-  --light-yellow: #FFC107;
-  --light-blue: #3B82F6;
-  --light-red: #FF3737;
-  --light-red2: #FF69B4;
+  --light-green: #22c55e;
+  --light-yellow: #ffc107;
+  --light-blue: #3b82f6;
+  --light-red: #ff3737;
+  --light-red2: #ff69b4;
 
-  --green: #2E865F;
-  --soil: #EEB27B;
+  --green: #2e865f;
+  --soil: #eeb27b;
 }
 
-
 /*  reset everything*/
-*, *::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
@@ -52,7 +53,8 @@ body {
 }
 
 /*  assign button hover state*/
-button, [role="button"] {
+button,
+[role="button"] {
   cursor: pointer;
   background-color: transparent;
   -webkit-tap-highlight-color: transparent;
@@ -63,8 +65,9 @@ button, [role="button"] {
 
 /*  reset anchor style*/
 
-p{
-  font-family: --myCustomFont,"system-ui", "-apple-system", "BlinkMacSystemFont",sans-serif;
+p {
+  font-family: --myCustomFont, "system-ui", "-apple-system",
+    "BlinkMacSystemFont", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
@@ -75,7 +78,7 @@ p{
   line-height: 20px;
 }
 
-main{
+main {
   width: 95%;
   max-width: 1440px; /* Fixed maximum width */
   height: 100%;
@@ -86,7 +89,7 @@ main{
   overflow: hidden;
 }
 
-h1{
+h1 {
   font-size: 60px;
   font-style: normal;
   font-weight: 350;

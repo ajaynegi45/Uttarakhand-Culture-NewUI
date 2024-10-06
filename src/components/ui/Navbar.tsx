@@ -1,9 +1,16 @@
+"use client";
 import Link from "next/link";
 import styles from "./navbar.module.css";
-import { auth } from "@/auth";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
-export default async function Navbar() {
-  const session = await auth();
+export default function Navbar() {
+  const session = useSession();
+  const router = useRouter();
+
+  const handleAvatarClick = () => {
+    router.push("/profile");
+  };
   return (
     <>
       <div className={styles["navbar-container"]}>
@@ -11,10 +18,18 @@ export default async function Navbar() {
           <Link href="/" className={styles["heading"]}>
             <h3 className={styles["title"]}>UTTARAKHAND CULTURE</h3>
           </Link>
-          {session ? (
-            <Link href="/auth/logout" className={styles.link}>
-              LOGOUT
-            </Link>
+          {session.status == "authenticated" ? (
+            <div
+              className={styles["avatar-container"]}
+              onClick={handleAvatarClick}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={session.data?.user?.image || "/default-avatar.png"}
+                alt="User Avatar"
+                className={styles["avatar"]}
+              />
+            </div>
           ) : (
             <Link href="/auth" className={styles.link}>
               LOGIN

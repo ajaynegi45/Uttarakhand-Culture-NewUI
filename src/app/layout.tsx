@@ -8,6 +8,7 @@ import { Toaster } from "sonner";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
+import { SessionProvider } from "next-auth/react";
 // import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const customFont = localFont({
@@ -73,15 +74,17 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={customFont.className}>
-        <main>
-          <Navbar />
-          {children}
-          {/*<SpeedInsights />*/}
-          <Toaster position="top-right" />
-          <Footer />
-        </main>
-      </body>
+      <SessionProvider>
+        <body className={customFont.className}>
+          <main>
+            <Navbar />
+            {children}
+            {/*<SpeedInsights />*/}
+            <Toaster position="top-right" />
+            <Footer />
+          </main>
+        </body>
+      </SessionProvider>
     </html>
   );
 }

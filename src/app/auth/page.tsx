@@ -6,12 +6,14 @@ import styles from "./page.module.css";
 import { toast } from "sonner";
 import { loginSchema, signupSchema } from "@/lib/zod";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Auth() {
-  const [isSignup, setIsSignup] = useState(true);
+  const [isSignup, setIsSignup] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const callback = searchParams.get("callbackUrl");
 
   const {
     register,
@@ -21,22 +23,51 @@ export default function Auth() {
     resolver: zodResolver(isSignup ? signupSchema : loginSchema),
   });
 
+  console.log(callback);
+
   const onSubmit = async (data: any) => {
     if (isSignup) {
       try {
         setIsLoading(true);
-        const res = await fetch("/api/auth/register", {
-          method: "POST",
-          body: JSON.stringify(data),
+
+        const handler = new Promise((resolve, reject) => {
+          fetch("/api/auth/register", {
+            method: "POST",
+            body: JSON.stringify(data),
+          })
+            .then((res) => {
+              res
+                .json()
+                .then((ms) => {
+                  if (res.status !== 200) {
+                    reject(new Error(ms.error));
+                  } else {
+                    resolve(
+                      signIn("credentials", {
+                        loginIdentifier: data.email,
+                        password: data.password,
+                        redirect: false,
+                      })
+                    );
+                  }
+                })
+                .catch(reject);
+            })
+            .catch(reject);
         });
 
-        const ms = await res.json();
-
-        if (res.status != 200) throw new Error(ms.error);
-
-        toast.success("User registered, Verify Email.");
-
-        setIsSignup(false);
+        toast.promise(handler, {
+          loading: "Loading...",
+          success: () => {
+            if (callback) {
+              router.push(callback);
+            } else {
+              router.push("/");
+            }
+            return "User registered, Verify Email.";
+          },
+          error: (err) => `${err}`,
+        });
       } catch (error: any) {
         console.log(error);
         toast.error(error.message || "Failed to register. Try again");
@@ -46,14 +77,35 @@ export default function Auth() {
     } else {
       try {
         setIsLoading(true);
-        const res = await signIn("credentials", {
-          ...data,
-          redirect: false,
+        const handler = new Promise((resolve, reject) => {
+          setIsLoading(true);
+
+          signIn("credentials", {
+            ...data,
+            redirect: false,
+          })
+            .then((res) => {
+              if (res?.error) {
+                reject(new Error("Invalid credentials"));
+              } else {
+                resolve("");
+              }
+            })
+            .catch(reject);
         });
 
-        if (res?.error) throw new Error("Invalid credentials");
-        toast.success("Login success.");
-        router.push("/explore");
+        toast.promise(handler, {
+          loading: "Loading...",
+          success: () => {
+            if (callback) {
+              router.push(callback);
+            } else {
+              router.push("/");
+            }
+            return "Login success.";
+          },
+          error: (err) => `${err}`,
+        });
       } catch (error) {
         toast.error("Check your credentials and Try again");
       } finally {
@@ -173,7 +225,7 @@ export default function Auth() {
           </>
         )}
         <button className={styles.button} disabled={isLoading} type="submit">
-          {isLoading ? "Working..." : <>{isSignup ? "Sign Up" : "Login"}</>}
+          {isSignup ? "Sign Up" : "Login"}
         </button>
       </form>
       <p
