@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -12,8 +13,49 @@ import Notify_Banner from "/public/notify-early-banner.jpg"
 import PahadiWomen from "/public/bhotiaWoman.webp"
 import Screen from "@/components/Screen";
 import Festivals from "@/components/Festivals";
-
+import Faq from "/public/Faq.png"
+import { useState } from "react";
+import FAQ from "@/components/Faq";
+import style from "../components/ui/Faq.module.css"
 export default function Home() {
+
+    const [faqs, setFaqs] = useState([
+        {
+          question: "So, you're a startup?",
+          answer: "description",
+          open: false, 
+        },
+        {
+          question: "Is Genie right for me?",
+          answer: "description",
+          open: false,
+        },
+        {
+          question: "How do I sign up?",
+          answer: "description",
+          open: false,
+        },
+        {
+          question: "What's the onboarding like? Do you charge for implementation?",
+          answer: "description",
+          open: false,
+        }
+      ]);
+      
+      const toggleFAQ = (index: number): void => {
+        setFaqs(
+          faqs.map((faq, i) => {
+            if (i === index) {
+              return { ...faq, open: !faq.open }; 
+            } else {
+              return { ...faq, open: false }; 
+            }
+          })
+        );
+      };
+      
+
+
 
     return (
         <>
@@ -23,15 +65,15 @@ export default function Home() {
                 <div className={styles.headerImageContainer}>
                     <div className={styles.headerLeftImageContainer}>
                         <Image src={PahadiWomen} alt={"Image of Pahadi Women"} loading={"eager"} height={500}
-                               priority={true} placeholder={"blur"}/>
+                            priority={true} placeholder={"blur"} />
                     </div>
                     <div className={styles.headerCenterImageContainer}>
                         <Image src={HeroMap} alt={"Image of Pahadi Women"} loading={"eager"} height={350}
-                               priority={true} placeholder={"blur"}/>
+                            priority={true} placeholder={"blur"} />
                     </div>
                     <div className={styles.headerRightImageContainer}>
                         <Image src={PahadiWomen} alt={"Image of Pahadi Women"} loading={"eager"} height={500}
-                               priority={true} placeholder={"blur"}/>
+                            priority={true} placeholder={"blur"} />
                     </div>
                 </div>
 
@@ -53,7 +95,7 @@ export default function Home() {
                 <div className={styles["why-built-it-container"]}>
                     <div className={styles["built-image-container"]}>
                         <Image src={Srinagar} alt="TREKKING" width="300" height={"211"} loading={"eager"}
-                               priority={true} placeholder={"blur"}/>
+                            priority={true} placeholder={"blur"} />
                         <p className={styles["journey-image-description"]}>A Painting of a Rope bridge across Alaknanda
                             River,
                             Srinagar, in the times of Garhwal Kingdom, 1784-94. Photo Src: British Library</p>
@@ -92,7 +134,7 @@ export default function Home() {
 
                         <div className={styles["journey-right-container"]}>
                             <Image src={GoriGanga} alt="TREKKING" width="350" height={"256"} loading={"eager"}
-                                   priority={true} placeholder={"blur"}/>
+                                priority={true} placeholder={"blur"} />
                             <p className={styles["journey-image-description"]}>Water-colour painting of the River Gori
                                 in Uttar Pradesh by James Manson (1791-1862), c.1826. </p>
                         </div>
@@ -130,7 +172,7 @@ export default function Home() {
                 <div className={styles.colorBlend}></div>
                 <div className={styles.notifyBannerImageContainer}>
                     <Image src={Notify_Banner} alt={"notify-early-banner-image"} width={1440} height={460}
-                           placeholder={"blur"}/>
+                        placeholder={"blur"} />
                 </div>
 
                 <div className={styles.notifyBannerTextContainer}>
@@ -144,6 +186,27 @@ export default function Home() {
                     </div>
                 </div>
 
+            </section>
+
+            {/* FAQ */}
+            <section className={style.faqcontainer}>
+               <div className={style.faqcontainertitle}>
+                    <h1 className={style.faqcontainer}>
+                        We're here to answer all <br /> your Questions.
+                    </h1>
+               </div>
+                
+                <div className="faqs">
+                    {faqs.map((faq, index) => (
+                        <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
+                    ))}
+                </div>
+                <div >
+                    <Image src={Faq} alt={"faqicon"} width={65} height={65}
+                        className={styles.faqcontainer}  />
+                </div>
+                <h3 className={style.faqcontainer}>Still have questions?</h3>
+                <button className={styles.faqcontainer}>Contact us</button>
             </section>
 
             {/*<Festivals />*/}

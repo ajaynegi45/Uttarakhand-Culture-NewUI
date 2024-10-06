@@ -1,0 +1,55 @@
+.faqcontainer{
+    align-items: center;
+    text-align: center;
+    min-width: 100%;
+    height: auto;
+}
+.faqcontainertitle{
+    margin-top: 20px;
+}
+.faqcontainer h1{
+    text-align: center;
+    font-size:55px;
+}
+
+.faqcontainer button{
+    font-size: 14px;
+    color: white;
+    background-color: var(--black);
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: normal;
+    box-shadow: 0 .7065919983928324px .7065919983928324px -.625px #00000026,0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,0 30px 30px -3.75px #0000000d;
+}
+
+
+.faqcontainer h3{
+  text-align: center;
+  margin-top: 20px;
+  font-weight: normal;
+}
+.faqcontainer image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 699px) {
+    .faqcontainer h1{
+        text-align: center;
+        font-size:35px;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 499px) {
+    .faqcontainer h1{
+        text-align: center;
+        font-size:25px;
+    }
+}
+
