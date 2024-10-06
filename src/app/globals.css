@@ -5,8 +5,8 @@
   /*"Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",*/
   /*"Fira Mono", "Droid Sans Mono", "Courier New", monospace;*/
 
-  --black: #3B3D41;
-  --grey: #A0A5AC;
+  --black: #191919;
+  --grey: #6a6b6c;
   --line-grey: #E1E4E8;
   --slate-black: #667085;
   --mist-grey: #F2F2F2;
@@ -65,9 +65,9 @@ button, [role="button"] {
 
 p{
   font-family: --myCustomFont,"system-ui", "-apple-system", "BlinkMacSystemFont",sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1px;
   color: var(--grey);
   text-decoration: none;
