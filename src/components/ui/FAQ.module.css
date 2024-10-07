@@ -89,7 +89,7 @@
 
 .contact-text {
   margin: 50px;
-  font-size: 3vw; /* Responsive font size */
+  font-size: 1.8rem; /* Responsive font size */
 }
 
 .contact-button {
@@ -129,7 +129,7 @@
   
 
   .contact-text {
-    font-size: 1.2rem; /* Responsive font size */
+    font-size: 1.5rem; /* Responsive font size */
   }
 
   .contact-button {
@@ -191,7 +191,7 @@
   }
 
   .contact-text {
-    font-size: 1.8rem; /* Adjust font size */
+    font-size: 1.3rem; /* Adjust font size */
   }
 
   .contact-button {
@@ -221,7 +221,7 @@
   }
 
   .contact-text {
-    font-size: 1.8rem; /* Adjust font size */
+    font-size: 1.5rem; /* Adjust font size */
   }
 
   .contact-image {
@@ -267,6 +267,7 @@
   .contact-button {
     width: 100%;
     font-size: 7px; /* Adjust font size */
+    border-radius: 5px;
   }
 
 
