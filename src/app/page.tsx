@@ -192,7 +192,7 @@ export default function Home() {
             <section className={style.faqcontainer}>
                <div className={style.faqcontainertitle}>
                     <h1 className={style.faqcontainer}>
-                        We're here to answer all <br /> your Questions.
+                    We&apos;re here to answer all <br /> your Questions.
                     </h1>
                </div>
                 
