@@ -60,6 +60,8 @@ Before diving into the project, make sure you’ve got the following tools ready
 
 - [npm](https://www.npmjs.com/) (v6 or higher)
 - [Node.js](https://nodejs.org/) (v18.17.1 or higher)
+- Don't use Tailwind CSS
+- Ask before using any other dependencies.
 
 And hey, while you’re at it, don’t forget to:
 
