@@ -12,6 +12,11 @@ import Notify_Banner from "/public/notify-early-banner.jpg"
 import PahadiWomen from "/public/bhotiaWoman.webp"
 import Screen from "@/components/Screen";
 import Festivals from "@/components/Festivals";
+import dynamic from 'next/dynamic'
+const UttarakhandMap = dynamic(() => import('../components/Mapcomponent'), { 
+    ssr: false 
+  })
+  
 
 export default function Home() {
 
@@ -39,6 +44,10 @@ export default function Home() {
                     <h1>We love <span className={styles.greenText}>Uttarakhand</span> and the people</h1>
                     <h1> who <span className={styles.soilText}>preserve</span> it.</h1>
                     <p>EXPERIENCE THE SOUL OF UTTARAKHAND</p>
+                    <section className={styles.mapSection}>
+        <h2>Explore Uttarakhand</h2>
+        <UttarakhandMap />
+      </section>
                     <Link className={styles.headerbuttonLink} href={"/explore"}>Start Your Journey</Link>
                 </div>
 
