@@ -13,50 +13,8 @@ import Notify_Banner from "/public/notify-early-banner.jpg"
 import PahadiWomen from "/public/bhotiaWoman.webp"
 import Screen from "@/components/Screen";
 import Festivals from "@/components/Festivals";
-import Faq from "/public/Faq.png"
-import { useState } from "react";
-import FAQ from "@/components/Faq";
-import style from "../components/ui/Faq.module.css"
+import Faq from "@/components/Faq";
 export default function Home() {
-
-    const [faqs, setFaqs] = useState([
-        {
-          question: "So, you're a startup?",
-          answer: "description",
-          open: false, 
-        },
-        {
-          question: "Is Genie right for me?",
-          answer: "description",
-          open: false,
-        },
-        {
-          question: "How do I sign up?",
-          answer: "description",
-          open: false,
-        },
-        {
-          question: "What's the onboarding like? Do you charge for implementation?",
-          answer: "description",
-          open: false,
-        }
-      ]);
-      
-      const toggleFAQ = (index: number): void => {
-        setFaqs(
-          faqs.map((faq, i) => {
-            if (i === index) {
-              return { ...faq, open: !faq.open }; 
-            } else {
-              return { ...faq, open: false }; 
-            }
-          })
-        );
-      };
-      
-
-
-
     return (
         <>
             <header className={styles.headerContainer}>
@@ -187,30 +145,11 @@ export default function Home() {
                 </div>
 
             </section>
-
-            {/* FAQ */}
-            <section className={style.faqcontainer}>
-               <div className={style.faqcontainertitle}>
-                    <h1 className={style.faqcontainer}>
-                    We&apos;re here to answer all <br /> your Questions.
-                    </h1>
-               </div>
-                
-                <div className="faqs">
-                    {faqs.map((faq, index) => (
-                        <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
-                    ))}
-                </div>
-                <div >
-                    <Image src={Faq} alt={"faqicon"} width={65} height={65}
-                        className={styles.faqcontainer}  />
-                </div>
-                <h3 className={style.faqcontainer}>Still have questions?</h3>
-                <button className={styles.faqcontainer}>Contact us</button>
-            </section>
-
             {/*<Festivals />*/}
 
+            {/* FAQ */}
+            <Faq/>
+            {/* FAQ */}
 
         </>
     );
