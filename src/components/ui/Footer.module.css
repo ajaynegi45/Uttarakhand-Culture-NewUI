@@ -1,10 +1,9 @@
-.footer-container{
+.footer-container {
     margin-top: 15rem;
     margin-bottom: 1rem;
     padding-top: 2rem;
     width: 100%;
     border-top: 1px solid var(--line-grey);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,31 +11,46 @@
     text-align: center;
 }
 
+
 /*.footer > h1 {*/
+
+
 /*    font-size: 20px;*/
+
+
 /*}*/
+
 
 /*.footer > p {*/
+
+
 /*    margin-top: 2px*/
+
+
 /*}*/
+
 
 /*.footer > div > p  {*/
+
+
 /*    margin-top: 2rem;*/
+
+
 /*    color: var(--black);*/
+
+
 /*    font-size: 10px;*/
+
+
 /*}*/
 
-
-
-
-.newsletter-container{
+.newsletter-container {
     max-width: 1200px;
     /* 980 at 1280px*/
     width: 100%;
     position: relative;
     z-index: 2;
     top: -135px;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,22 +62,24 @@
     border-radius: 10px;
 }
 
-.newsletter-container > div p {
+.newsletter-container>div p {
     font-size: 18px;
     color: #667085;
 }
 
-.newsletter-container > div > h3 {
+.newsletter-container>div>h4 {
     font-size: 28px;
     margin-bottom: 1rem;
 }
-.newsletter-right-container > .newsletter-email-container > form {
+
+.newsletter-right-container>.newsletter-email-container>form {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     margin-bottom: 1rem;
 }
-.newsletter-right-container > .newsletter-email-container > form > input{
+
+.newsletter-right-container>.newsletter-email-container>form>input {
     width: 100%;
     max-width: 250px;
     height: 3rem;
@@ -75,7 +91,7 @@
     outline: none;
 }
 
-.newsletter-right-container > .newsletter-email-container > form > p{
+.newsletter-right-container>.newsletter-email-container>form>p {
     color: white;
     height: 3rem;
     font-size: 1rem;
@@ -83,35 +99,33 @@
     padding: 10px 18px 10px 18px;
     border-radius: 5px;
     background-color: var(--black);
-
-    box-shadow: 0 .7065919983928324px .7065919983928324px -.625px #00000026,0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025,0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023,0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020,0 13.646761411524492px 13.646761411524492px -3.125px #0000001b,0 30px 30px -3.75px #0000000d;
+    box-shadow: 0 .7065919983928324px .7065919983928324px -.625px #00000026, 0 1.8065619053231785px 1.8065619053231785px -1.25px #00000025, 0 3.6217592146567767px 3.6217592146567767px -1.875px #00000023, 0 6.8655999097303715px 6.8655999097303715px -2.5px #00000020, 0 13.646761411524492px 13.646761411524492px -3.125px #0000001b, 0 30px 30px -3.75px #0000000d;
 }
-.newsletter-right-container > .newsletter-email-container > form > p:hover{
+
+.newsletter-right-container>.newsletter-email-container>form>p:hover {
     background-color: var(--slate-black);
     cursor: pointer;
 }
 
-
-
-
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
 }
-.footer-right-container{
+
+.footer-right-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     max-width: 600px;
     width: 100%;
-
     padding: 0 4rem 0 4rem;
 }
-.footer-right-link-container{
+
+.footer-right-link-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,23 +133,24 @@
     text-align: left;
 }
 
-.footer-left-container{
+.footer-left-container {
     text-align: left;
     max-width: 600px;
     width: 100%;
 }
 
-.footer-left-container > h2 {
+.footer-left-container>h2 {
     margin-bottom: 1rem;
     color: var(--black);
     letter-spacing: 2px;
 }
-.footer-right-link-container > p {
+
+.footer-right-link-container>p {
     color: var(--black);
     font-weight: 600;
 }
 
-.footer-right-link-container > a {
+.footer-right-link-container>a {
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -148,7 +163,7 @@
     position: relative;
 }
 
-.footer-right-link-container > a::after {
+.footer-right-link-container>a::after {
     content: "";
     position: absolute;
     bottom: 4px;
@@ -161,104 +176,86 @@
     transform-origin: 0% 100%;
 }
 
-.footer-right-link-container > a:hover::after {
+.footer-right-link-container>a:hover::after {
     transform: scale(1, 1);
 }
-.footer-right-link-container > a:hover {
-     color: var(--black);
-     filter: drop-shadow(0 0 0.90rem #A0A5AC);
- }
 
+.footer-right-link-container>a:hover {
+    color: var(--black);
+    filter: drop-shadow(0 0 0.90rem #A0A5AC);
+}
 
-.copyright-container{
+.copyright-container {
     border-top: 1px solid var(--line-grey);
     margin-top: 5rem;
     max-width: 1200px;
     width: 100%;
 }
 
-.copyright-container > p{
+.copyright-container>p {
     margin: 2rem 0 1rem 0;
     color: var(--black);
 }
 
-
 @media (max-width: 1000px) {
-    .newsletter-container{
+    .newsletter-container {
         padding: 4rem 2rem 4rem 2rem;
         gap: 5px;
     }
-
-    .newsletter-right-container > .newsletter-email-container > form > p{
+    .newsletter-right-container>.newsletter-email-container>form>p {
         padding: 10px 15px 10px 15px;
     }
-    .newsletter-right-container > .newsletter-email-container > form {
+    .newsletter-right-container>.newsletter-email-container>form {
         gap: 0.5rem;
     }
 }
 
-
 @media (max-width: 699px) {
-    .newsletter-container{
+    .newsletter-container {
         padding: 4rem 1rem 4rem 1rem;
         flex-direction: column;
         gap: 3rem;
         float: left;
         align-items: flex-start;
     }
-
-    .newsletter-right-container > .newsletter-email-container > form > input{
+    .newsletter-right-container>.newsletter-email-container>form>input {
         padding: 10px 15px 10px 15px;
     }
-    .footer-right-container{
+    .footer-right-container {
         max-width: 500px;
         width: 100%;
         padding: 0 0.5rem 0 2rem;
         gap: 5px
     }
-
-    .newsletter-container > div p {
+    .newsletter-container>div p {
         font-size: 16px;
     }
 }
 
 @media (max-width: 499px) {
-    .footer{
+    .footer {
         flex-direction: column;
         gap: 2rem;
     }
-    .footer-left-container > h2{
+    .footer-left-container>h2 {
         text-align: center;
     }
-
-    .footer-right-container{
+    .footer-right-container {
         padding: 0 2rem 0 2rem;
     }
 }
 
 
-
-
-
-
-
-
-
-
-
 /* */
 
-.notify-early-container{
+.notify-early-container {}
 
-}
-
-.notify-early-banner-container > img {
+.notify-early-banner-container>img {
     width: 100%;
     height: auto;
-
 }
 
-#notify-early-image{
+#notify-early-image {
     width: 100%;
     height: auto;
 }

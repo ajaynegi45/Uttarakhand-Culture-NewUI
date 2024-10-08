@@ -7,7 +7,7 @@ export default function Footer() {
 
             <div className={styles["newsletter-container"]}>
                 <div className={styles["newsletter-left-container"]}>
-                    <h3>Join the newsletter</h3>
+                    <h4>Join the newsletter</h4>
                     <p>Get the latest insights and updates straight to your inbox.</p>
                 </div>
                 <div className={styles["newsletter-right-container"]}>
