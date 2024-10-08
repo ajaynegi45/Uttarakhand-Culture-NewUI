@@ -30,7 +30,6 @@ export default auth((req) => {
   if (isAuthRoute) {
     if (isLoggedIn) {
       const callbackUrl = nextUrl.searchParams.get("CallbackUrl") || DEFAULT_LOGIN_REDIRECT;
-      console.log("CALLBACK:", callbackUrl)
       return Response.redirect(new URL(callbackUrl, nextUrl));
     }
     return NextResponse.next({ headers });
@@ -43,9 +42,6 @@ export default auth((req) => {
     }
     const encodedCallbackUrl = encodeURIComponent(callbackUrl);
 
-    if (nextUrl.pathname === "/auth/logout") {
-      return Response.redirect(new URL(`/auth`, nextUrl));
-    }
 
     return Response.redirect(
       new URL(`/auth?callbackUrl=${encodedCallbackUrl}`, nextUrl)

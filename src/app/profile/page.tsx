@@ -12,7 +12,7 @@ export default function Profile() {
   }
 
   if (status === "unauthenticated") {
-    router.push("/auth"); // Redirect to login if unauthenticated
+    router.push("/"); // Redirect to login if unauthenticated
     return null;
   }
 
@@ -33,11 +33,7 @@ export default function Profile() {
         </p>
       </div>
       <button
-        onClick={() =>
-          signOut({
-            redirectTo: "/",
-          })
-        }
+        onClick={() => signOut({ redirect: false })}
         className={styles["logout-button"]}
       >
         Logout

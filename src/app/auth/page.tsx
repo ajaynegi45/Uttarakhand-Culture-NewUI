@@ -81,8 +81,7 @@ export default function Auth() {
 
           signIn("credentials", {
             ...data,
-            redirect: true,
-            redirectTo: callback || "/",
+            redirect: false,
           })
             .then((res) => {
               if (res?.error) {
