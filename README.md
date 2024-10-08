@@ -60,16 +60,12 @@ Before making any contributions, please read the [Readme.md](https://github.com/
 # Contact
 If you have any questions or would like to connect, please don't hesitate to reach out. I'd be more than happy to chat and learn from your experiences too.
 <br><br>
-
+<div>
 <!-- LinkedIn -->
-<a href="https://linkedin.com/in/ajaynegi45/" >
-<img align="center" src="https://img.icons8.com/color/48/linkedin.png" alt="ajaynegi45/" width="40" height="40"  t/>
-</a>
+<a href="https://linkedin.com/in/ajaynegi45/"><img align="center" src="https://img.icons8.com/color/48/linkedin.png" alt="ajaynegi45/" width="40" height="40"  t/></a>
 <!-- Twitter -->
-<a href="https://x.com/ajaynegi45" >
-<img align="center" src="https://img.icons8.com/color/48/twitter.png" alt="ajaynegi45/" width="40" height="40"  t/>
-</a>
-
+<a href="https://x.com/ajaynegi45"><img align="center" src="https://github.com/vedhcet-07/Uttarakhand-Culture-NewUI/blob/main/public/icons8-twitterx.svg" alt="ajaynegi45/" width="45" height="45"  t/></a>
+</div>
 <br>
 
 # Acknowledgements
@@ -102,8 +98,5 @@ We appreciate your interest in preserving Uttarakhandi culture. Together, we can
 
 <br/>
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 Made with ❤️ by Uttarakhand Culture Community
