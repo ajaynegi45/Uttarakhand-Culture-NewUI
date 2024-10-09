@@ -37,7 +37,7 @@
     text-align: center;
 }
 .headerTextContainer > h1 {
-    font-family: "-apple-system","system-ui";
+    font-family: "-apple-system","system-ui","BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif";
     font-size: 5vw;
     font-weight: bolder;
 }
