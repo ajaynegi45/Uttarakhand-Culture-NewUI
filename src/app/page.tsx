@@ -79,7 +79,7 @@ export default function Home() {
                     <div>
 
                         <div className={styles["journey-left-container"]}>
-                            <div><h3>EXPLORE UTTARAKAHND</h3></div>
+                            <div><h3>EXPLORE UTTARAKHAND</h3></div>
                             <div><p className={styles["built-description-container"]}>To address this problem, we have
                                 come up with a solution to digitize this cultural
                                 knowledge. Since today&apos;s generation is more comfortable with technology, we aim to
