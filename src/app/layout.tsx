@@ -80,7 +80,7 @@ export default async function RootLayout({
             <Navbar />
             {children}
             {/*<SpeedInsights />*/}
-            <Toaster position="top-center" />
+            <Toaster position="bottom-right" richColors={true} closeButton={true} />
             <Footer />
           </main>
         </body>

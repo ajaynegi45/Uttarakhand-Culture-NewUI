@@ -1,4 +1,3 @@
-
 import { db } from "@/lib/drizzle";
 import { otps, users } from "@/lib/schema";
 import { NextRequest, NextResponse } from "next/server";
@@ -6,8 +5,6 @@ import { z } from "zod";
 
 import { auth } from "@/auth";
 import { eq } from "drizzle-orm";
-
-
 
 export async function POST(req: NextRequest) {
   try {
