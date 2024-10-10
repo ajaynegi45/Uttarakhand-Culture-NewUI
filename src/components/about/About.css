@@ -1,0 +1,153 @@
+/* Container */
+.about-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.about-hero {
+    /* background: linear-gradient(135deg, #e0f7fa, #f1f8e9); */
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 12px;
+    color: #2c3e50;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #2c3e50;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 40px 20px;
+    border-radius: 12px;
+    background-color: #fafafa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-content {
+    flex: 1;
+    font-size:x-large;
+    margin: 10px;
+    padding: 10px;
+}
+
+.section img {
+    width: 40%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.section-content p{
+    color: #11181f;
+    font-size: large;
+    line-height:30px;
+    margin-top: 20px;
+}
+
+/* Problem Section */
+.problem-section {
+    background: #e8f5e9;
+}
+
+.solution-section {
+    background: #e3f2fd;
+}
+
+/* Discover Section */
+.discover-section {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.discover-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.discover-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.discover-list li {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.discover-list li:hover {
+    transform: translateY(-5px);
+}
+
+.discover-list li strong {
+    color: #e91e63;
+    font-weight: 600;
+}
+
+/* User Section */
+.user-section {
+    background: #f0f4c3;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    font-style: italic;
+}
+
+.user-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.user-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section img {
+        width: 80%;
+    }
+
+    .discover-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+}
