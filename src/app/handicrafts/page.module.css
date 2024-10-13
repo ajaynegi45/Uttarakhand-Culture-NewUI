@@ -1,0 +1,180 @@
+.container {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  .header {
+    width: 100%;
+    background-color: white;
+  }
+  
+  .headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .headerFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .headerText {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #4b5563;
+  }
+  
+  .headerImage {
+    width: 100%;
+    max-width: 368px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    background-color: white;
+  }
+  
+  .sectionTitle {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 2rem;
+  }
+  
+  .sectionFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .sectionImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionText {
+    width: 100%;
+  }
+  
+  .sectionParagraph {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .button {
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .cardGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cardSubtitle {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  @media (min-width: 768px) {
+    .headerFlex {
+      flex-direction: row;
+    }
+  
+    .headerText {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  
+    .title {
+      font-size: 3rem;
+    }
+  
+    .sectionFlex {
+      flex-direction: row;
+    }
+  
+    .sectionImage {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  
+    .sectionText {
+      width: 50%;
+      padding-left: 2rem;
+    }
+  
+    .cardGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .cardGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
