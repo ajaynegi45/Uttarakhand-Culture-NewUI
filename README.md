@@ -66,7 +66,7 @@ If you have any questions or would like to connect, please don't hesitate to rea
 <!-- Twitter -->
 <a href="https://x.com/ajaynegi45"><img align="center" src="https://github.com/vedhcet-07/Uttarakhand-Culture-NewUI/blob/main/public/icons8-twitterx.svg" alt="ajaynegi45/" width="45" height="45"  t/></a>
 <!-- Discord -->
-<a href="https://discord.gg/xk8MqtqG"><img align="center" src="https://img.icons8.com/3d-fluency/94/discord.png" alt="ajaynegi45/" width="45" height="45"  t/></a>
+<a href="https://discord.gg/QFnvJGh72V"><img align="center" src="https://img.icons8.com/3d-fluency/94/discord.png" alt="ajaynegi45/" width="45" height="45"  t/></a>
 </div>
 <br>
 
