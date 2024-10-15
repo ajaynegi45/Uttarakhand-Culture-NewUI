@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { getUpcomingFestival } from "@/utils/festivals";
 import SectionCard from "@/components/ui/SectionCard";
 import Nanda_Sunanda from "/public/Nanda-Sunanda.webp";
