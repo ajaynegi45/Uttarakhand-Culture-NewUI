@@ -6,11 +6,7 @@ export const loginSchema = z.object({
   loginIdentifier: z.string().min(1, "Email or Username is required"),
   password: z
     .string()
-    .min(8, "Password must be at least 8 characters long")
-    .regex(
-      passwordRegex,
-      "Password must be include at least one uppercase letter, one lowercase letter, one number, and one special character."
-    ),
+    .min(1, "Invalid Password")
 });
 
 export const signupSchema = z

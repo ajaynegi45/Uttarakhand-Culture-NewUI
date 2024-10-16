@@ -7,10 +7,22 @@ import { toast } from "sonner";
 import { loginSchema, signupSchema } from "@/lib/zod";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import cross from "../../../public/cross.png";
+import tick from "../../../public/tick.png"; 
 
 export default function Auth() {
   const [isSignup, setIsSignup] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); 
+  const [password, setPassword] = useState("");
+  const [validations, setValidations] = useState({
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    number: false,
+    special: false,
+  });
+
   const router = useRouter();
   const searchParams = useSearchParams();
   const callback = searchParams.get("callbackUrl");
@@ -28,7 +40,22 @@ export default function Auth() {
     reset();
   }, [isSignup, reset]);
 
-  console.log(callback);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newPassword = e.target.value;
+    setPassword(newPassword);
+
+    setValidations({
+      length: newPassword.length >= 8,
+      uppercase: /[A-Z]/.test(newPassword),
+      lowercase: /[a-z]/.test(newPassword),
+      number: /\d/.test(newPassword),
+      special: /[^A-Za-z0-9]/.test(newPassword),
+    });
+  };
 
   const onSubmit = async (data: any) => {
     if (isSignup) {
@@ -67,9 +94,7 @@ export default function Auth() {
 
         toast.promise(handler, {
           loading: "Loading...",
-          success: () => {
-            return "User registered, Verify Email.";
-          },
+          success: () => "User registered, Verify Email.",
           error: (err) => `${err}`,
         });
       } catch (error: any) {
@@ -82,8 +107,6 @@ export default function Auth() {
       try {
         setIsLoading(true);
         const handler = new Promise((resolve, reject) => {
-          setIsLoading(true);
-
           signIn("credentials", {
             ...data,
             redirect: false,
@@ -106,9 +129,7 @@ export default function Auth() {
 
         toast.promise(handler, {
           loading: "Loading...",
-          success: () => {
-            return "Login success.";
-          },
+          success: () => "Login success.",
           error: (err) => `${err}`,
         });
       } catch (error) {
@@ -162,13 +183,64 @@ export default function Auth() {
               </p>
             )}
 
-            <input
-              type="password"
-              placeholder="Password"
-              disabled={isLoading}
-              {...register("password")}
-              className={styles.input}
-            />
+            <div className={styles.passwordField}>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                disabled={isLoading}
+                {...register("password")}
+                value={password}
+                onChange={handlePasswordChange}
+                className={styles.input}
+              />
+              <button
+                type="button"
+                className={styles.showHideButton}
+                onClick={togglePasswordVisibility}
+                disabled={isLoading}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+
+            <div className={styles["password-check"]}>
+              <div className={styles["check-length"]}>
+                <img
+                  src={validations.length ? tick.src : cross.src}
+                  alt="Validation"
+                />{" "}
+                At least 8 characters Long
+              </div>
+              <div className={styles["check-uppercase"]}>
+                <img
+                  src={validations.uppercase ? tick.src : cross.src}
+                  alt="Validation"
+                />{" "}
+                At least 1 uppercase letter (A-Z)
+              </div>
+              <div className={styles["check-lowercase"]}>
+                <img
+                  src={validations.lowercase ? tick.src : cross.src}
+                  alt="Validation"
+                />{" "}
+                At least 1 lowercase letter (a-z)
+              </div>
+              <div className={styles["check-number"]}>
+                <img
+                  src={validations.number ? tick.src : cross.src}
+                  alt="Validation"
+                />{" "}
+                At least 1 number (0-9)
+              </div>
+              <div className={styles["check-special"]}>
+                <img
+                  src={validations.special ? tick.src : cross.src}
+                  alt="Validation"
+                />{" "}
+                At least 1 special character (@-$)
+              </div>
+            </div>
+
             {errors.password && (
               <p className={styles.errors}>
                 {errors.password.message?.toString()}
@@ -215,13 +287,23 @@ export default function Auth() {
               </p>
             )}
 
-            <input
-              type="password"
-              placeholder="Password"
-              {...register("password")}
-              className={styles.input}
-              disabled={isLoading}
-            />
+            <div className={styles.passwordField}>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                {...register("password")}
+                className={styles.input}
+                disabled={isLoading}
+              />
+              <button
+                type="button"
+                className={styles.showHideButton}
+                onClick={togglePasswordVisibility}
+                disabled={isLoading}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
             {errors.password && (
               <p className={styles.errors}>
                 {errors.password.message?.toString()}

@@ -71,3 +71,16 @@
   cursor: pointer;
   color: var(--slate-black);
 }
+
+.password-check div {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  font-weight: 500;
+  color: red;
+}
+
+.password-check img {
+  height: 25px;
+  padding-right: 10px;
+}
