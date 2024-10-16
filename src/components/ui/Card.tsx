@@ -7,10 +7,15 @@ import Link from "next/link";
 import Roopkund from "/public/roopkund.jpg";
 
 type TrekDetails = {
+  title: string;
   introduction: string;
   overview: string;
   route: string[];
   attractions: string[];
+  culturalInsights: string[];
+  physicalChallenges: string[];
+  recommendedGear: string[];
+  bestTimeToVisit: string; // Change this to an array of strings
 };
 
 type CardProps = {
@@ -23,7 +28,7 @@ type CardProps = {
 export default function Card(props: CardProps) {
   const { title, subTitle, trekDetails, readMoreLink } = props; // Destructure props
   const [isExpanded, setIsExpanded] = useState(false); // State to track the expanded content
-
+ 
 
 
   return (
@@ -33,12 +38,14 @@ export default function Card(props: CardProps) {
         <p className={styles["subTitle"]}>{subTitle}</p>
         <div className={styles["description"]}>
             <p className="paragraph">{trekDetails.introduction}</p>
-            <p className="paragraph">{trekDetails.overview}</p>
+            
          
 
           {/* Conditional rendering of the extra content */}
           {isExpanded && (
             <div className={styles["readmore-div"]}>
+              <h2 className={styles['heading']}>&#9670; Overview</h2>
+              <p className="paragraph">{trekDetails.overview}</p>
                 <h2 className={styles['heading']}>&#9670; Route</h2>
               <p>
                 <ul className={styles['heading-list']}>
@@ -58,6 +65,39 @@ export default function Card(props: CardProps) {
                   ))}
                 </ul>
               </p>
+              <h2 className={styles['heading']}>&#9670; Physical Challenges</h2>
+              <p>
+                <ul className={styles['heading-list']}>
+                  {trekDetails.physicalChallenges.map((item, index) => (
+                    <li key={index} className="list-item">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </p>
+              <h2 className={styles['heading']}>&#9670; Recommended Gear</h2>
+              <p>
+                <ul className={styles['heading-list']}>
+                  {trekDetails.recommendedGear.map((item, index) => (
+                    <li key={index} className="list-item">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </p>
+              <h2 className={styles['heading']}>&#9670; Cultural Insights</h2>
+              <p>
+                <ul className={styles['heading-list']}>
+                  {trekDetails.culturalInsights.map((item, index) => (
+                    <li key={index} className="list-item">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </p>
+              <h2 className={styles['heading']}>&#9670; Best Time To Visit</h2>
+              <p className="paragraph">{trekDetails.bestTimeToVisit}</p>
+                
             </div>
           )}
         </div>

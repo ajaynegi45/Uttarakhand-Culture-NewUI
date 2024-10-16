@@ -5,6 +5,8 @@ import TrekkingHeroImage from "/public/heroImage.png";
 import { trekDetails } from './location-detail';
 
 export default function Trekking() {
+    console.log('hello')
+    console.log(trekDetails.length)
     return (
         <>
             <header className={styles["page-header"]}>
