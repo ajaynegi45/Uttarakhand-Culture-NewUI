@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import styles from "./page.module.css";
@@ -19,9 +19,14 @@ export default function Auth() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: zodResolver(isSignup ? signupSchema : loginSchema),
   });
+
+  useEffect(() => {
+    reset();
+  }, [isSignup, reset]);
 
   console.log(callback);
 
