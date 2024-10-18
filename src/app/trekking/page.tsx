@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import Card from "@/components/ui/Card";
+import TrekCard from "@/components/ui/TrekCard";
 import TrekkingHeroImage from "/public/heroImage.png";
 import { trekDetails } from './location-detail';
 
@@ -66,77 +66,77 @@ export default function Trekking() {
             </header>
 
             <div className={styles["card-container"]}>
-                <Card
+                <TrekCard
                     title={"ROOPKUND TREK"}
                     subTitle={"HIGH RISK · 4536m · CHAMOLI"}
                     trekDetails={trekDetails[0]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"VALLEY OF FLOWERS TREK"}
                     subTitle={"MODERATE · 3658m · CHAMOLI"}
                     trekDetails={trekDetails[1]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"HAR KI DUN TREK"}
                     subTitle={"MODERATE · 3566m · UTTARKASHI"}
                     trekDetails={trekDetails[2]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"KEDARKANTHA TREK"}
                     subTitle={"EASY TO MODERATE · 3810m · UTTARKASHI"}
                     trekDetails={trekDetails[3]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"NANDA DEVI BASE CAMP TREK"}
                     subTitle={"MODERATE TO DIFFICULT · 4000m · CHAMOLI"}
                     trekDetails={trekDetails[4]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"PINDARI GLACIER TREK"}
                     subTitle={"MODERATE · 3660m · BAGESHWAR"}
                     trekDetails={trekDetails[5]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"BALI PASS TREK"}
                     subTitle={"DEMANDING · 4,950m · UTTARKASHI"}
                     trekDetails={trekDetails[6]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"KUMAON HIMALAYAS TREK"}
                     subTitle={"MODERATE · 4,200m · KUMAON"}
                     trekDetails={trekDetails[7]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"TUNGNATH CHOPTA TREK"}
                     subTitle={"EASY · 3,680m · CHAMOLI"}
                     trekDetails={trekDetails[8]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"RUPIN PASS TREK"}
                     subTitle={"DEMANDING · 4,650m · HIMACHAL PRADESH"}
                     trekDetails={trekDetails[9]} // Adjust the key according to your dictionary
                     readMoreLink="#"
                 />
 
-                <Card
+                <TrekCard
                     title={"CHOPTA TO TUNGNATH AND BACK"}
                     subTitle={"EASY · 3,680m · CHAMOLI"}
                     trekDetails={trekDetails[10]} // Adjust the key according to your dictionary
