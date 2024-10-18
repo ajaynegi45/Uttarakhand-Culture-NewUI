@@ -6,21 +6,31 @@ import Chat from "/public/chat.svg";
 const Faq: React.FC = () => {
     const [faqs, setFaqs] = useState([
         {
-            question: "Why we build Uttarakhand Culture?",
-            answer: "A concerning trend is emerging in Uttarakhand, where the younger generation is gradually forgetting their cultural heritage and traditional rituals. This decline in cultural knowledge is evident across generations, with each successive generation possessing less knowledge than the previous one. For instance, the amount of cultural knowledge possessed by grandparents is significantly more than that of their children, and the cultural knowledge of today's youth is likely to be even less than that of their parents. If this trend continues, there is a risk that the cultural heritage of Uttarakhand may eventually disappear from the society. This loss would not only erase the region's rich cultural identity but also deprive future generations of their cultural roots and traditions.",
+            question: "Why was Uttarakhand Culture created?",
+            answer: "To address the decline in cultural knowledge among the younger generation in Uttarakhand, ensuring the preservation and appreciation of our rich heritage.",
             open: false,
         },
         {
-            question: "Why we build Uttarakhand Culture?",
-            answer: "A concerning trend is emerging in Uttarakhand, where the younger generation is gradually forgetting their cultural heritage and traditional rituals. This decline in cultural knowledge is evident across generations, with each successive generation possessing less knowledge than the previous one. For instance, the amount of cultural knowledge possessed by grandparents is significantly more than that of their children, and the cultural knowledge of today's youth is likely to be even less than that of their parents. If this trend continues, there is a risk that the cultural heritage of Uttarakhand may eventually disappear from the society. This loss would not only erase the region's rich cultural identity but also deprive future generations of their cultural roots and traditions.",
+            question: "What makes Uttarakhand’s culture unique?",
+            answer: "Uttarakhand’s culture is a vibrant blend of traditions, languages, and festivals, influenced by its diverse geography, rich history, and spiritual heritage, making it distinct from other regions in India.",
             open: false,
         }, {
-            question: "Why we build Uttarakhand Culture?",
-            answer: "A concerning trend is emerging in Uttarakhand, where the younger generation is gradually forgetting their cultural heritage and traditional rituals. This decline in cultural knowledge is evident across generations, with each successive generation possessing less knowledge than the previous one. For instance, the amount of cultural knowledge possessed by grandparents is significantly more than that of their children, and the cultural knowledge of today's youth is likely to be even less than that of their parents. If this trend continues, there is a risk that the cultural heritage of Uttarakhand may eventually disappear from the society. This loss would not only erase the region's rich cultural identity but also deprive future generations of their cultural roots and traditions.",
+            question: "How can I stay updated on cultural events in Uttarakhand?",
+            answer: "You can stay updated by visiting our platform regularly, where we post information about upcoming festivals, events, and cultural activities happening in Uttarakhand.",
             open: false,
         }, {
-            question: "Why we build Uttarakhand Culture?",
-            answer: "A concerning trend is emerging in Uttarakhand, where the younger generation is gradually forgetting their cultural heritage and traditional rituals. This decline in cultural knowledge is evident across generations, with each successive generation possessing less knowledge than the previous one. For instance, the amount of cultural knowledge possessed by grandparents is significantly more than that of their children, and the cultural knowledge of today's youth is likely to be even less than that of their parents. If this trend continues, there is a risk that the cultural heritage of Uttarakhand may eventually disappear from the society. This loss would not only erase the region's rich cultural identity but also deprive future generations of their cultural roots and traditions.",
+            question: "How does this project benefit future generations?",
+            answer: "By digitizing and promoting Uttarakhand’s cultural heritage, we aim to instill pride and knowledge in the younger generation, ensuring they carry forward the rich traditions and stories of their ancestors.",
+            open: false,
+        },
+        {
+            question: "How can I contribute to the project?",
+            answer: "You can contribute by submitting code, content ideas, or features. Check the Readme.md and Contributing.md files for guidelines.",
+            open: false,
+        },
+        {
+            question: "How can I contribute to the project?",
+            answer: "You can contribute by submitting code, content ideas, or features. Check the Readme.md and Contributing.md files for guidelines.",
             open: false,
         }
     ]);
