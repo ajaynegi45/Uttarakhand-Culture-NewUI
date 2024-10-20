@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from 'react';
+import {useRef} from 'react';
 import map from "/public/mapUk.svg";
 import styles from "./page.module.css";
 import Image from "next/image";
@@ -56,21 +56,30 @@ const Map = () => {
     };
 
     return (
-        <div>
-            <div className={styles["uttarakhand-map"]}>
-                <h1 className={styles["uttarakhand-map-heading"]}>Map of Uttarakhand</h1>
-                <p>Detailed map of Uttarakhand</p>
-                <div ref={mapBoxHeightRef} className={styles["uttarakhand-map-container"]}>
-                    <Image className={styles["map-image"]} ref={mapImageRef} src={map} alt="Important Map of Uttarakhand" decoding="async" />
+        <>
+            {/*<div>*/}
+            {/*    <Image src={"/mapClick.svg"} alt={""} width={100} height={100} />*/}
+            {/*</div>*/}
+            
+            <div>
+                <div className={styles["uttarakhand-map"]}>
+                    <h1 className={styles["uttarakhand-map-heading"]}>Map of Uttarakhand</h1>
+                    <p>Detailed map of Uttarakhand</p>
+                    <div ref={mapBoxHeightRef} className={styles["uttarakhand-map-container"]}>
+                        <Image className={styles["map-image"]} ref={mapImageRef} src={map}
+                               alt="Important Map of Uttarakhand"
+                               decoding="async"/>
+                    </div>
+                    <div className={styles["zoom-button-container"]}>
+                        <p onClick={handleZoomIn} className={styles["zoom-level-button"]}>+</p>
+                        <p onClick={handleZoomOut} className={styles["zoom-level-button"]}>-</p>
+                    </div>
+                    <p>Zoom to view Map</p>
                 </div>
-                <div className={styles["zoom-button-container"]}>
-                    <p onClick={handleZoomIn} className={styles["zoom-level-button"]}>+</p>
-                    <p onClick={handleZoomOut} className={styles["zoom-level-button"]}>-</p>
-                </div>
-                <p>Zoom to view Map</p>
             </div>
-        </div>
-    );
+        </>
+    )
+        ;
 };
 
 export default Map;
