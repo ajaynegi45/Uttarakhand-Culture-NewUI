@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"; // Import useState for managing state
 import Image from "next/image";
-import styles from "./Card.module.css";
+import styles from "./TrekCard.module.css";
 import Link from "next/link";
 import Roopkund from "/public/roopkund.jpg";
 
@@ -15,7 +15,8 @@ type TrekDetails = {
   culturalInsights: string[];
   physicalChallenges: string[];
   recommendedGear: string[];
-  bestTimeToVisit: string; // Change this to an array of strings
+  bestTimeToVisit: string;
+  image: string; // Change this to an array of strings
 };
 
 type CardProps = {
@@ -33,7 +34,7 @@ export default function TrekCard(props: CardProps) {
 
   return (
     <section className={styles["card"]}>
-            <div className={styles[""]} >
+            <div className={styles["left-card"]} >
         <h2 className={styles["title"]}>{title}</h2>
         <p className={styles["subTitle"]}>{subTitle}</p>
         <div className={styles["description"]}>
@@ -121,7 +122,7 @@ export default function TrekCard(props: CardProps) {
       </div>
 
       <div className={styles["image-container"]}>
-        <Image src={Roopkund} alt={title} width={300} height={200} placeholder={"blur"} />
+        <img src={trekDetails.image} alt={title} width={300} height={200} />
       </div>
     </section>
   );

@@ -34,6 +34,7 @@ export const trekDetails = [
       "Sleeping bags suitable for cold temperatures and a sturdy backpack, essential for overnight camping and day treks."
     ],
     bestTimeToVisit: "The ideal months for the Roopkund Trek are May to June and September to October, when the weather is relatively stable, and the trails are accessible.",
+    image : 'https://upload.wikimedia.org/wikipedia/commons/2/24/Roopkund_Lake.jpg'
   },
   {
     title: "Valley of Flowers Trek",
@@ -70,6 +71,7 @@ export const trekDetails = [
       "A reliable daypack for carrying essentials, including water, snacks, and a first-aid kit for emergencies."
     ],
     bestTimeToVisit: "The best time to visit the Valley of Flowers is between late June and early September, when the flowers are in full bloom and the weather is pleasant.",
+    image : "https://upload.wikimedia.org/wikipedia/commons/6/63/Valley_of_flowers_uttaranchal_full_view.JPG"
   },
   {
     title: "Har Ki Dun Trek",
@@ -106,6 +108,7 @@ export const trekDetails = [
       "A durable backpack to carry essential items, including a water bottle, snacks, and a first-aid kit."
     ],
     bestTimeToVisit: "The ideal time to trek Har Ki Dun is from April to June and September to November, when the weather is pleasant and the trails are accessible.",
+    image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Har_Ki_Dun.jpg/1200px-Har_Ki_Dun.jpg"
   },
   {
     title: "Kedarkantha Trek",
@@ -141,7 +144,8 @@ export const trekDetails = [
       "Essential gear such as trekking poles, a good-quality backpack, and a first-aid kit for safety."
     ],
     bestTimeToVisit: "The best time for the Kedarkantha Trek is from December to April, when the region is covered in snow, providing an ideal winter trekking experience.",
-},
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/68/Kedarkantha_Peak.jpg"
+  },
 
 {
   title: "Nanda Devi Base Camp Trek",
@@ -177,6 +181,7 @@ export const trekDetails = [
     "Essential gear such as trekking poles, a high-quality backpack, and a first-aid kit."
   ],
   bestTimeToVisit: "The best time for the Nanda Devi Base Camp Trek is from May to October when the weather is relatively stable and the trails are clear.",
+  image : "https://upload.wikimedia.org/wikipedia/commons/d/d2/Mt._Nanda_Devi.jpg"
 },
 {
   title: "Pindari Glacier Trek",
@@ -210,6 +215,7 @@ export const trekDetails = [
     "Essential gear such as a daypack, hydration system, and a basic first-aid kit.",
   ],
   bestTimeToVisit: "The ideal time for the Pindari Glacier Trek is from May to October when the weather is stable and the trails are clear.",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Pindari_glacier%2C_Uttarakhand%2C_India.jpg/1200px-Pindari_glacier%2C_Uttarakhand%2C_India.jpg"
 },
 {
   title: "Bali Pass Trek",
@@ -244,6 +250,7 @@ export const trekDetails = [
     "Essential gear such as a hydration system, trekking poles, and a first-aid kit.",
   ],
   bestTimeToVisit: "The best time for the Bali Pass Trek is from May to October when the weather is favorable and the trails are accessible.",
+  image : "https://himalayashelter.com/wp-content/uploads/2021/08/bali-pass-top-1024x576.webp"
 },
 
 {
@@ -278,6 +285,7 @@ export const trekDetails = [
     "Essential trekking gear such as a daypack, water bottle, and first-aid kit.",
   ],
   bestTimeToVisit: "The best time for the Kumaon Himalayas Trek is from April to October when the weather is pleasant and the trails are clear.",
+  image :"https://cdn.britannica.com/23/120923-159-7ABAB87D/Nanga-Parbat.jpg"
 },
 
   {
@@ -314,6 +322,7 @@ export const trekDetails = [
       "A daypack for carrying essentials, including water, snacks, and a first-aid kit.",
     ],
     bestTimeToVisit: "The best time for the Chopta Tungnath Trek is between March to June and September to November, when the weather is pleasant and the trails are clear.",
+    image : "https://trisoj.com/travel-guide/wp-content/uploads/2022/11/Chandrashila.png"
   },
     {
       title: "Rupin Pass Trek",
@@ -348,6 +357,7 @@ export const trekDetails = [
         "Learn about the traditional practices and folklore of the region during your trek.",
       ],
       bestTimeToVisit: "The best time for the Rupin Pass Trek is from May to October, when the weather is clear and the trails are accessible.",
+      image : "https://trekthehimalayas.com/images/RupinPassTrek/GalleryDesktop/Winter/625ce941-4dcc-46d4-a5b7-015e4d037005_Rupin-Pass-6.webp"
     },
     {
       title: "Chopta to Tungnath and Back",
@@ -380,6 +390,7 @@ export const trekDetails = [
         "Essential items like a daypack, water bottle, and a basic first-aid kit.",
       ],
       bestTimeToVisit: "The best time for the Chopta to Tungnath trek is from April to June and September to November, when the weather is pleasant and the trails are clear.",
+      image : "https://trekiq.in/uploads/2021/04/Chandrashila-in-winters.jpg"
     },
   ];
   

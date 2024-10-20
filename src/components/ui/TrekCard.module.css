@@ -8,6 +8,11 @@
     padding-top: 4rem;
     margin-top: 4rem;
 }
+.left-card{
+    flex: 3;
+    padding-right: 1rem;
+    width: 100%;
+}
 
 .title{
     /*font-size: 2em;*/
@@ -22,15 +27,20 @@
     font-size: 13px;
     color: var(--black);
     overflow: hidden;
-    height: 9em;
-
     display: -webkit-box;
-    -webkit-line-clamp: 6; /* Number of lines to show */
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    white-space: normal; /* Allows the text to wrap within the box */
+    
 }
 
+.heading{
+    margin: 1rem 0rem;
+    font-size: medium;
+    font-weight: 300;
+}
+.heading-list{
+    margin-left: 2rem;
+}
 
 .link-container{
     display: flex;
@@ -88,9 +98,12 @@
 
 
 .image-container{
-    margin-left: 2rem;
-    width: 100%;
-    display: flex;
+    margin-top: 0%;
+    margin-bottom: auto;
+    margin-left: auto;  
+    margin-right: 0%;
+    width: fit-content;
+    flex: 1;
     flex-direction: row;
     justify-content: flex-end;
 }
