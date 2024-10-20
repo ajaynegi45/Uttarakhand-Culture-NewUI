@@ -27,11 +27,6 @@ const Faq: React.FC = () => {
             question: "How can I contribute to the project?",
             answer: "You can contribute by submitting code, content ideas, or features. Check the Readme.md and Contributing.md files for guidelines.",
             open: false,
-        },
-        {
-            question: "How can I contribute to the project?",
-            answer: "You can contribute by submitting code, content ideas, or features. Check the Readme.md and Contributing.md files for guidelines.",
-            open: false,
         }
     ]);
 
