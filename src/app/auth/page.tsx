@@ -271,6 +271,7 @@ export default function Auth() {
           if (!isLoading) {
             setIsSignup(!isSignup);
           }
+          setHidden(true)
         }}
         className={styles.toggle}
       >
