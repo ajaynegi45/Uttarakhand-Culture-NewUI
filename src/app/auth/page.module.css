@@ -71,3 +71,22 @@
   cursor: pointer;
   color: var(--slate-black);
 }
+
+.passwordContainer{
+  position: relative;
+
+}
+
+.passwordToggle{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  top: 0;
+  align-items: center;
+  right: 1rem
+}
+
+.image{
+  height: 25px;
+  width: 25px;
+}
