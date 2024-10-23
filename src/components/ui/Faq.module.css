@@ -4,10 +4,10 @@
     min-width: 100%;
     height: auto;
     margin-top: 5rem;
-  }
-  
-  .faqContainer h1 {
-    font-size: 48px; 
+}
+
+.faqContainer h1 {
+    font-size: 48px;
     line-height: 1.2;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -15,72 +15,72 @@
 
 @media (max-width: 1024px) {
     .faqContainer h1 {
-        font-size: 40px; 
-        margin-top: 20px; 
+        font-size: 40px;
+        margin-top: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .faqContainer h1 {
-        font-size: 35px; 
-        margin-top: 30px; 
+        font-size: 35px;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 600px) {
     .faqContainer h1 {
-        font-size: 28px; 
-        margin-top: 50px; 
+        font-size: 28px;
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 499px) {
     .faqContainer h1 {
-        font-size: 28px; 
-        margin-top: 50px; 
+        font-size: 28px;
+        margin-top: 50px;
     }
 }
 
-  .faqIcon {
-    margin-top: 10px; 
-  }
-  
-  .faqTitle {
-    margin-top: 10px; 
+.faqIcon {
+    margin-top: 10px;
+}
+
+.faqTitle {
+    margin-top: 10px;
     font-weight: normal;
-    font-size: 18px; 
-  }
-  
-  .faqs {
+    font-size: 18px;
+}
+
+.faqs {
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
     padding: 15px;
-    text-align: left; 
-  }
-  
-  .faq {
+    text-align: left;
+}
+
+.faq {
     margin: 15px 0;
     padding: 15px;
     background: #f2f2f2;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.2s ease;
-  }
-  
-  .faq:hover {
+}
+
+.faq:hover {
     background-color: #e2e2e2;
-  }
-  
-  .faqQuestion {
+}
+
+.faqQuestion {
     position: relative;
     font-size: 20px;
     padding-right: 30px;
     transition: all 0.2s ease;
     text-align: left;
-  }
-  
-  .faqQuestion::after {
+}
+
+.faqQuestion::after {
     content: "+";
     position: absolute;
     top: 50%;
@@ -88,27 +88,27 @@
     transform: translateY(-50%);
     font-size: 20px;
     transition: all 0.2s ease;
-  }
-  
-  .faq.open .faqQuestion::after {
+}
+
+.faq.open .faqQuestion::after {
     content: "-";
-  }
-  
-  .faqAnswer {
+}
+
+.faqAnswer {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
     text-align: left;
-  }
-  
-  .faq.open .faqAnswer {
+}
+
+.faq.open .faqAnswer {
     opacity: 1;
-    max-height: 500px; 
-    margin-top: 10px;  
-  }
-  
-  .contactButton {
+    max-height: 500px;
+    margin-top: 10px;
+}
+
+.contactButton {
     font-size: 14px;
     color: white;
     background-color: var(--black);
@@ -116,10 +116,10 @@
     margin: 20px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 .7px .7px -.6px #00000026, 
-                0 1.8px 1.8px -1.2px #00000025, 
-                0 3.6px 3.6px -1.9px #00000023, 
-                0 6.9px 6.9px -2.5px #00000020, 
-                0 13.6px 13.6px -3.1px #0000001b, 
-                0 30px 30px -3.8px #0000000d;
-  }
+    box-shadow: 0 .7px .7px -.6px #00000026,
+    0 1.8px 1.8px -1.2px #00000025,
+    0 3.6px 3.6px -1.9px #00000023,
+    0 6.9px 6.9px -2.5px #00000020,
+    0 13.6px 13.6px -3.1px #0000001b,
+    0 30px 30px -3.8px #0000000d;
+}
