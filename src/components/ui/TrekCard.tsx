@@ -38,7 +38,7 @@ export default function TrekCard(props: CardProps) {
         <h2 className={styles["title"]}>{title}</h2>
         <p className={styles["subTitle"]}>{subTitle}</p>
         <div className={styles["description"]}>
-            <p className="paragraph">{trekDetails.introduction}</p>
+            <p className={styles["description"]}>{trekDetails.introduction}</p>
             
          
 
@@ -46,12 +46,12 @@ export default function TrekCard(props: CardProps) {
           {isExpanded && (
             <div className={styles["readmore-div"]}>
               <h2 className={styles['heading']}>&#9670; Overview</h2>
-              <p className="paragraph">{trekDetails.overview}</p>
+              <p className={styles["description"]}>{trekDetails.overview}</p>
                 <h2 className={styles['heading']}>&#9670; Route</h2>
               <p>
                 <ul className={styles['heading-list']}>
                   {trekDetails.route.map((item, index) => (
-                    <li key={index} className="list-item">{item}</li>
+                    <li key={index} className={styles['list-item']}>{item}</li>
                   ))}
                 </ul>
               </p>
@@ -60,7 +60,7 @@ export default function TrekCard(props: CardProps) {
               <p>
                 <ul className={styles['heading-list']}>
                   {trekDetails.attractions.map((item, index) => (
-                    <li key={index} className="list-item">
+                    <li key={index} className={styles['list-item']}>
                       {item}
                     </li>
                   ))}
@@ -70,7 +70,7 @@ export default function TrekCard(props: CardProps) {
               <p>
                 <ul className={styles['heading-list']}>
                   {trekDetails.physicalChallenges.map((item, index) => (
-                    <li key={index} className="list-item">
+                    <li key={index} className={styles['list-item']}>
                       {item}
                     </li>
                   ))}
@@ -80,7 +80,7 @@ export default function TrekCard(props: CardProps) {
               <p>
                 <ul className={styles['heading-list']}>
                   {trekDetails.recommendedGear.map((item, index) => (
-                    <li key={index} className="list-item">
+                    <li key={index} className={styles['list-item']}>
                       {item}
                     </li>
                   ))}
@@ -90,14 +90,14 @@ export default function TrekCard(props: CardProps) {
               <p>
                 <ul className={styles['heading-list']}>
                   {trekDetails.culturalInsights.map((item, index) => (
-                    <li key={index} className="list-item">
+                    <li key={index} className={styles['list-item']}>
                       {item}
                     </li>
                   ))}
                 </ul>
               </p>
               <h2 className={styles['heading']}>&#9670; Best Time To Visit</h2>
-              <p className="paragraph">{trekDetails.bestTimeToVisit}</p>
+              <p className={styles["description"]}>{trekDetails.bestTimeToVisit}</p>
                 
             </div>
           )}

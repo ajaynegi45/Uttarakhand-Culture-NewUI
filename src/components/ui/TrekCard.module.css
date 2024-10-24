@@ -32,6 +32,22 @@
     text-overflow: ellipsis;
     
 }
+.list-item{
+    font-size: 13px;
+    color: var(--black);
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.paragraph{
+    margin-top: 1rem;
+    font-size: 13px;
+    color: var(--black);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    
+}
 
 .heading{
     margin: 1rem 0rem;
