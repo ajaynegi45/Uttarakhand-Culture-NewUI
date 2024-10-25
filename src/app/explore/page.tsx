@@ -22,6 +22,17 @@ export default function Explore() {
                          subTitle={"KUMAONI · GARHWALI · JAUNSARI"}
                          description={"Uttarakhand is a state rich in linguistic diversity, with its residents speaking several regional languages and dialects. The most widely spoken languages include Kumaoni, Garhwali, and Jaunsari, which vary based on the region's geography and communities. Each of these languages carries a deep cultural significance, passed down through generations, reflecting the local folklore, traditions, and lifestyle. These languages serve as a vital link to the past, preserving Uttarakhand’s heritage through oral literature, songs, and storytelling. By learning and promoting these languages, we continue to celebrate and preserve the unique identity of this beautiful region."}
                          image={Bagwal} readMoreLink={"/language"}/>
+            
+            <SectionCard cardTitle={"UTTARAKHAND FOOD"} title={"EXPLORE FOOD"}
+                         subTitle={"FLAVORS OF THE HILLS: A TASTE OF TRADITIONAL UTTARAKHANDI CUISINE"}
+                         description={"Uttarakhand's cuisine, also known as Pahadi food, reflects its mountainous culture and ingredients found in the Himalayan region. Known for its simplicity and nutritional value, the cuisine features dishes rich in grains, pulses, and locally-sourced greens. Staple ingredients like mandua (finger millet) and jhangora (barnyard millet) are commonly used. Popular dishes include kafuli, a green leafy curry made from spinach, and bhatt ki churkani, a black bean dish with spices. The region’s sweets, such as singodi and bal mithai, are crafted from condensed milk and nuts. Uttarakhandi food is seasoned mildly, focusing on enhancing the natural flavors."}
+                         image={Bagwal} readMoreLink={"/Food"}/>
+
+            <SectionCard cardTitle={"UTTARAKHAND ATTIRE"} title={"EXPLORE ATTIRE"}
+                         subTitle={"TRADITIONAL ELEGANCE OF UTTARAKHAND: A FUSION OF CULTURE AND HERITAGE"}
+                         description={"Uttarakhand's traditional attire varies between Garhwal and Kumaon regions. Women wear Ghagri (skirt) and Choli (blouse), often with a richly decorated Pichora (shawl) for special occasions. Bridal wear includes vibrant patterns and intricate embroidery, complemented by heavy gold and silver jewelry, like the Nath (nose ring). Men traditionally wear Kurta-Pajama or Dhoti with an Angarkha (coat) in colder areas, and a Topi (cap) symbolizing identity. Younger generations often blend traditional and modern clothing, though the attire holds deep cultural significance, especially for weddings and festivals, reflecting the Himalayan lifestyle and local heritage."}
+                         image={Bagwal} readMoreLink={"/attire"}/>
+
 
             <section>
 
