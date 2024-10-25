@@ -1,0 +1,200 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid var(--cloud-grey);
+    padding-top: 4rem;
+    margin-top: 4rem;
+}
+.left-card{
+    flex: 3;
+    padding-right: 1rem;
+    width: 100%;
+}
+
+.title{
+    /*font-size: 2em;*/
+}
+
+.subTitle{
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+.description{
+    margin-top: 1rem;
+    font-size: 13px;
+    color: var(--black);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    
+}
+.list-item{
+    font-size: 13px;
+    color: var(--black);
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.paragraph{
+    margin-top: 1rem;
+    font-size: 13px;
+    color: var(--black);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    
+}
+
+.heading{
+    margin: 1rem 0rem;
+    font-size: medium;
+    font-weight: 300;
+}
+.heading-list{
+    margin-left: 2rem;
+}
+
+.link-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+
+}
+
+.link-container > div{
+    border-top: 1px solid #E1E4E8;
+    padding: 3px 10px 1px 10px;
+}
+.link-container2{
+
+}
+.link-container > div > a{
+    text-align: center;
+    color: var(--grey);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 350;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: none;
+    line-height: 20px;
+
+    position: relative;
+}
+
+.link-container > div > a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background-color: var(--black);
+    transition: 0.3s ease-in-out;
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+}
+
+.link-container > div:hover > a:hover::after {
+    transform: scale(1, 1);
+}
+
+.link-container > div:hover > a{
+    color: var(--black);
+    filter: drop-shadow(0 0 0.90rem #A0A5AC);
+}
+
+.link-container > div > button {
+    text-align: center;
+    color: var(--grey);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 350;
+    letter-spacing: 1px;
+    text-decoration: none; /* Note: Not necessary for buttons */
+    text-transform: none;
+    line-height: 20px;
+    position: relative;
+    background: none; /* Make the button background transparent */
+    border: none; /* Remove border for a link-like appearance */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.link-container > div > button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background-color: var(--black);
+    transition: 0.3s ease-in-out;
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+}
+
+.link-container > div:hover > button:hover::after {
+    transform: scale(1, 1);
+}
+
+.link-container > div:hover > button {
+    color: var(--black);
+    filter: drop-shadow(0 0 0.90rem #A0A5AC);
+}
+
+
+.image-container{
+    margin-top: 0%;
+    margin-bottom: auto;
+    margin-left: auto;  
+    margin-right: 0%;
+    width: fit-content;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.image-container > img{
+
+    width: auto;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+
+
+}
+
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .card{
+        width: 96%;
+        padding-top: 3rem;
+        margin-top: 3rem;
+    }
+
+    .subTitle{
+        font-weight: 300;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .image-container{
+        display: none;
+    }
+    .image-container > img{
+        width: 100px;
+        height: 100%;
+    }
+
+    .link-container > div > a{
+        font-size: 10px;
+    }
+}
