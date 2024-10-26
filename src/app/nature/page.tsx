@@ -5,9 +5,9 @@ import styles from './page.module.css';
 import Background from '/public/Banner 1.svg';
 import Flora from '/public/flora.png';
 import Fauna from '/public/fauna.png';
-import Glaciers from '/public/glaciers.png';
-import Rivers from '/public/rivers.png';
-import Mountains from '/public/mountains.png';
+import Glaciers from '/public/GangotriGlacier.jpg';
+import Rivers from '/public/Devprayag.jpg';
+import Mountains from '/public/NandaDevi.jpg';
 import Link from 'next/link';
 import { StaticImageData } from 'next/image';
 
