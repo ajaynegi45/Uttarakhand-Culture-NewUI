@@ -7,10 +7,15 @@ import { toast } from "sonner";
 import { loginSchema, signupSchema } from "@/lib/zod";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import eye from "../../../public/eye.png"
+import hide from "../../../public/eye-hide.png"
+import Image from 'next/image';
 
 export default function Auth() {
   const [isSignup, setIsSignup] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [hidden, setHidden] = useState(true);
+  const [confirmHidden, setConfirmHidden] = useState(true);
   const router = useRouter();
   const searchParams = useSearchParams();
   const callback = searchParams.get("callbackUrl");
@@ -161,27 +166,46 @@ export default function Auth() {
                 {errors.email.message?.toString()}
               </p>
             )}
-
-            <input
-              type="password"
-              placeholder="Password"
-              disabled={isLoading}
-              {...register("password")}
-              className={styles.input}
-            />
+            <div className={styles.passwordContainer} >
+              <input
+                type={hidden ? "password" : "text"}
+                placeholder="Password"
+                disabled={isLoading}
+                {...register("password")}
+                className={styles.input}
+              />
+              <button className={styles.passwordToggle} onClick={(e)=>{
+                  e.preventDefault()
+                  setHidden(!hidden)
+                }}>
+                {
+                  hidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />
+                }
+              </button>
+            </div>
             {errors.password && (
               <p className={styles.errors}>
                 {errors.password.message?.toString()}
               </p>
             )}
 
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              {...register("confirmPassword")}
-              className={styles.input}
-              disabled={isLoading}
-            />
+            <div className={styles.passwordContainer} >
+              <input
+                type={confirmHidden ? "password" : "text"}
+                placeholder="Confirm Password"
+                {...register("confirmPassword")}
+                className={styles.input}
+                disabled={isLoading}
+              />
+              <button className={styles.passwordToggle} onClick={(e)=>{
+                  e.preventDefault()
+                  setConfirmHidden(!confirmHidden)
+                }}>
+                {
+                  confirmHidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />
+                }
+              </button>
+            </div>
             {errors.confirmPassword && (
               <p className={styles.errors}>
                 {errors.confirmPassword.message?.toString()}
@@ -214,14 +238,23 @@ export default function Auth() {
                 {errors.loginIdentifier.message?.toString()}
               </p>
             )}
-
-            <input
-              type="password"
-              placeholder="Password"
-              {...register("password")}
-              className={styles.input}
-              disabled={isLoading}
-            />
+            <div className={styles.passwordContainer} >
+              <input
+                type={hidden? "password" : "text"}
+                placeholder="Password"
+                {...register("password")}
+                className={styles.input}
+                disabled={isLoading}
+              />
+              <button className={styles.passwordToggle} onClick={(e)=>{
+                  e.preventDefault()
+                  setHidden(!hidden)
+                }}>
+                {
+                  hidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />
+                }
+              </button>
+            </div>
             {errors.password && (
               <p className={styles.errors}>
                 {errors.password.message?.toString()}
@@ -238,6 +271,7 @@ export default function Auth() {
           if (!isLoading) {
             setIsSignup(!isSignup);
           }
+          setHidden(true)
         }}
         className={styles.toggle}
       >
