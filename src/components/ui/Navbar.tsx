@@ -27,7 +27,8 @@ export default function Navbar() {
                         >
                             <Image src={session.data?.user?.image || "/default-avatar.png"}
                                    alt="User Avatar"
-                                   className={styles["avatar"]}/>
+                                   className={styles["avatar"]}
+                                   width={250} height={250}/>
 
                         </div>
                     ) : (

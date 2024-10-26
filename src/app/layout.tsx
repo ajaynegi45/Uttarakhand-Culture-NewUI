@@ -65,7 +65,7 @@ export default async function RootLayout({
   const pathname = h.get("x-current-path");
 
   if (session) {
-    if (!session.user.emailVerified) {
+    if (!session.user?.emailVerified) {
       if (!pathname!.includes("/auth")) {
         redirect("/auth/verify");
       }
