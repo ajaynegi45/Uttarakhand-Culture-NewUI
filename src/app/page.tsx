@@ -14,6 +14,7 @@ import PahadiWomen from "/public/bhotiaWoman.webp"
 import Screen from "@/components/Screen";
 import Festivals from "@/components/Festivals";
 import Faq from "@/components/Faq";
+import FeedbackForm from './FeedbackForm';
 export default function Home() {
     return (
         <>
@@ -150,6 +151,9 @@ export default function Home() {
             {/* FAQ */}
             <Faq/>
             {/* FAQ */}
+            {/* FEEDBACK */}
+            <FeedbackForm/>
+            {/* FEEDBACK */}
 
         </>
     );

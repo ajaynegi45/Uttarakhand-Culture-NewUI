@@ -1,0 +1,86 @@
+/* Container Styling */
+.feedback-container {
+    max-width: 300px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background-color: #333;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    color: #ddd;
+  }
+  
+  .feedback-container h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Form Field Styling */
+  .feedback-container form div {
+    margin-bottom: 1rem;
+  }
+  
+  .feedback-container label {
+    display: block;
+    font-weight: bold;
+    color: #bbb;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+  
+  .feedback-container input[type="text"],
+  .feedback-container input[type="email"],
+  .feedback-container input[type="number"],
+  .feedback-container textarea {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #444;
+    border: 1px solid #555;
+    color: #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+  }
+  
+  .feedback-container input[type="text"]:focus,
+  .feedback-container input[type="email"]:focus,
+  .feedback-container input[type="number"]:focus,
+  .feedback-container textarea:focus {
+    border-color: #666;
+    outline: none;
+  }
+  
+  /* Textarea Specific Styling */
+  .feedback-container textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  /* Submit Button Styling */
+  .feedback-container button[type="submit"] {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ddd;
+    background-color: #555;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .feedback-container button[type="submit"]:hover {
+    background-color: #777;
+  }
+  
+  /* Success Message Styling */
+  .feedback-container p {
+    text-align: center;
+    color: #88c0d0;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  

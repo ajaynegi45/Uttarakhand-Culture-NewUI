@@ -11,6 +11,8 @@ import eye from "../../../public/eye.png"
 import hide from "../../../public/eye-hide.png"
 import Image from 'next/image';
 
+
+
 export default function Auth() {
   const [isSignup, setIsSignup] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
