@@ -46,6 +46,17 @@
   width: 100%;
   align-items: center;
 }
+
+.form > div > input {
+  -moz-appearance: textfield;
+}
+
+.form > div > input::-webkit-outer-spin-button,
+.form > div > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .errors {
   color: red;
   font-weight: 600;
