@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+
+:root {
+    --black: #00000000;
+    --white: #fff;
+    --shocking-col: #1eff8f;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Inconsolata", monospace;
+    font-size: 14px;
+    background-color: var(--black);
+    display: grid;
+    place-items: center;
+}
+
+.ti-btn {
+    color: var(--white);
+    font: inherit;
+    background-color: var(--black);
+    padding: 8px 12px;
+    border-radius: 99px;
+    outline: 0;
+    overflow: hidden;
+    display: inline-flex;
+    position: relative;
+    user-select: none;
+    box-shadow: 0 0 0 0 rgba(var(--white), 0.5);
+    transition: box-shadow 150ms ease-out;
+    align-items: center;
+    justify-content: center;
+}
+.ti-btn svg {
+    margin-right: 2px;
+    width: 32px;
+    height: 32px;
+}
+
+.ti-btn:focus {
+    box-shadow: 0 0 0 8px rgba(var(--white), 0.5);
+}
+
+.ripple {
+    background-color: var(--shocking-col);
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-100%, -100%);
+    mix-blend-mode: screen;
+    animation: ripple 1250ms ease-out forwards, fade 1500ms ease-out forwards;
+}
+
+@media (max-width: 700px) {
+    .ti-btn {
+        padding: 5px;
+        background: transparent;
+    }
+
+    .ti-btn span {
+        display: none;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-100%, -100%);
+    }
+    80% {
+        transform: translate(-100%, -100%) scale(50);
+    }
+    100% {
+        transform: translate(-100%, -100%) scale(50);
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
