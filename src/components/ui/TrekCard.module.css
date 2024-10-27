@@ -6,7 +6,7 @@
     width: 100%;
     border-top: 1px solid var(--cloud-grey);
     padding-top: 4rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 .left-card{
     flex: 3;

@@ -46,6 +46,49 @@
     justify-content: center;
 }
 
+.filter-section {
+    margin-top: 4rem; /* Space above the filter section */
+}
+
+.search-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+}
+
+.item {
+    flex: 1; /* Allow items to grow equally */
+    margin: 0 0.5rem; /* Margin between items */
+    position: relative; /* Relative positioning for label */
+}
+
+.item label {
+    display: block; /* Make label a block element */
+    margin-bottom: 0.25rem; /* Space below the label */
+    font-weight: 500; /* Medium font weight */
+    color: #333; /* Dark gray for good contrast */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.item select {
+    padding: 0.5rem; /* Padding inside the select box */
+    border-radius: 5px; /* Rounded corners for select box */
+    border: 1px solid #ccc; /* Light gray border */
+    font-size: 0.75rem; /* Font size for select box */
+    color: #333; /* Dark text color */
+    background-color: #fff; /* White background for select box */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+}
+.not-available {
+    text-align: center; /* Center the text */
+    color: #555; /* Gray text color */
+    font-size: 1rem; /* Adjust font size */
+    margin: 20px 0; /* Space around the message */
+}
+
+
+
+
 
 
 

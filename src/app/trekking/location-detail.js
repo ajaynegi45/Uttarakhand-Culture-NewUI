@@ -1,6 +1,9 @@
 export const trekDetails = [
   {
-    title: "Roopkund Trek",
+    title: "ROOPKUND TREK",
+    difficultyLevel: "HIGH RISK",
+    altitude: 4536,
+    district: "CHAMOLI",
     introduction:
       "The Roopkund Trek is a mesmerizing journey through the pristine wilderness of the Himalayas, famously known as the 'Skeleton Lake.' This trek is shrouded in mystery and folklore, as the lake is home to human skeletal remains that date back centuries. Surrounded by majestic mountains and verdant meadows, the trek offers not just adventure but also a unique glimpse into the region's rich history and culture. As you traverse the rugged terrain, you'll encounter breathtaking landscapes that change with every turn, making this an unforgettable experience for every nature enthusiast.",
     overview:
@@ -37,7 +40,10 @@ export const trekDetails = [
     image : 'https://upload.wikimedia.org/wikipedia/commons/2/24/Roopkund_Lake.jpg'
   },
   {
-    title: "Valley of Flowers Trek",
+    title: "VALLEY OF FLOWERS TREK",
+    difficultyLevel: "MODERATE",
+        altitude: 3658,
+        district: "CHAMOLI",
     introduction:
       "The Valley of Flowers Trek is a breathtaking expedition into one of India's most spectacular national parks. Known for its vibrant meadows filled with a stunning array of endemic flowers, this UNESCO World Heritage site is a paradise for nature lovers and photographers alike. As you trek through the valley, you’ll be greeted by a colorful landscape that comes alive during the monsoon season. The blend of beautiful flora and the majestic backdrop of snow-capped mountains creates a visual feast that captivates all who visit. The Valley of Flowers is not just a visual delight; it’s an opportunity to connect with nature at its most vibrant and enchanting.",
     overview:
@@ -74,7 +80,10 @@ export const trekDetails = [
     image : "https://upload.wikimedia.org/wikipedia/commons/6/63/Valley_of_flowers_uttaranchal_full_view.JPG"
   },
   {
-    title: "Har Ki Dun Trek",
+    title: "HAR KI DUN TREK",
+    difficultyLevel: "MODERATE",
+        altitude: 3566,
+        district: "UTTARKASHI",
     introduction:
       "The Har Ki Dun Trek offers a mesmerizing blend of natural beauty and rich cultural heritage, often referred to as the 'Valley of Gods.' This picturesque valley is steeped in mythological significance and is surrounded by magnificent snow-capped peaks, dense forests, and lush meadows. The trek is an ideal escape for those looking to immerse themselves in the tranquility of nature while exploring the rich history and traditions of the local people. Trekking in Har Ki Dun allows you to connect with the serene landscapes and delve into the stories that the mountains hold.",
     overview:
@@ -111,7 +120,10 @@ export const trekDetails = [
     image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Har_Ki_Dun.jpg/1200px-Har_Ki_Dun.jpg"
   },
   {
-    title: "Kedarkantha Trek",
+    title: "KEDARKANTHA TREK",
+    difficultyLevel: "EASY TO MODERATE",
+    altitude: 3810,
+    district: "UTTARKASHI",
     introduction:
       "Experience the thrilling Kedarkantha Trek, renowned for its stunning winter landscapes and breathtaking summit views. This trek is especially popular during the winter months when the entire region is blanketed in snow, creating a picturesque setting for adventure seekers.",
     overview:
@@ -148,7 +160,10 @@ export const trekDetails = [
   },
 
 {
-  title: "Nanda Devi Base Camp Trek",
+  title: "NANDA DEVI BASE CAMP TREK",
+  difficultyLevel: "MODERATE TO DIFFICULT",
+  altitude: 4000,
+  district: "CHAMOLI",
   introduction:
     "Discover the untouched beauty of Nanda Devi Base Camp, a majestic trek that offers a glimpse into the heart of the Himalayas. This trek is an adventure through one of India's most scenic and lesser-known trails, perfect for nature lovers and adventure seekers alike.",
   overview:
@@ -184,7 +199,10 @@ export const trekDetails = [
   image : "https://upload.wikimedia.org/wikipedia/commons/d/d2/Mt._Nanda_Devi.jpg"
 },
 {
-  title: "Pindari Glacier Trek",
+  title: "PINDARI GLACIER TREK",
+  difficultyLevel: "MODERATE",
+  altitude: 3660,
+  district: "BAGESHWAR",
   introduction:
     "Venture to the Pindari Glacier, a mesmerizing trek that offers breathtaking views of the majestic glacier and surrounding peaks. This trek is renowned for its pristine natural beauty and serene atmosphere.",
   overview:
@@ -218,7 +236,10 @@ export const trekDetails = [
   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Pindari_glacier%2C_Uttarakhand%2C_India.jpg/1200px-Pindari_glacier%2C_Uttarakhand%2C_India.jpg"
 },
 {
-  title: "Bali Pass Trek",
+  title: "BALI PASS TREK",
+  difficultyLevel: "DEMANDING",
+  altitude: 4950,
+  district: "UTTARKASHI",
   introduction:
     "Embark on an extraordinary journey through the Bali Pass, a high-altitude trek that connects the Har Ki Dun and Yamunotri valleys. This trek offers a perfect blend of adventure and breathtaking natural beauty.",
   overview:
@@ -254,7 +275,10 @@ export const trekDetails = [
 },
 
 {
-  title: "Kumaon Himalayas Trek",
+  title: "KUMAON HIMALAYAS TREK",
+  difficultyLevel: "MODERATE",
+  altitude: 4200,
+  district: "KUMAON",
   introduction:
     "Explore the pristine beauty of the Kumaon Himalayas, where adventure and nature come together in perfect harmony. This trek promises an unforgettable experience for nature lovers and adventure seekers, offering an immersive journey through one of India's most scenic regions.",
   overview:
@@ -289,7 +313,10 @@ export const trekDetails = [
 },
 
   {
-    title: "Chopta Tungnath Trek",
+    title: "TUNGNATH CHOPTA TREK",
+    difficultyLevel: "EASY",
+    altitude: 3680,
+    district: "CHAMOLI",
     introduction:
       "Experience the breathtaking beauty of the Chopta Tungnath Trek, known for its stunning landscapes and rich cultural heritage. This trek, leading to the highest Shiva temple in the world, combines adventure with spiritual significance, making it a unique experience for trekkers. Nestled in the heart of the Himalayas, Chopta is often referred to as the 'Mini Switzerland of India' due to its picturesque meadows and panoramic views of the surrounding peaks. The trek not only offers mesmerizing views but also a deep connection to the spiritual essence of the region, making it a favorite among both adventure seekers and those seeking solace.",
     overview:
@@ -325,7 +352,10 @@ export const trekDetails = [
     image : "https://trisoj.com/travel-guide/wp-content/uploads/2022/11/Chandrashila.png"
   },
     {
-      title: "Rupin Pass Trek",
+      title: "RUPIN PASS TREK",
+      difficultyLevel: "DEMANDING",
+      altitude: 4650,
+      district: "UTTARKASHI",
       introduction:
         "Challenge yourself with the Rupin Pass trek, a breathtaking adventure that showcases the stunning beauty of the Himalayas. Known for its dramatic landscapes, this trek offers a unique opportunity to explore the diverse terrains and experience the rich culture of the region.",
       overview:
@@ -360,7 +390,10 @@ export const trekDetails = [
       image : "https://trekthehimalayas.com/images/RupinPassTrek/GalleryDesktop/Winter/625ce941-4dcc-46d4-a5b7-015e4d037005_Rupin-Pass-6.webp"
     },
     {
-      title: "Chopta to Tungnath and Back",
+      title: "CHOPTA TO TUNGNATH AND BACK",
+      difficultyLevel: "EASY",
+      altitude: 3680,
+      district: "CHAMOLI",
       introduction:
         "Embark on a scenic trek from Chopta to Tungnath, a journey filled with natural beauty and spiritual significance. This trek not only offers stunning vistas but also allows you to connect with the sacred heritage of the region.",
       overview:
