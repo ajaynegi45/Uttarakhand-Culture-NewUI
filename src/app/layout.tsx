@@ -9,7 +9,7 @@ import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 import { SessionProvider } from "next-auth/react";
-// import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const customFont = localFont({
   src: "../font/customFont.otf",
@@ -82,7 +82,7 @@ export default async function RootLayout({
           <main>
             <Navbar />
             {children}
-            {/*<SpeedInsights />*/}
+            <SpeedInsights />
             <Toaster position="bottom-right" richColors={true} />
             <Footer />
           </main>
