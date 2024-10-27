@@ -425,5 +425,222 @@ export const trekDetails = [
       bestTimeToVisit: "The best time for the Chopta to Tungnath trek is from April to June and September to November, when the weather is pleasant and the trails are clear.",
       image : "https://trekiq.in/uploads/2021/04/Chandrashila-in-winters.jpg"
     },
+    {
+      title: "PANWALI KANTHA TREK",
+      difficultyLevel: "EASY TO MODERATE",
+      altitude: 3075,
+      district: "TEHRI GARHWAL",
+      introduction:
+        "The Panwali Kantha Trek is a serene journey that offers a perfect blend of lush greenery, stunning views, and rich cultural heritage. Nestled in the Garhwal Himalayas, this trek is ideal for beginners and nature lovers looking to escape into the wilderness. The path winds through quaint villages, dense forests, and breathtaking meadows, providing an immersive experience in the heart of Uttarakhand's natural beauty.",
+      overview:
+        "Covering approximately 36 kilometers, the Panwali Kantha Trek leads you to an altitude of 10,700 feet. The trek begins at the charming village of Kandikhal and ascends through thick oak forests and lush meadows. As you reach the summit, you are greeted with panoramic views of the Himalayan peaks and the enchanting landscapes of the region. The trek is dotted with local flora and fauna, making it a perfect spot for wildlife enthusiasts and photographers alike.",
+      route: [
+        "Day 1: Drive to Kandikhal, the starting point, and acclimatize to the beautiful surroundings.",
+        "Day 2: Trek to Panwali Kantha (10,700 feet) through picturesque meadows and enjoy stunning views along the way.",
+        "Day 3: Explore the area, interact with local communities, and take in the serene beauty of the Himalayas before returning to Kandikhal.",
+      ],
+      attractions: [
+        "Breathtaking views of the surrounding mountains and valleys, perfect for photography enthusiasts.",
+        "Rich biodiversity, including various species of flora and fauna unique to the region.",
+        "Cultural experiences with local villagers, offering insights into traditional Garhwali lifestyles."
+      ],
+      culturalInsights: [
+        "Engage with local families and learn about their daily lives, customs, and traditional practices.",
+        "Explore local temples and understand their significance in the cultural landscape of Uttarakhand."
+      ],
+      physicalChallenges: [
+        "Gentle ascents with some steep sections, making it suitable for beginner trekkers with moderate fitness levels.",
+        "Potentially unpredictable weather, especially in higher altitudes, necessitating preparedness."
+      ],
+      recommendedGear: [
+        "Comfortable trekking shoes, suitable for varied terrain and long walks.",
+        "Lightweight and breathable clothing for warm days, along with a warm jacket for cooler evenings.",
+        "A reliable backpack to carry essentials, along with a water bottle for hydration."
+      ],
+      bestTimeToVisit: "The best time to visit Panwali Kantha is from April to June and September to November, ensuring pleasant weather for trekking.",
+      image: 'https://uttarakhandtriptrek.com/wp-content/uploads/2019/03/Panwali-Kantha-Trek-Image.jpg'
+    },
+    {
+      title: "DRONAGIRI TREK",
+      difficultyLevel: "MODERATE",
+      altitude: 6070,
+      district: "CHAMOLI",
+      introduction:
+        "The Dronagiri Trek takes you on an extraordinary journey to one of the lesser-known peaks of the Himalayas. It is renowned for its stunning landscapes and rich mythology associated with the Dronagiri mountain, believed to be where Hanuman fetched the Sanjeevani herb. This trek offers breathtaking views of the surrounding mountains and a unique adventure for trekkers.",
+      overview:
+        "Spanning around 45 kilometers, the Dronagiri Trek reaches an altitude of 19,918 feet. The journey begins at the village of Kanchoti and leads trekkers through lush forests, rocky terrains, and picturesque meadows. The trek is challenging yet rewarding, offering stunning vistas of snow-clad peaks and valleys as you approach the summit. This trek is perfect for experienced trekkers looking for an adventure in the heart of the Himalayas.",
+      route: [
+        "Day 1: Drive to Kanchoti, the base camp, and acclimatize to the stunning views.",
+        "Day 2: Trek to Dronagiri Base Camp (16,500 feet) through lush forests and rocky terrains.",
+        "Day 3: Summit Dronagiri Peak (19,918 feet) and return to Base Camp.",
+        "Day 4: Descend back to Kanchoti, reflecting on the incredible journey.",
+      ],
+      attractions: [
+        "Panoramic views of Nanda Devi, Kamet, and other prominent peaks of the Himalayas.",
+        "Rich flora and fauna, with unique species found in high-altitude regions.",
+        "Mythological significance of Dronagiri, making it a culturally enriching experience."
+      ],
+      culturalInsights: [
+        "Learn about the legends associated with Dronagiri and its significance in Hindu mythology.",
+        "Experience the local culture and traditions of the villages along the trek."
+      ],
+      physicalChallenges: [
+        "Steep ascents and rocky terrains require good stamina and physical fitness.",
+        "Altitude sickness may be a concern due to high elevations, necessitating acclimatization."
+      ],
+      recommendedGear: [
+        "High-quality trekking boots for challenging terrains and a good grip.",
+        "Layered clothing suitable for varying temperatures, along with a warm sleeping bag.",
+        "A sturdy backpack for carrying essentials, including hydration packs."
+      ],
+      bestTimeToVisit: "The ideal time for the Dronagiri Trek is from May to June and September to October, offering stable weather conditions.",
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiWcyBC6dgDZKjp_xyCXjJSEEWd_XdnTrsAQ&s'
+    },
+    {
+      title: "TARSAR MARSAR TREK",
+      difficultyLevel: "MODERATE TO DIFFICULT",
+      altitude: 4000,
+      district: "RUDRAPRAYAG",
+      introduction:
+        "The Tarsar Marsar Trek is a breathtaking journey that offers trekkers a unique experience of glacial lakes and mesmerizing landscapes. Nestled amidst towering peaks and verdant valleys, this trek provides stunning views of the Himalayas and an opportunity to explore the serene beauty of Tarsar and Marsar lakes, which are often compared to jewels in the mountains.",
+      overview:
+        "Spanning approximately 46 kilometers, the Tarsar Marsar Trek ascends to an altitude of 13,123 feet. The trek starts from Arakhota and leads trekkers through lush meadows, dense forests, and rocky terrains. The picturesque Tarsar and Marsar lakes, nestled in the lap of the mountains, are the highlights of this trek, offering tranquil spots for camping and reflection. The journey is filled with captivating views and diverse flora and fauna, making it an unforgettable experience.",
+      route: [
+        "Day 1: Drive to Arakhota, the starting point, and enjoy the surrounding beauty.",
+        "Day 2: Trek to Tarsar Lake (12,100 feet), immersing in nature's tranquility.",
+        "Day 3: Explore the area around Tarsar Lake and trek to Marsar Lake (13,123 feet).",
+        "Day 4: Return trek to Arakhota, cherishing the memories made along the journey.",
+      ],
+      attractions: [
+        "Stunning views of Tarsar and Marsar lakes, reflecting the surrounding mountains.",
+        "Rich biodiversity, with unique plant and animal species found in the region.",
+        "Cultural insights from local shepherd communities, offering a glimpse into their way of life."
+      ],
+      culturalInsights: [
+        "Interact with local communities and learn about their traditions and lifestyles.",
+        "Discover the significance of the lakes in local folklore and culture."
+      ],
+      physicalChallenges: [
+        "Steep climbs and rocky paths require good physical fitness and stamina.",
+        "Variable weather conditions may present challenges during the trek."
+      ],
+      recommendedGear: [
+        "Durable trekking shoes for rocky terrains and variable weather.",
+        "Lightweight and insulated clothing for warmth and comfort.",
+        "A reliable backpack to carry camping gear and supplies."
+      ],
+      bestTimeToVisit: "The best months to undertake the Tarsar Marsar Trek are May to June and September to October when the weather is relatively stable.",
+      image: 'https://static.wixstatic.com/media/6671f2_656b6fb4d9614110be2d8bc177252fb6~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/6671f2_656b6fb4d9614110be2d8bc177252fb6~mv2.jpg'
+    },
+    {
+      title: "CHANDRASHILA TREK",
+      difficultyLevel: "MODERATE",
+      altitude: 4000,
+      district: "RUDRAPRAYAG",
+      introduction:
+        "The Chandrashila Trek is a popular trek in the Garhwal region, offering trekkers the chance to reach the summit of Chandrashila, a peak revered in Hindu mythology. This trek is renowned for its breathtaking views of the Himalayas and provides a unique opportunity to witness the majestic beauty of the region, including the stunning sunrise from the summit.",
+      overview:
+        "Covering approximately 22 kilometers, the Chandrashila Trek takes trekkers to an altitude of 13,070 feet. The trek begins at Chopta, a small village known as the 'Mini Switzerland of India.' Trekkers will journey through lush meadows, dense forests, and rocky paths leading to the summit. The journey is rich in scenic beauty, offering stunning views of peaks like Nanda Devi, Trishul, and Chaukhamba from the top of Chandrashila.",
+      route: [
+        "Day 1: Drive to Chopta and acclimatize while enjoying the surrounding beauty.",
+        "Day 2: Trek to Chandrashila (13,070 feet), experiencing stunning landscapes along the way.",
+        "Day 3: Enjoy the sunrise from the summit, capturing unforgettable memories.",
+        "Day 4: Descend back to Chopta, reflecting on the mesmerizing journey.",
+      ],
+      attractions: [
+        "Breathtaking views of the Himalayan peaks, including Nanda Devi and Trishul.",
+        "Diverse flora and fauna, making it a treat for nature enthusiasts.",
+        "Cultural experiences at local villages along the trek."
+      ],
+      culturalInsights: [
+        "Learn about the legends associated with Chandrashila and its significance in Hindu culture.",
+        "Experience the warmth of local hospitality from villagers during the trek."
+      ],
+      physicalChallenges: [
+        "Moderate difficulty with some steep sections, making it suitable for moderately fit trekkers.",
+        "Weather conditions can change rapidly, so preparedness is key."
+      ],
+      recommendedGear: [
+        "Good-quality trekking boots for comfort and grip on rocky terrains.",
+        "Layered clothing suitable for fluctuating temperatures during the trek.",
+        "A sturdy backpack for carrying essentials, including snacks and hydration."
+      ],
+      bestTimeToVisit: "The best time for the Chandrashila Trek is from March to May and September to November, ensuring pleasant weather for trekking.",
+      image: 'https://media1.thrillophilia.com/filestore/vnxo50hgkek8ya56awjw92ok50rm_1513415035_Deoriatal-Chandrashila-Peak-trek-At-the-summit-Indiahikes.jpg'
+    },
+    
+    {
+      title: "NAG TIBBA TREK",
+      difficultyLevel: "EASY",
+      altitude: 3022,
+      district: "TEHRI GARHWAL",
+      introduction:
+        "The Nag Tibba Trek is an easy yet rewarding trek that takes you through lush green forests, quaint villages, and offers mesmerizing views of the Himalayas. Known as the 'Serpent's Peak,' this trek is perfect for beginners and families looking to explore the beauty of the Garhwal region in Uttarakhand.",
+      overview:
+        "Spanning approximately 20 kilometers, the Nag Tibba Trek reaches an altitude of 9,914 feet. The trek begins from the village of Pantwari and winds through picturesque landscapes, including dense oak and deodar forests. As you ascend, you'll be rewarded with breathtaking views of the surrounding mountains, including the majestic views of the Gangotri and Yamunotri ranges. The summit offers a serene atmosphere, perfect for camping and relaxation.",
+      route: [
+        "Day 1: Drive to Pantwari and begin the trek towards Nag Tibba Base Camp.",
+        "Day 2: Summit Nag Tibba (9,914 feet) and enjoy the panoramic views.",
+        "Day 3: Descend back to Pantwari, reflecting on the beautiful journey.",
+      ],
+      attractions: [
+        "Stunning views of the surrounding peaks and valleys, ideal for photography.",
+        "Rich biodiversity, with various flora and fauna found along the trail.",
+        "Cultural experiences in local villages, showcasing Garhwali traditions."
+      ],
+      culturalInsights: [
+        "Learn about the local folklore associated with Nag Tibba and its cultural significance.",
+        "Interact with local communities and experience their warm hospitality."
+      ],
+      physicalChallenges: [
+        "Easy trek, suitable for beginners and families with children.",
+        "Short steep sections may present minor challenges, but overall accessible."
+      ],
+      recommendedGear: [
+        "Comfortable trekking shoes for easy navigation and grip.",
+        "Light clothing suitable for warm weather, along with a warm layer for evenings.",
+        "A lightweight backpack for carrying essentials and snacks."
+      ],
+      bestTimeToVisit: "The best time for the Nag Tibba Trek is from March to June and September to November, ensuring pleasant weather.",
+      image: 'https://www.bikatadventures.com/images/BlogspotContents/BlogspotImageUrl3825.JPG'
+    },
+    
+    {
+      title: "KALINDI KHAL TREK",
+      difficultyLevel: "DIFFICULT",
+      altitude: 5950,
+      district: "CHAMOLI",
+      introduction:
+        "The Kalindi Khal Trek is a thrilling adventure that connects the valleys of Bhagirathi and Alaknanda, offering breathtaking views of the Himalayan peaks. Known for its challenging terrains and high-altitude landscapes, this trek is suitable for experienced trekkers seeking a unique experience in the pristine wilderness of Uttarakhand.",
+      overview:
+        "Spanning approximately 80 kilometers, the Kalindi Khal Trek ascends to an altitude of 19,591 feet. The trek starts from Gangotri and takes trekkers through stunning glaciers, meadows, and rocky terrains. The highlight of this trek is the Kalindi Khal Pass, offering spectacular views of the surrounding peaks. The journey provides a perfect blend of adventure, beauty, and solitude, making it an unforgettable experience.",
+      route: [
+        "Day 1: Drive to Gangotri and acclimatize while enjoying the views of the region.",
+        "Day 2: Trek to Bhoj Kharak, setting up camp amidst stunning landscapes.",
+        "Day 3: Continue to Kalindi Base Camp, preparing for the summit attempt.",
+        "Day 4: Summit Kalindi Khal and descend to the next campsite, soaking in the views.",
+        "Day 5: Trek back to Gangotri, reflecting on the incredible journey.",
+      ],
+      attractions: [
+        "Stunning views of Bhagirathi peaks and other Himalayan ranges.",
+        "Challenging terrains that provide a sense of adventure and accomplishment.",
+        "Rich biodiversity and unique landscapes, perfect for nature lovers."
+      ],
+      culturalInsights: [
+        "Learn about the cultural significance of the region and its local traditions.",
+        "Experience the spiritual essence of the Himalayas while visiting sacred sites."
+      ],
+      physicalChallenges: [
+        "Difficult trek requiring good fitness and prior trekking experience.",
+        "High altitude can lead to altitude sickness, necessitating acclimatization."
+      ],
+      recommendedGear: [
+        "High-quality trekking boots for tough terrains and comfort.",
+        "Warm clothing suitable for extremely cold temperatures at higher altitudes.",
+        "A durable backpack for carrying essentials, including climbing gear."
+      ],
+      bestTimeToVisit: "The best time for the Kalindi Khal Trek is from late June to early September, ensuring better weather conditions.",
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKV_lPz1AKPYoEfTG8c4Jy91NNzir4P2S_g&s'
+    }
   ];
   

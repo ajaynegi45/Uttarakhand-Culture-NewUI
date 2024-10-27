@@ -54,12 +54,11 @@ export default function Trekking() {
                 </section>
             </header>
 
-            <section className={styles['filter-section']}>
-                <div className={styles["search-container"]}>
-                    <div className={styles["item"]}>
-                        <label htmlFor="difficulty-level">Difficulty Level</label>
-                        <select
-                            id="difficulty-level"
+            <section className={styles["search-section"]}>
+                    <div className={styles["search-container"]}>
+                        <div className={styles["item"]}>
+                            <label htmlFor="difficulty-level" />
+                            <select id="difficulty-level"
                             onChange={(e) => handleFilterChange(e, "difficulty")}
                         >
                             <option value="">Select Difficulty</option>
@@ -73,9 +72,8 @@ export default function Trekking() {
                     </div>
 
                     <div className={styles["item"]}>
-                        <label htmlFor="district">District</label>
-                        <select
-                            id="district"
+                            <label htmlFor="district" />
+                            <select id="district"
                             onChange={(e) => handleFilterChange(e, "district")}
                         >
                             <option value="">Select District</option>
@@ -88,9 +86,8 @@ export default function Trekking() {
                     </div>
 
                     <div className={styles["item"]}>
-                        <label htmlFor="altitude">Altitude</label>
-                        <select
-                            id="altitude"
+                            <label htmlFor="altitude" />
+                            <select id="altitude"
                             onChange={(e) => handleFilterChange(e, "altitude")}
                         >
                             <option value="">Select Altitude</option>
