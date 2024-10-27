@@ -20,6 +20,14 @@ export default function Auth() {
   const searchParams = useSearchParams();
   const callback = searchParams.get("callbackUrl");
 
+  const [passwordFeedback, setPasswordFeedback] = useState({
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    number: false,
+    specialChar: false,
+  });
+
   const {
     register,
     handleSubmit,
@@ -34,6 +42,16 @@ export default function Auth() {
   }, [isSignup, reset]);
 
   console.log(callback);
+
+  const validatePassword = (password: string) => {
+    setPasswordFeedback({
+      length: password.length >= 8,
+      uppercase: /[A-Z]/.test(password),
+      lowercase: /[a-z]/.test(password),
+      number: /\d/.test(password),
+      specialChar: /[@$!%*?&]/.test(password),
+    });
+  };
 
   const onSubmit = async (data: any) => {
     if (isSignup) {
@@ -171,7 +189,7 @@ export default function Auth() {
                 type={hidden ? "password" : "text"}
                 placeholder="Password"
                 disabled={isLoading}
-                {...register("password")}
+                {...register("password", {onChange:(e)=>validatePassword(e.target.value)})}
                 className={styles.input}
               />
               <button className={styles.passwordToggle} onClick={(e)=>{
@@ -242,7 +260,7 @@ export default function Auth() {
               <input
                 type={hidden? "password" : "text"}
                 placeholder="Password"
-                {...register("password")}
+                {...register("password", {onChange:(e)=>validatePassword(e.target.value)})}
                 className={styles.input}
                 disabled={isLoading}
               />
@@ -255,13 +273,33 @@ export default function Auth() {
                 }
               </button>
             </div>
-            {errors.password && (
+            {/* {errors.password && (
               <p className={styles.errors}>
                 {errors.password.message?.toString()}
               </p>
-            )}
+            )} */}
           </>
         )}
+
+        {/* Password criteria feedback */}
+        <div className={styles.passwordCriteria}>
+          <p style={{ color: passwordFeedback.length ? "green" : "red" }}>
+            {passwordFeedback.length ? "✔️ At least 8 characters" : "❌ At least 8 characters"}
+          </p>
+          <p style={{ color: passwordFeedback.uppercase ? "green" : "red" }}>
+            {passwordFeedback.uppercase ? "✔️ At least 1 uppercase letter" : "❌ At least 1 uppercase letter"}
+          </p>
+          <p style={{ color: passwordFeedback.lowercase ? "green" : "red" }}>
+            {passwordFeedback.lowercase ? "✔️ At least 1 lowercase letter" : "❌ At least 1 lowercase letter"}
+          </p>
+          <p style={{ color: passwordFeedback.number ? "green" : "red" }}>
+            {passwordFeedback.number ? "✔️ At least 1 number" : "❌ At least 1 number"}
+          </p>
+          <p style={{ color: passwordFeedback.specialChar ? "green" : "red" }}>
+            {passwordFeedback.specialChar ? "✔️ At least 1 special character" : "❌ At least 1 special character"}
+          </p>
+        </div>
+
         <button className={styles.button} disabled={isLoading} type="submit">
           {isSignup ? "Sign Up" : "Login"}
         </button>
