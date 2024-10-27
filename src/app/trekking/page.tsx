@@ -63,11 +63,8 @@ export default function Trekking() {
                         >
                             <option value="">Select Difficulty</option>
                             <option value="EASY">EASY</option>
-                            <option value="EASY TO MODERATE">EASY TO MODERATE</option>
                             <option value="MODERATE">MODERATE</option>
-                            <option value="MODERATE TO DIFFICULT">MODERATE TO DIFFICULT</option>
-                            <option value="DEMANDING">DEMANDING</option>
-                            <option value="HIGH RISK">HIGH RISK</option>
+                            <option value="DIFFICULT">DIFFICULT</option>
                         </select>
                     </div>
 
@@ -77,11 +74,20 @@ export default function Trekking() {
                             onChange={(e) => handleFilterChange(e, "district")}
                         >
                             <option value="">Select District</option>
-                            {districts.map((dist, index) => (
-                                <option key={index} value={dist}>
-                                    {dist}
-                                </option>
-                            ))}
+                                <option value="Almora">Almora</option>
+                                <option value="Bageshwar">Bageshwar</option>
+                                <option value="Chamoli">Chamoli</option>
+                                <option value="Champawat">Champawat</option>
+                                <option value="Dehradun">Dehradun</option>
+                                <option value="Haridwar">Haridwar</option>
+                                <option value="Nainital">Nainital</option>
+                                <option value="Pauri Garhwal">Pauri Garhwal</option>
+                                <option value="Pithoragarh">Pithoragarh</option>
+                                <option value="Rudraprayag">Rudraprayag</option>
+                                <option value="Tehri Garhwal">Tehri Garhwal</option>
+                                <option value="Udham Singh Nagar">Udham Singh Nagar</option>
+                                <option value="Uttarkashi">Uttarkashi</option>
+                            
                         </select>
                     </div>
 

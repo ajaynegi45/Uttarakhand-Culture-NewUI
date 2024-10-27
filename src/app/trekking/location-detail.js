@@ -1,7 +1,7 @@
 export const trekDetails = [
   {
     title: "ROOPKUND TREK",
-    difficultyLevel: "HIGH RISK",
+    difficultyLevel: "DIFFICULT",
     altitude: 4536,
     district: "CHAMOLI",
     introduction:
@@ -121,7 +121,7 @@ export const trekDetails = [
   },
   {
     title: "KEDARKANTHA TREK",
-    difficultyLevel: "EASY TO MODERATE",
+    difficultyLevel: "MODERATE",
     altitude: 3810,
     district: "UTTARKASHI",
     introduction:
@@ -161,7 +161,7 @@ export const trekDetails = [
 
 {
   title: "NANDA DEVI BASE CAMP TREK",
-  difficultyLevel: "MODERATE TO DIFFICULT",
+  difficultyLevel: "DIFFICULT",
   altitude: 4000,
   district: "CHAMOLI",
   introduction:
@@ -237,7 +237,7 @@ export const trekDetails = [
 },
 {
   title: "BALI PASS TREK",
-  difficultyLevel: "DEMANDING",
+  difficultyLevel: "DIFFICULT",
   altitude: 4950,
   district: "UTTARKASHI",
   introduction:
@@ -278,7 +278,7 @@ export const trekDetails = [
   title: "KUMAON HIMALAYAS TREK",
   difficultyLevel: "MODERATE",
   altitude: 4200,
-  district: "KUMAON",
+  district: "ALMORA",
   introduction:
     "Explore the pristine beauty of the Kumaon Himalayas, where adventure and nature come together in perfect harmony. This trek promises an unforgettable experience for nature lovers and adventure seekers, offering an immersive journey through one of India's most scenic regions.",
   overview:
@@ -353,7 +353,7 @@ export const trekDetails = [
   },
     {
       title: "RUPIN PASS TREK",
-      difficultyLevel: "DEMANDING",
+      difficultyLevel: "DIFFICULT",
       altitude: 4650,
       district: "UTTARKASHI",
       introduction:
@@ -427,7 +427,7 @@ export const trekDetails = [
     },
     {
       title: "PANWALI KANTHA TREK",
-      difficultyLevel: "EASY TO MODERATE",
+      difficultyLevel: "MODERATE",
       altitude: 3075,
       district: "TEHRI GARHWAL",
       introduction:
@@ -498,7 +498,7 @@ export const trekDetails = [
     },
     {
       title: "TARSAR MARSAR TREK",
-      difficultyLevel: "MODERATE TO DIFFICULT",
+      difficultyLevel: "DIFFICULT",
       altitude: 4000,
       district: "RUDRAPRAYAG",
       introduction:
