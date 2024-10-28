@@ -1,12 +1,45 @@
+"use client"; // Marking this as a client component
 import styles from "./page.module.css";
 import Image from "next/image";
 import TrekCard from "@/components/ui/TrekCard";
 import TrekkingHeroImage from "/public/heroImage.png";
 import { trekDetails } from './location-detail';
+import { useState } from "react";
 
 export default function Trekking() {
-    console.log('hello')
-    console.log(trekDetails.length)
+    const [difficultyLevel, setDifficultyLevel] = useState("");
+    const [district, setDistrict] = useState("");
+    const [altitude, setAltitude] = useState("");
+
+    const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>, filterType: string) => {
+        const value = e.target.value;
+        if (filterType === "difficulty") setDifficultyLevel(value);
+        else if (filterType === "district") setDistrict(value);
+        else if (filterType === "altitude") setAltitude(value);
+    };
+
+    // Extract unique districts from trekDetails
+    const districts = Array.from(new Set(trekDetails.map(trek => trek.district)));
+
+    const filterTreks = trekDetails.filter(trek => {
+        const matchesDifficulty = difficultyLevel === "" || trek.difficultyLevel.toLowerCase() === difficultyLevel.toLowerCase();
+        const matchesDistrict = district === "" || trek.district.toLowerCase() === district.toLowerCase();
+        
+        let matchesAltitude = true; // Default to true (not filtering)
+        if (altitude) {
+            // Define altitude ranges for filtering
+            if (altitude === "Low") {
+                matchesAltitude = trek.altitude < 3500; // Altitude below 3500m
+            } else if (altitude === "Moderate") {
+                matchesAltitude = trek.altitude >= 3500 && trek.altitude <= 4000; // Altitude between 3500m and 4000m
+            } else if (altitude === "High") {
+                matchesAltitude = trek.altitude > 4000; // Altitude above 4000m
+            }
+        }
+
+        return matchesDifficulty && matchesDistrict && matchesAltitude;
+    });
+
     return (
         <>
             <header className={styles["page-header"]}>
@@ -19,23 +52,28 @@ export default function Trekking() {
                         <Image src={TrekkingHeroImage} alt="TREKKING" width="368" height="400" loading={"eager"} priority={true} />
                     </div>
                 </section>
+            </header>
 
-                <section className={styles["search-section"]}>
+            <section className={styles["search-section"]}>
                     <div className={styles["search-container"]}>
                         <div className={styles["item"]}>
                             <label htmlFor="difficulty-level" />
-                            <select id="difficulty-level">
-                                <option value="">Level</option>
-                                <option value="Low">Low</option>
-                                <option value="Moderate">Moderate</option>
-                                <option value="High">High</option>
-                            </select>
-                        </div>
+                            <select id="difficulty-level"
+                            onChange={(e) => handleFilterChange(e, "difficulty")}
+                        >
+                            <option value="">Select Difficulty</option>
+                            <option value="EASY">EASY</option>
+                            <option value="MODERATE">MODERATE</option>
+                            <option value="DIFFICULT">DIFFICULT</option>
+                        </select>
+                    </div>
 
-                        <div className={styles["item"]}>
+                    <div className={styles["item"]}>
                             <label htmlFor="district" />
-                            <select id="district">
-                                <option value="">District</option>
+                            <select id="district"
+                            onChange={(e) => handleFilterChange(e, "district")}
+                        >
+                            <option value="">Select District</option>
                                 <option value="Almora">Almora</option>
                                 <option value="Bageshwar">Bageshwar</option>
                                 <option value="Chamoli">Chamoli</option>
@@ -49,99 +87,40 @@ export default function Trekking() {
                                 <option value="Tehri Garhwal">Tehri Garhwal</option>
                                 <option value="Udham Singh Nagar">Udham Singh Nagar</option>
                                 <option value="Uttarkashi">Uttarkashi</option>
-                            </select>
-                        </div>
-
-                        <div className={styles["item"]}>
-                            <label htmlFor="altitude" />
-                            <select id="altitude">
-                                <option value="">Altitude</option>
-                                <option value="Low">2500m</option>
-                                <option value="Moderate">2500m - 3500m</option>
-                                <option value="High">3500m acclimatization</option>
-                            </select>
-                        </div>
+                            
+                        </select>
                     </div>
-                </section>
-            </header>
+
+                    <div className={styles["item"]}>
+                            <label htmlFor="altitude" />
+                            <select id="altitude"
+                            onChange={(e) => handleFilterChange(e, "altitude")}
+                        >
+                            <option value="">Select Altitude</option>
+                            <option value="Low">Low (below 3500m)</option>
+                            <option value="Moderate">Moderate (3500m - 4000m)</option>
+                            <option value="High">High (above 4000m)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
 
             <div className={styles["card-container"]}>
-                <TrekCard
-                    title={"ROOPKUND TREK"}
-                    subTitle={"HIGH RISK · 4536m · CHAMOLI"}
-                    trekDetails={trekDetails[0]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"VALLEY OF FLOWERS TREK"}
-                    subTitle={"MODERATE · 3658m · CHAMOLI"}
-                    trekDetails={trekDetails[1]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"HAR KI DUN TREK"}
-                    subTitle={"MODERATE · 3566m · UTTARKASHI"}
-                    trekDetails={trekDetails[2]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"KEDARKANTHA TREK"}
-                    subTitle={"EASY TO MODERATE · 3810m · UTTARKASHI"}
-                    trekDetails={trekDetails[3]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"NANDA DEVI BASE CAMP TREK"}
-                    subTitle={"MODERATE TO DIFFICULT · 4000m · CHAMOLI"}
-                    trekDetails={trekDetails[4]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"PINDARI GLACIER TREK"}
-                    subTitle={"MODERATE · 3660m · BAGESHWAR"}
-                    trekDetails={trekDetails[5]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"BALI PASS TREK"}
-                    subTitle={"DEMANDING · 4,950m · UTTARKASHI"}
-                    trekDetails={trekDetails[6]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"KUMAON HIMALAYAS TREK"}
-                    subTitle={"MODERATE · 4,200m · KUMAON"}
-                    trekDetails={trekDetails[7]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"TUNGNATH CHOPTA TREK"}
-                    subTitle={"EASY · 3,680m · CHAMOLI"}
-                    trekDetails={trekDetails[8]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"RUPIN PASS TREK"}
-                    subTitle={"DEMANDING · 4,650m · HIMACHAL PRADESH"}
-                    trekDetails={trekDetails[9]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
-
-                <TrekCard
-                    title={"CHOPTA TO TUNGNATH AND BACK"}
-                    subTitle={"EASY · 3,680m · CHAMOLI"}
-                    trekDetails={trekDetails[10]} // Adjust the key according to your dictionary
-                    readMoreLink="#"
-                />
+                {filterTreks.length > 0 ? (
+                    filterTreks.map((trek, index) => (
+                        <TrekCard
+                            key={index}
+                            title={trek.title}
+                            subTitle={`${trek.difficultyLevel} · ${trek.altitude}m · ${trek.district}`}
+                            trekDetails={trek}
+                            readMoreLink="#"
+                        />
+                    ))
+                ) : (
+                    <div className={styles["not-available"]}>
+                        <p>No treks available based on your filters. Please adjust your selections.</p>
+                    </div>
+                )}
             </div>
         </>
     );
