@@ -19,7 +19,7 @@ export default function Trekking() {
     };
 
     // Extract unique districts from trekDetails
-    const districts = Array.from(new Set(trekDetails.map(trek => trek.district)));
+    
 
     const filterTreks = trekDetails.filter(trek => {
         const matchesDifficulty = difficultyLevel === "" || trek.difficultyLevel.toLowerCase() === difficultyLevel.toLowerCase();
