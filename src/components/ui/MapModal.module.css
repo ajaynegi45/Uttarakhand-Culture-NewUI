@@ -77,3 +77,24 @@
     cursor: pointer;
   }
   
+  .mapLinks {
+    margin-top: 10px;
+    gap: 2px;
+  }
+  
+  .mapLinks a {
+    display: inline-block;
+    color: #007aff;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .mapLinks a:hover {
+    text-decoration: underline;
+  }
+  .mapLinks .icon {
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+  }
