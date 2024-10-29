@@ -136,30 +136,19 @@ export default function ContributorPage() {
         const fetchData = async () => {
             try {
                 let allContributors: Contributor[] = [];
-                let page = 1;
-                const perPage = 100;
-
-                while (true) {
-                    const contributorsResponse = await fetch(
-                        `https://api.github.com/repos/ajaynegi45/Uttarakhand-Culture-NewUI/contributors?page=${page}&per_page=${perPage}`,
-                    );
-
-                    if (!contributorsResponse.ok) {
-                        throw new Error('Failed to fetch contributors data');
-                    }
-                    const contributorsData: Contributor[] =
-                        await contributorsResponse.json();
-
-                    if (contributorsData.length === 0) break;
-
-                    allContributors = [...allContributors, ...contributorsData];
-                    page++;
+                const contributorsResponse = await fetch("https://api.github.com/repos/ajaynegi45/Uttarakhand-Culture-NewUI/contributors?page=1&per_page=100")
+                if (!contributorsResponse.ok) {
+                    throw new Error('Failed to fetch contributors data');
                 }
+                const contributorsData: Contributor[] =
+                    await contributorsResponse.json();
+
+                allContributors = [...allContributors, ...contributorsData];
+
                 setContributors(allContributors);
 
                 const repoResponse = await fetch(
-                    'https://api.github.com/repos/ajaynegi45/Uttarakhand-Culture-NewUI',
-                );
+                    'https://api.github.com/repos/ajaynegi45/Uttarakhand-Culture-NewUI')
                 const repoData = await repoResponse.json();
                 setRepoStats({
                     stars: repoData.stargazers_count,
@@ -290,7 +279,7 @@ export default function ContributorPage() {
                             label="Forks"
                             value={repoStats.forks}
                             icon={
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" style={{ width: '2rem', height: '2rem' }} viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" style={{ width: '2rem', height: '2rem' }} viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                             }
                         />
                         <StatCard
@@ -298,7 +287,7 @@ export default function ContributorPage() {
                             label="Open Issues"
                             value={repoStats.openIssues}
                             icon={
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" style={{ width: '2rem', height: '2rem' }} viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" style={{ width: '2rem', height: '2rem' }} viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path></svg>
 
                             }
                         />
