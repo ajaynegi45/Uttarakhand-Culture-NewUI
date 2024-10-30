@@ -72,6 +72,7 @@
     border-radius: 9999px;
     padding: 0.5rem 1rem;
     display: inline-block;
+    cursor: pointer;
 }
 
 .profile-card-contributions-light {
@@ -146,6 +147,7 @@
     align-items: center;
     border-width: 1px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .stat-card-container.dark-mode {
@@ -468,4 +470,155 @@
 
 .darkThemeBtn {
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.issue-card-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid;
+    transition: transform 0.3s ease;
+}
+
+.issue-card-container:hover {
+    transform: translateY(-10px);
+}
+
+.issue-card-container-light {
+    background-color: white;
+    backdrop-filter: blur(0.5rem);
+    border-color: #d1d5db;
+}
+
+.issue-card-container-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1rem);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.issue-card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.issue-card-avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border-width: 4px;
+}
+
+.issue-card-avatar-light {
+    border-color: #0a731f;
+}
+
+.issue-card-avatar-dark {
+    border-color: #0a731f;
+}
+
+.issue-card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.issue-card-title-light {
+    color: #1f2937;
+}
+
+.issue-card-title-dark {
+    color: white;
+}
+
+.issue-card-state {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.issue-card-state-light {
+    color: #4b5563;
+}
+
+.issue-card-state-dark {
+    color: #0b9b51;
+}
+
+/* Footer Row */
+.issue-card-footer-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.issue-card-user-light,
+.issue-card-user-dark {
+    color: #4b5563;
+}
+
+.issue-card-date-light,
+.issue-card-date-dark {
+    color: #6b7280;
+}
+
+/* Footer */
+.issue-card-footer {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.issue-card-footer-light {
+    background-color: #006019;
+}
+
+.issue-card-footer-dark {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Link */
+.issue-card-link {
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.issue-card-link-light {
+    color: #fff;
+}
+
+.issue-card-link-dark {
+    color: white;
+}
+
+.issue-card-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Comments Count */
+.issue-card-comments-count {
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.issue-card-comments-count-light {
+    color: #d1d5db;
+}
+
+.issue-card-comments-count-dark {
+    color: rgba(255, 255, 255, 0.5);
 }

@@ -48,7 +48,8 @@ const ContributorCard: React.FC<Contributor> = ({
             <p className={`profile-card-type ${mode === 'dark' ? 'profile-card-type-dark' : 'profile-card-type-light'} mb-2`}>
                 {type}
             </p>
-            <div className={`profile-card-contributions ${mode === 'dark' ? 'profile-card-contributions-dark' : 'profile-card-contributions-light'}`}>
+            <div className={`profile-card-contributions ${mode === 'dark' ? 'profile-card-contributions-dark' : 'profile-card-contributions-light'}`} onClick={() => window.open('https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/graphs/contributors', '_blank')}
+            >
                 <span className={`profile-card-contributions-text ${mode === 'dark' ? 'profile-card-contributions-text-dark' : 'profile-card-contributions-text-light'}`}>
                     {contributions} contributions
                 </span>
@@ -95,15 +96,17 @@ interface StatCardProps {
     value: number;
     icon: React.ReactNode;
     mode: string;
+    onclick?: () => void;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ label, value, icon, mode }) => (
+const StatCard: React.FC<StatCardProps> = ({ label, value, icon, mode, onclick }) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className={`stat-card-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}
         aria-label={`${label} stat card`}
+        onClick={onclick}
     >
         <div className={`stat-card-icon-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
             {icon}
@@ -119,8 +122,92 @@ const StatCard: React.FC<StatCardProps> = ({ label, value, icon, mode }) => (
     </motion.div>
 );
 
+interface Issue {
+    title: string;
+    number: number;
+    html_url: string;
+    user: {
+        login: string;
+        avatar_url: string;
+    };
+    state: string;
+    created_at: string;
+    comments: number;
+    mode: string; // Assuming you have a light/dark mode
+}
+
+const IssueCard: React.FC<Issue> = ({
+    title,
+    number,
+    html_url,
+    user,
+    state,
+    created_at,
+    comments,
+    mode,
+}) => (
+    <motion.div
+        whileHover={{ y: -5 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+        className={`issue-card-container ${mode === 'dark' ? 'issue-card-container-dark' : 'issue-card-container-light'}`}
+        data-aos="fade-up"
+        data-aos-duration="1500"
+    >
+        <div className="issue-card-content">
+            <img
+                src={user.avatar_url}
+                alt={user.login}
+                className={`issue-card-avatar ${mode === 'dark' ? 'issue-card-avatar-dark' : 'issue-card-avatar-light'}`}
+            />
+            <h3 className={`issue-card-title ${mode === 'dark' ? 'issue-card-title-dark' : 'issue-card-title-light'}`}>
+                #{number} - {title}
+            </h3>
+            <p className={`issue-card-state ${mode === 'dark' ? 'issue-card-state-dark' : 'issue-card-state-light'}`}>
+                Status: {state}
+            </p>
+        </div>
+
+        {/* Footer Row with "Created by" and Date */}
+        <div className="issue-card-footer-row">
+            <p className={`issue-card-user ${mode === 'dark' ? 'issue-card-user-dark' : 'issue-card-user-light'}`}>
+                Created by: {user.login}
+            </p>
+            <p className={`issue-card-date ${mode === 'dark' ? 'issue-card-date-dark' : 'issue-card-date-light'}`}>
+                Created at: {new Date(created_at).toLocaleDateString()}
+            </p>
+        </div>
+
+        <div className={`issue-card-footer ${mode === 'dark' ? 'issue-card-footer-dark' : 'issue-card-footer-light'}`}>
+            <a
+                href={html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`issue-card-link ${mode === 'dark' ? 'issue-card-link-dark' : 'issue-card-link-light'}`}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 mr-2"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                >
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
+                View Issue
+            </a>
+            <span className="issue-card-comments-count">
+                {comments} Comments
+            </span>
+        </div>
+    </motion.div>
+
+);
+
+
 export default function ContributorPage() {
     const [contributors, setContributors] = useState<Contributor[]>([]);
+    const [openIssues, setOpenIssues] = useState<Issue[]>([]);
+    const [isContributorPage, setisContributorPage] = useState(true);
     const [repoStats, setRepoStats] = useState<RepoStats>({
         stars: 0,
         forks: 0,
@@ -146,10 +233,13 @@ export default function ContributorPage() {
                 allContributors = [...allContributors, ...contributorsData];
 
                 setContributors(allContributors);
+                console.log(allContributors)
 
                 const repoResponse = await fetch(
                     'https://api.github.com/repos/ajaynegi45/Uttarakhand-Culture-NewUI')
                 const repoData = await repoResponse.json();
+
+
                 setRepoStats({
                     stars: repoData.stargazers_count,
                     forks: repoData.forks_count,
@@ -160,6 +250,15 @@ export default function ContributorPage() {
             } finally {
                 setLoading(false);
             }
+
+
+            const issue = await fetch('https://api.github.com/repos/ajaynegi45/Uttarakhand-Culture-NewUI/issues');
+            const openIssueData: Issue[] = await issue.json();
+
+            // Filter the issues where the state is 'open', explicitly typing the 'issue' parameter
+            const opened = openIssueData.filter((issue: Issue) => issue.state === 'open');
+            setOpenIssues(opened)
+            console.log(opened);
         };
 
         fetchData();
@@ -257,6 +356,7 @@ export default function ContributorPage() {
                             icon={
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" style={{ width: '2rem', height: '2rem' }} viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
                             }
+                            onclick={() => setisContributorPage(true)}
                         />
                         <StatCard
                             mode={mode}
@@ -290,6 +390,8 @@ export default function ContributorPage() {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary" style={{ width: '2rem', height: '2rem' }} viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path></svg>
 
                             }
+
+                            onclick={() => setisContributorPage(false)}
                         />
                     </div>
                 </div>
@@ -299,16 +401,25 @@ export default function ContributorPage() {
             <section className="contributors-section">
                 <div className="stats-container">
                     <h2 className={`contributors-heading ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-                        Meet Our Contributors
+                        {isContributorPage ? 'Meet Our Contributors' : 'Your contribution is valuable see all Issues'}
                     </h2>
                     {loading ? (
                         <p className="text-center text-white">Loading...</p>
                     ) : (
-                        <div className="contributors-grid">
-                            {currentContributors.map((contributor) => (
-                                <ContributorCard key={contributor.id} {...contributor} mode={mode} />
-                            ))}
-                        </div>
+                        isContributorPage ?
+
+                            <div className="contributors-grid">
+                                {contributors.map((contributor) => (
+                                    <ContributorCard key={contributor.id} {...contributor} mode={mode} />
+                                ))}
+                            </div> :
+                            <div className="contributors-grid">
+                                {openIssues.map((issue) => (
+                                    // <ContributorCard key={contributor.id} {...contributor} mode={mode} />
+                                    <IssueCard key={issue.number} {...issue} mode={mode} />
+                                ))}
+                            </div>
+
                     )}
 
                     <div className="pagination-container">
