@@ -75,26 +75,37 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    background-color: #333;
+  }
+  .closeButton:hover{
+    background-color: black;
   }
   
   .mapLinks {
     margin-top: 10px;
     gap: 2px;
+    display: flex;
+    justify-content: space-between;
   }
   
   .mapLinks a {
-    display: inline-block;
-    color: #007aff;
+    white-space: nowrap;
+    color: white;
+    background-color: #333;
+    padding: 8px 16px;
+    margin: 5px;
+    justify-self: center;
     text-align: center;
     border-radius: 4px;
     font-weight: 500;
   }
   
   .mapLinks a:hover {
-    text-decoration: underline;
+    background-color: black;
   }
   .mapLinks .icon {
-    margin-right: 8px;
+    position: relative;
     display: inline-flex;
-    align-items: center;
+    margin-right: 2px;
+    top: 2px;
   }
