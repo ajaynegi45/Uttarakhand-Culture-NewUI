@@ -2,12 +2,10 @@
     border-radius: 0.5rem;
     overflow: hidden;
     border: 1px solid;
-    transition: all 0.3s ease-in-out;
 }
 
 .profile-card-container:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease-in-out;
+    transform: translateY(-10px);
 }
 
 .profile-card-container-light {
