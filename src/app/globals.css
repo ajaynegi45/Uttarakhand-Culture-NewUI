@@ -105,3 +105,16 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
+
+/* globals.css */
+html, body {
+  overflow: hidden; /* Hide overflow initially */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
