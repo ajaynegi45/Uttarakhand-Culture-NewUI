@@ -45,12 +45,9 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .rightColumn h2{
-    white-space: nowrap;
-  }
+  
   
   .subTitle{
-    white-space: nowrap;
     width: fit-content;
   }
   
