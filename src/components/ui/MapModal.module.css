@@ -1,25 +1,27 @@
 .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 20;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50; /* Lower than navbar */
+
+}
   
-  .modalContent {
-    display: flex;
-    width: 80%;
-    max-width: 900px;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+.modalContent {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(calc(var(--navbar-height, 50px) + 10px)); /* Adjust height as necessary */
+}
   
   .leftColumn {
     width: 90%;
@@ -108,4 +110,43 @@
     display: inline-flex;
     margin-right: 2px;
     top: 2px;
+  }
+  @media (max-width: 768px) {
+    .modalContent {
+      flex-direction: column; /* Stack columns vertically */
+      width: 90%; /* Full width on mobile */
+      max-height: 90%; /* Prevent the modal from exceeding the viewport */
+      overflow-y: auto; /* Enable vertical scrolling */
+    }
+  
+    .leftColumn,
+    .rightColumn {
+      width: 100%; /* Full width for both columns */
+      padding: 12px; /* Adjust padding for mobile */
+    }
+  
+    .mapContainer {
+      min-height: 200px; /* Reduce minimum height for mobile */
+      flex-grow: 1; /* Allow the map container to grow and take available space */
+    }
+  
+    .imageSection img {
+      width: 100%; /* Full width for images on mobile */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .closeButton {
+      margin-top: 12px; /* Adjust margin for mobile */
+      width: 100%; /* Full width for button */
+    }
+  
+    .mapLinks {
+      flex-direction: column; /* Stack links vertically */
+      gap: 8px; /* Add spacing between links */
+    }
+  
+    .mapLinks a {
+      width: 100%; /* Full width for each link */
+      text-align: center; /* Center text for links */
+    }
   }
