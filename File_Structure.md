@@ -184,7 +184,7 @@ Contains configuration files for JetBrains IDEs:
 ### public Directory
 
 Contains static assets for the project:
-- **Images**: Various images, including those for branding, icons, and page elements.
+- **Images**: Various images and page elements.
 - **SVG Files**: Vector images (e.g., maps and icons).
 - **Other Assets**: Includes site banners, avatars, and other graphics.
 
