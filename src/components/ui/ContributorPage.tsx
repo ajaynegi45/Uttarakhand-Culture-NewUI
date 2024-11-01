@@ -409,7 +409,7 @@ export default function ContributorPage() {
                         isContributorPage ?
 
                             <div className="contributors-grid">
-                                {contributors.map((contributor) => (
+                                {currentContributors.map((contributor) => (
                                     <ContributorCard key={contributor.id} {...contributor} mode={mode} />
                                 ))}
                             </div> :
