@@ -1,77 +1,173 @@
-.pageHeader{
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --dark-background-color: #181818;
+    --dark-text-color: #fff;
+    --green: #28a745;
+    --black: #000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+.pageHeader {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     margin: 3rem 0 5rem 0;
-    color: #ffff;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pageHeader > h1 {
     font-weight: bold;
     color: var(--green);
+    font-size: 2rem;
 }
+
 .pageHeader > img {
-    position: relative;
     filter: drop-shadow(0 0 0.40rem #A0A5AC);
     width: 100%;
     max-width: 500px;
     height: auto;
     margin-top: -10vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pageHeader > img:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 700px) {
     .pageHeader > h1 {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 700px) {
-    .pageHeader > h1 {
-        font-size: 1.9rem;
-    }
-    /*.pageHeader > img {*/
-    /*    margin-top: -15vh;*/
-    /*}*/
-}
-
-
-.text-container{
+.text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
     margin-top: 10vw;
     margin-bottom: 5rem;
-
+    text-align: center;
 }
 
-.text-container > p{
+.text-container > p {
     color: var(--black);
     text-align: center;
     margin: 5px;
 }
 
-.links-container{
+.links-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 5rem;
-
 }
 
-.div{
+.div {
     width: max-content;
     border: 1px solid red;
-    padding: 0.8rem  1rem;
+    padding: 0.8rem 1rem;
     border-radius: 5px;
     float: right;
-    transition-duration: 1s;
+    transition: background-color 0.3s, text-decoration-line 0.3s;
 }
-.div:hover{
+
+.div:hover {
     background-color: dodgerblue;
     text-decoration-line: underline;
     cursor: pointer;
+}
+
+.cursor-custom {
+    cursor: url('cursor.png'), auto;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--black);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the element */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
 }
