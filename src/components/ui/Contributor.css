@@ -482,14 +482,17 @@
 
 
 
-
-
 .issue-card-container {
     border-radius: 0.5rem;
     overflow: hidden;
     border: 1px solid;
     transition: transform 0.3s ease;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 .issue-card-container:hover {
     transform: translateY(-10px);
@@ -510,6 +513,7 @@
 .issue-card-content {
     padding: 1.5rem;
     text-align: center;
+    flex-grow: 1;
 }
 
 .issue-card-avatar {
@@ -531,6 +535,9 @@
 .issue-card-title {
     font-weight: bold;
     font-size: 1.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .issue-card-title-light {
@@ -541,9 +548,13 @@
     color: white;
 }
 
+
 .issue-card-state {
     font-size: 0.875rem;
     margin-bottom: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .issue-card-state-light {
@@ -579,6 +590,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 3rem;
 }
 
 .issue-card-footer-light {
