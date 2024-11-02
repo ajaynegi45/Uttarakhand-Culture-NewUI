@@ -1,14 +1,14 @@
 "use client"; // Marking this as a client component
 
 import React, { useState } from "react"; // Import useState for managing state
-import Image from "next/image";
-import styles from "./TrekCard.module.css";
-import Link from "next/link";
-import Roopkund from "/public/roopkund.jpg";
 
-type TrekDetails = {
+import styles from "./TrekCard.module.css";
+import MapModal from '../../components/ui/MapModal';
+export type TrekDetails = {
   title: string;
   introduction: string;
+  address : string;
+  coordinates : number[];
   overview: string;
   route: string[];
   attractions: string[];
@@ -29,7 +29,10 @@ type CardProps = {
 export default function TrekCard(props: CardProps) {
   const { title, subTitle, trekDetails, readMoreLink } = props; // Destructure props
   const [isExpanded, setIsExpanded] = useState(false); // State to track the expanded content
- 
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
+  const handleOpenMap = () => setIsMapOpen(true);
+  const handleCloseMap = () => setIsMapOpen(false);
 
 
   return (
@@ -116,7 +119,7 @@ export default function TrekCard(props: CardProps) {
             </div>
           )}
           <div className={styles["link-container2"]}>
-            <Link href={readMoreLink ? readMoreLink : "#"}>VIEW LOCATION</Link>
+            <button onClick={handleOpenMap}>VIEW LOCATION</button>
           </div>
         </div>
       </div>
@@ -124,6 +127,11 @@ export default function TrekCard(props: CardProps) {
       <div className={styles["image-container"]}>
         <img src={trekDetails.image} alt={title} width={300} height={200} />
       </div>
+
+
+<MapModal isOpen={isMapOpen} onClose={handleCloseMap} center={trekDetails.coordinates} markerLocation= {trekDetails.coordinates}zoom={10} info= {trekDetails} subTitle = {subTitle}/>
+
+    
     </section>
   );
 }
