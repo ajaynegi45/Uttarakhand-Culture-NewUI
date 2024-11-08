@@ -7,9 +7,10 @@ import { toast } from "sonner";
 import { loginSchema, signupSchema } from "@/lib/zod";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
-import eye from "../../../public/eye.png"
-import hide from "../../../public/eye-hide.png"
+import eye from "../../../public/eye.png";
+import hide from "../../../public/eye-hide.png";
 import Image from 'next/image';
+import GoogleSignIn from './GoogleSignIn'; // import GoogleSignIn component
 
 export default function Auth() {
   const [isSignup, setIsSignup] = useState(false);
@@ -32,8 +33,6 @@ export default function Auth() {
   useEffect(() => {
     reset();
   }, [isSignup, reset]);
-
-  console.log(callback);
 
   const onSubmit = async (data: any) => {
     if (isSignup) {
@@ -78,7 +77,6 @@ export default function Auth() {
           error: (err) => `${err}`,
         });
       } catch (error: any) {
-        console.log(error);
         toast.error(error.message || "Failed to register. Try again");
       } finally {
         setIsLoading(false);
@@ -130,6 +128,7 @@ export default function Auth() {
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         {isSignup && (
           <>
+            {/* Signup fields */}
             <input
               type="text"
               disabled={isLoading}
@@ -166,7 +165,7 @@ export default function Auth() {
                 {errors.email.message?.toString()}
               </p>
             )}
-            <div className={styles.passwordContainer} >
+            <div className={styles.passwordContainer}>
               <input
                 type={hidden ? "password" : "text"}
                 placeholder="Password"
@@ -174,13 +173,11 @@ export default function Auth() {
                 {...register("password")}
                 className={styles.input}
               />
-              <button className={styles.passwordToggle} onClick={(e)=>{
-                  e.preventDefault()
-                  setHidden(!hidden)
-                }}>
-                {
-                  hidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />
-                }
+              <button className={styles.passwordToggle} onClick={(e) => {
+                e.preventDefault();
+                setHidden(!hidden);
+              }}>
+                {hidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />}
               </button>
             </div>
             {errors.password && (
@@ -189,7 +186,7 @@ export default function Auth() {
               </p>
             )}
 
-            <div className={styles.passwordContainer} >
+            <div className={styles.passwordContainer}>
               <input
                 type={confirmHidden ? "password" : "text"}
                 placeholder="Confirm Password"
@@ -197,13 +194,11 @@ export default function Auth() {
                 className={styles.input}
                 disabled={isLoading}
               />
-              <button className={styles.passwordToggle} onClick={(e)=>{
-                  e.preventDefault()
-                  setConfirmHidden(!confirmHidden)
-                }}>
-                {
-                  confirmHidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />
-                }
+              <button className={styles.passwordToggle} onClick={(e) => {
+                e.preventDefault();
+                setConfirmHidden(!confirmHidden);
+              }}>
+                {confirmHidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />}
               </button>
             </div>
             {errors.confirmPassword && (
@@ -224,6 +219,8 @@ export default function Auth() {
             </div>
           </>
         )}
+
+        {/* Login fields */}
         {!isSignup && (
           <>
             <input
@@ -238,21 +235,19 @@ export default function Auth() {
                 {errors.loginIdentifier.message?.toString()}
               </p>
             )}
-            <div className={styles.passwordContainer} >
+            <div className={styles.passwordContainer}>
               <input
-                type={hidden? "password" : "text"}
+                type={hidden ? "password" : "text"}
                 placeholder="Password"
                 {...register("password")}
                 className={styles.input}
                 disabled={isLoading}
               />
-              <button className={styles.passwordToggle} onClick={(e)=>{
-                  e.preventDefault()
-                  setHidden(!hidden)
-                }}>
-                {
-                  hidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />
-                }
+              <button className={styles.passwordToggle} onClick={(e) => {
+                e.preventDefault();
+                setHidden(!hidden);
+              }}>
+                {hidden ? <Image className={styles.image} src={hide} alt="My Image" /> : <Image className={styles.image} src={eye} alt="My Image" />}
               </button>
             </div>
             {errors.password && (
@@ -262,16 +257,21 @@ export default function Auth() {
             )}
           </>
         )}
+
         <button className={styles.button} disabled={isLoading} type="submit">
           {isSignup ? "Sign Up" : "Login"}
         </button>
       </form>
+
+      {/* Google Sign-In */}
+      <GoogleSignIn />
+
       <p
         onClick={() => {
           if (!isLoading) {
             setIsSignup(!isSignup);
           }
-          setHidden(true)
+          setHidden(true);
         }}
         className={styles.toggle}
       >
