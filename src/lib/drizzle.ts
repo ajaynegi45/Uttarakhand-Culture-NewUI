@@ -1,10 +1,16 @@
-
 import { drizzle } from 'drizzle-orm/neon-http';
-import * as schema from '@/lib/schema'
+import * as schema from '@/lib/schema';
 import { neon } from '@neondatabase/serverless';
 
-const connectionString = process.env.DATABASE_URL!;
+// Load the connection string from environment variables
+const connectionString = process.env.DATABASE_URL;
 
-const pool = neon(connectionString)
+if (!connectionString) {
+    throw new Error("DATABASE_URL environment variable is not set.");
+}
 
-export const db = drizzle(pool, { schema })
+// Set up Neon pool using the connection string
+const pool = neon(connectionString);
+
+// Export the configured database instance
+export const db = drizzle(pool, { schema });
