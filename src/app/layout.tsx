@@ -62,7 +62,7 @@ export default async function RootLayout({
 }>) {
   const session = await auth();
   const h = headers();
-  const pathname = h.get("x-current-path");
+  const pathname = h.get("x-current-path") || "";
 
   if (session) {
     if (!session.user?.emailVerified) {

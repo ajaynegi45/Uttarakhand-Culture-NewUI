@@ -14,7 +14,7 @@ export default function Footer() {
 
                     <div className={styles["newsletter-email-container"]}>
                         <form action="">
-                            <input id={"email-input"} type="email" placeholder="Enter Your email" required={true} disabled={true}/>
+                            <input id={"email-input"} type="email" placeholder="Enter Your email" required={true} disabled={true} />
                             <p>Subscribe</p>
                         </form>
                     </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                         <p>Contribution</p>
                         <Link href={""}>Issues</Link>
                         <Link href={"/about"}>About us</Link>
-                        <Link href={""}>Contribution</Link>
+                        <Link href={"/contributors"}>Contribution</Link>
                     </div>
                 </div>
             </div>
