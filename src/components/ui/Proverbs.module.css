@@ -1,0 +1,161 @@
+.sectionCardContainer {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.sectionCardTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionCardTitleLine{
+    position: absolute;
+    border-top: 1px solid var(--line-grey);
+    width: 95%;
+    max-width: 650px;
+}
+
+.sectionCardTitle > p {
+    position: absolute;
+    background-color: white;
+    padding: 0 10px 0 10px;
+    color: var(--green);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.sectionCardContainer > .sectionCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+
+    background: linear-gradient(90deg, white 0%, #fff7ef 50%, white 100%);
+}
+
+.hindiTextContainer > p {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.englishTextContainer> p {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.meaningTextContainer > p {
+    color: var(--slate-black);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .sectionCardContainer  {
+        margin-top: 5rem;
+    }
+
+    .sectionCardContainer > .sectionCard {
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -14,6 +14,7 @@ import PahadiWomen from "/public/bhotiaWoman.webp"
 import Screen from "@/components/Screen";
 import Festivals from "@/components/Festivals";
 import Faq from "@/components/Faq";
+import Proverbs from "@/components/ui/Proverbs";
 export default function Home() {
     return (
         <>
@@ -46,6 +47,7 @@ export default function Home() {
 
             {/*<Screen/>*/}
 
+            <Proverbs />
 
             <section className={styles["home-story-container"]}>
 
