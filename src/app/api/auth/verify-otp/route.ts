@@ -7,10 +7,7 @@ import { auth } from "@/auth";
 import { eq } from "drizzle-orm";
 
 // In-memory store for rate limiting
-const rateLimit = new Map<
-  string,
-  { requests: number; lastRequestTime: number }
->();
+const rateLimit = new Map < string, { requests: number; lastRequestTime: number } >();
 
 // Rate limiting configuration
 const MAX_REQUESTS = 3; // Max requests per window
