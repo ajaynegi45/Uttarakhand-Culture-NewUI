@@ -1,11 +1,11 @@
 import styles from "./DropDownMenu.module.css";
 
 type DropDownMenuProps = {
-    title : string,
+    title: string,
 }
 
 export default function DropDownMenu(props: DropDownMenuProps) {
-    return(
+    return (
         <>
             <section className={styles["search-section"]}>
                 <div className={styles["search-container"]}>

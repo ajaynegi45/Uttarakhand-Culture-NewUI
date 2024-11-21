@@ -10,13 +10,13 @@ export interface Festival {
 // Define a constant 'festivals', which is an array of objects, each object conforming
 // to the 'Festival' interface. This array contains details about several Uttarakhand festivals.
 export const festivals: Festival[] = [
-    { name: "Harela", date: "16-07" },
-    { name: "Phool Dei", date: "14-03" },
-    { name: "Nanda Devi Raj Jat", date: "05-09" },
-    { name: "Bikhauti", date: "14-04" },
-    { name: "Kauthig", date: "22-02" },
-    { name: "Ghee Sankranti", date: "17-02" },
-    { name: "Egaas Bhagwal", date: "12-03" }
+    {name: "Harela", date: "16-07"},
+    {name: "Phool Dei", date: "14-03"},
+    {name: "Nanda Devi Raj Jat", date: "05-09"},
+    {name: "Bikhauti", date: "14-04"},
+    {name: "Kauthig", date: "22-02"},
+    {name: "Ghee Sankranti", date: "17-02"},
+    {name: "Egaas Bhagwal", date: "12-03"}
 ];
 
 // Define a function 'getUpcomingFestival' which returns the festival happening today or the next upcoming festival,

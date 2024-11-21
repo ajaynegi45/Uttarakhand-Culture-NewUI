@@ -2,7 +2,7 @@
     margin-top: 5rem;
 }
 
-.sectionCardTitle{
+.sectionCardTitle {
 
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-.sectionCardTitleLine{
+.sectionCardTitleLine {
     position: absolute;
 
     border-top: 1px solid var(--line-grey);
@@ -28,8 +28,6 @@
 }
 
 
-
-
 .sectionCardContainer > .sectionCard {
     display: flex;
     flex-direction: row;
@@ -40,16 +38,17 @@
 }
 
 
-.title{
+.title {
     /*font-size: 2em;*/
 }
 
-.subTitle{
+.subTitle {
     margin-top: 0.5rem;
     letter-spacing: 1px;
 
 }
-.description{
+
+.description {
     margin-top: 1rem;
     font-size: 13px;
     color: var(--black);
@@ -66,23 +65,26 @@
 }
 
 
-.linkContainer{
+.linkContainer {
     display: flex;
     flex-direction: row;
     margin-top: 1.5rem;
 
 }
 
-.linkContainer > div{
+.linkContainer > div {
     border-top: 1px solid #E1E4E8;
     padding: 3px 10px 1px 10px;
 }
-.linkContainer1{
+
+.linkContainer1 {
 }
-.linkContainer2{
+
+.linkContainer2 {
     border-left: 1px solid #E1E4E8;
 }
-.linkContainer > div > a{
+
+.linkContainer > div > a {
     text-align: center;
     color: var(--grey);
     font-size: 12px;
@@ -113,28 +115,27 @@
     transform: scale(1, 1);
 }
 
-.linkContainer > div:hover > a{
+.linkContainer > div:hover > a {
     color: var(--black);
     filter: drop-shadow(0 0 0.90rem #A0A5AC);
 }
 
 
-
-.imageContainer{
+.imageContainer {
     margin-left: 2rem;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-.imageContainer > img{
+
+.imageContainer > img {
 
     width: auto;
     max-width: 250px;
     height: auto;
     border-radius: 5px;
 }
-
 
 
 /* Mobile */
@@ -145,8 +146,7 @@
     /*    padding-top: 3rem;*/
     /*    margin-top: 3rem;*/
     /*}*/
-
-    .sectionCardContainer  {
+    .sectionCardContainer {
         margin-top: 8rem;
     }
 
@@ -156,27 +156,28 @@
         justify-content: space-between;
     }
 
-    .subTitle{
+    .subTitle {
         font-weight: 300;
     }
 
-    .title{
+    .title {
         font-size: 20px;
     }
 
-    .imageContainer{
+    .imageContainer {
         margin-left: 0;
         width: 100%;
         margin-bottom: 1rem;
     }
-    .imageContainer > img{
+
+    .imageContainer > img {
         width: auto;
         max-width: 250px;
         height: auto;
         border-radius: 5px;
     }
 
-    .imageContainer > img{
+    .imageContainer > img {
         /*width: 100px;*/
         /*height: 100%;*/
 
@@ -185,7 +186,7 @@
         height: auto;
     }
 
-    .linkContainer > div > a{
+    .linkContainer > div > a {
         font-size: 10px;
     }
 }

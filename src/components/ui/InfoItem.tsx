@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./InfoItem.module.css";
 
 type CardProps = {

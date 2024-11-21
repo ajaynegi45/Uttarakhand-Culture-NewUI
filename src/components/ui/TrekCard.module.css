@@ -1,4 +1,4 @@
-.card{
+.card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -8,21 +8,23 @@
     padding-top: 4rem;
     margin-top: 1rem;
 }
-.left-card{
+
+.left-card {
     flex: 3;
     padding-right: 1rem;
     width: 100%;
 }
 
-.title{
+.title {
     /*font-size: 2em;*/
 }
 
-.subTitle{
+.subTitle {
     margin-top: 0.5rem;
     letter-spacing: 1px;
 }
-.description{
+
+.description {
     margin-top: 1rem;
     font-size: 13px;
     color: var(--black);
@@ -30,49 +32,54 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    
-}
-.list-item{
-    font-size: 13px;
-    color: var(--black);
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-}
-.paragraph{
-    margin-top: 1rem;
-    font-size: 13px;
-    color: var(--black);
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    
+
 }
 
-.heading{
+.list-item {
+    font-size: 13px;
+    color: var(--black);
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.paragraph {
+    margin-top: 1rem;
+    font-size: 13px;
+    color: var(--black);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+}
+
+.heading {
     margin: 1rem 0rem;
     font-size: medium;
     font-weight: 300;
 }
-.heading-list{
+
+.heading-list {
     margin-left: 2rem;
 }
 
-.link-container{
+.link-container {
     display: flex;
     flex-direction: row;
     margin-top: 1.5rem;
 
 }
 
-.link-container > div{
+.link-container > div {
     border-top: 1px solid #E1E4E8;
     padding: 3px 10px 1px 10px;
 }
-.link-container2{
+
+.link-container2 {
     border-left: 1px solid #E1E4E8;
 }
-.link-container > div > a{
+
+.link-container > div > a {
     text-align: center;
     color: var(--grey);
     font-size: 12px;
@@ -103,7 +110,7 @@
     transform: scale(1, 1);
 }
 
-.link-container > div:hover > a{
+.link-container > div:hover > a {
     color: var(--black);
     filter: drop-shadow(0 0 0.90rem #A0A5AC);
 }
@@ -147,17 +154,18 @@
 }
 
 
-.image-container{
+.image-container {
     margin-top: 0%;
     margin-bottom: auto;
-    margin-left: auto;  
+    margin-left: auto;
     margin-right: 0%;
     width: fit-content;
     flex: 1;
     flex-direction: row;
     justify-content: flex-end;
 }
-.image-container > img{
+
+.image-container > img {
 
     width: auto;
     max-width: 250px;
@@ -168,33 +176,33 @@
 }
 
 
-
 /* Mobile */
 @media (max-width: 700px) {
 
-    .card{
+    .card {
         width: 96%;
         padding-top: 3rem;
         margin-top: 3rem;
     }
 
-    .subTitle{
+    .subTitle {
         font-weight: 300;
     }
 
-    .title{
+    .title {
         font-size: 20px;
     }
 
-    .image-container{
+    .image-container {
         display: none;
     }
-    .image-container > img{
+
+    .image-container > img {
         width: 100px;
         height: 100%;
     }
 
-    .link-container > div > a{
+    .link-container > div > a {
         font-size: 10px;
     }
 }

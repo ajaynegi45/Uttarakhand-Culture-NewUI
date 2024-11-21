@@ -1,4 +1,4 @@
-.card{
+.card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,15 +9,16 @@
     margin-top: 4rem;
 }
 
-.title{
+.title {
     /*font-size: 2em;*/
 }
 
-.subTitle{
+.subTitle {
     margin-top: 0.5rem;
     letter-spacing: 1px;
 }
-.description{
+
+.description {
     margin-top: 1rem;
     font-size: 13px;
     color: var(--black);
@@ -32,24 +33,27 @@
 }
 
 
-.link-container{
+.link-container {
     display: flex;
     flex-direction: row;
     margin-top: 1.5rem;
 
 }
 
-.link-container > div{
+.link-container > div {
     border-top: 1px solid #E1E4E8;
     padding: 3px 10px 1px 10px;
 }
-.link-container1{
+
+.link-container1 {
     border-right: 1px solid #E1E4E8;
 }
-.link-container2{
+
+.link-container2 {
 
 }
-.link-container > div > a{
+
+.link-container > div > a {
     text-align: center;
     color: var(--grey);
     font-size: 12px;
@@ -80,21 +84,21 @@
     transform: scale(1, 1);
 }
 
-.link-container > div:hover > a{
+.link-container > div:hover > a {
     color: var(--black);
     filter: drop-shadow(0 0 0.90rem #A0A5AC);
 }
 
 
-
-.image-container{
+.image-container {
     margin-left: 2rem;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-.image-container > img{
+
+.image-container > img {
 
     width: auto;
     max-width: 250px;
@@ -105,33 +109,33 @@
 }
 
 
-
 /* Mobile */
 @media (max-width: 700px) {
 
-    .card{
+    .card {
         width: 96%;
         padding-top: 3rem;
         margin-top: 3rem;
     }
 
-    .subTitle{
+    .subTitle {
         font-weight: 300;
     }
 
-    .title{
+    .title {
         font-size: 20px;
     }
 
-    .image-container{
+    .image-container {
         display: none;
     }
-    .image-container > img{
+
+    .image-container > img {
         width: 100px;
         height: 100%;
     }
 
-    .link-container > div > a{
+    .link-container > div > a {
         font-size: 10px;
     }
 }

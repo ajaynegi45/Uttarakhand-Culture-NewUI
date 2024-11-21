@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import TrekCard from "@/components/ui/TrekCard";
 import TrekkingHeroImage from "/public/heroImage.png";
-import { trekDetails } from './location-detail';
-import { useState } from "react";
+import {trekDetails} from './location-detail';
+import {useState} from "react";
 
 export default function Trekking() {
     const [difficultyLevel, setDifficultyLevel] = useState("");
@@ -19,12 +19,12 @@ export default function Trekking() {
     };
 
     // Extract unique districts from trekDetails
-    
+
 
     const filterTreks = trekDetails.filter(trek => {
         const matchesDifficulty = difficultyLevel === "" || trek.difficultyLevel.toLowerCase() === difficultyLevel.toLowerCase();
         const matchesDistrict = district === "" || trek.district.toLowerCase() === district.toLowerCase();
-        
+
         let matchesAltitude = true; // Default to true (not filtering)
         if (altitude) {
             // Define altitude ranges for filtering
@@ -49,17 +49,18 @@ export default function Trekking() {
                         <p>EXPLORE HIDDEN PLACES IN UTTARAKHAND</p>
                     </div>
                     <div className={styles["img-container"]}>
-                        <Image src={TrekkingHeroImage} alt="TREKKING" width="368" height="400" loading={"eager"} priority={true} />
+                        <Image src={TrekkingHeroImage} alt="TREKKING" width="368" height="400" loading={"eager"}
+                               priority={true}/>
                     </div>
                 </section>
             </header>
 
             <section className={styles["search-section"]}>
-                    <div className={styles["search-container"]}>
-                        <div className={styles["item"]}>
-                            <label htmlFor="difficulty-level" />
-                            <select id="difficulty-level"
-                            onChange={(e) => handleFilterChange(e, "difficulty")}
+                <div className={styles["search-container"]}>
+                    <div className={styles["item"]}>
+                        <label htmlFor="difficulty-level"/>
+                        <select id="difficulty-level"
+                                onChange={(e) => handleFilterChange(e, "difficulty")}
                         >
                             <option value="">Select Difficulty</option>
                             <option value="EASY">EASY</option>
@@ -69,32 +70,32 @@ export default function Trekking() {
                     </div>
 
                     <div className={styles["item"]}>
-                            <label htmlFor="district" />
-                            <select id="district"
-                            onChange={(e) => handleFilterChange(e, "district")}
+                        <label htmlFor="district"/>
+                        <select id="district"
+                                onChange={(e) => handleFilterChange(e, "district")}
                         >
                             <option value="">Select District</option>
-                                <option value="Almora">Almora</option>
-                                <option value="Bageshwar">Bageshwar</option>
-                                <option value="Chamoli">Chamoli</option>
-                                <option value="Champawat">Champawat</option>
-                                <option value="Dehradun">Dehradun</option>
-                                <option value="Haridwar">Haridwar</option>
-                                <option value="Nainital">Nainital</option>
-                                <option value="Pauri Garhwal">Pauri Garhwal</option>
-                                <option value="Pithoragarh">Pithoragarh</option>
-                                <option value="Rudraprayag">Rudraprayag</option>
-                                <option value="Tehri Garhwal">Tehri Garhwal</option>
-                                <option value="Udham Singh Nagar">Udham Singh Nagar</option>
-                                <option value="Uttarkashi">Uttarkashi</option>
-                            
+                            <option value="Almora">Almora</option>
+                            <option value="Bageshwar">Bageshwar</option>
+                            <option value="Chamoli">Chamoli</option>
+                            <option value="Champawat">Champawat</option>
+                            <option value="Dehradun">Dehradun</option>
+                            <option value="Haridwar">Haridwar</option>
+                            <option value="Nainital">Nainital</option>
+                            <option value="Pauri Garhwal">Pauri Garhwal</option>
+                            <option value="Pithoragarh">Pithoragarh</option>
+                            <option value="Rudraprayag">Rudraprayag</option>
+                            <option value="Tehri Garhwal">Tehri Garhwal</option>
+                            <option value="Udham Singh Nagar">Udham Singh Nagar</option>
+                            <option value="Uttarkashi">Uttarkashi</option>
+
                         </select>
                     </div>
 
                     <div className={styles["item"]}>
-                            <label htmlFor="altitude" />
-                            <select id="altitude"
-                            onChange={(e) => handleFilterChange(e, "altitude")}
+                        <label htmlFor="altitude"/>
+                        <select id="altitude"
+                                onChange={(e) => handleFilterChange(e, "altitude")}
                         >
                             <option value="">Select Altitude</option>
                             <option value="Low">Low (below 3500m)</option>

@@ -3,13 +3,13 @@ import Style from "./Proverbs.module.css";
 import {getRandomProverb} from "@/utils/proverbs";
 
 type ProverbProps = {
-    hindi:String,
+    hindi: String,
     english: string,
     meaning?: String
 }
 
-const Proverbs = ()=> {
-    const Proverb =  getRandomProverb();
+const Proverbs = () => {
+    const Proverb = getRandomProverb();
     return (
         <>
             <section className={Style.sectionCardContainer}>
@@ -30,12 +30,11 @@ const Proverbs = ()=> {
                         <p className={Style.englishText}>{Proverb.english}</p>
                     </div>
 
-                    { Proverb.meaning?
-                    <div className={Style.meaningTextContainer}>
-                        <p className={Style.englishText}>{Proverb.meaning}</p>
-                    </div>
-                    :" " }
-
+                    {Proverb.meaning ?
+                        <div className={Style.meaningTextContainer}>
+                            <p className={Style.englishText}>{Proverb.meaning}</p>
+                        </div>
+                        : " "}
 
 
                 </div>

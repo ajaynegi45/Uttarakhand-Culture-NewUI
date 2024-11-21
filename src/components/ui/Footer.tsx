@@ -14,7 +14,8 @@ export default function Footer() {
 
                     <div className={styles["newsletter-email-container"]}>
                         <form action="">
-                            <input id={"email-input"} type="email" placeholder="Enter Your email" required={true} disabled={true}/>
+                            <input id={"email-input"} type="email" placeholder="Enter Your email" required={true}
+                                   disabled={true}/>
                             <p>Subscribe</p>
                         </form>
                     </div>
@@ -31,13 +32,14 @@ export default function Footer() {
                 </div>
 
                 <div className={styles["footer-right-container"]}>
-                    <div className={styles["footer-right-link-container"]} >
+                    <div className={styles["footer-right-link-container"]}>
                         <p>Socials</p>
-                        <Link href={"https://www.linkedin.com/company/uttarakhandculture?trk=public_post_follow-view-profile"}>LinkedIn</Link>
+                        <Link
+                            href={"https://www.linkedin.com/company/uttarakhandculture?trk=public_post_follow-view-profile"}>LinkedIn</Link>
                         <Link href={"https://github.com/Uttarakhand-Culture"}>Github</Link>
                         <Link href={"https://ukculture.netlify.app/contact"}>Contact us</Link>
                     </div>
-                    <div className={styles["footer-right-link-container"]} >
+                    <div className={styles["footer-right-link-container"]}>
                         <p>Contribution</p>
                         <Link href={""}>Issues</Link>
                         <Link href={"/about"}>About us</Link>

@@ -2,7 +2,6 @@ import styles from "./FestivalCard.module.css"
 import Link from "next/link";
 import Image from "next/image";
 import GheeSankranti from "/public/Ghee_Sankranti.jpeg"
-import Bagwal from "/public/bagwal.jpg"
 import Nanda_Sunanda from "/public/Nanda-Sunanda.webp"
 
 export default function FestivalCard() {
@@ -49,7 +48,14 @@ export default function FestivalCard() {
                         <p className={styles["subTitle"]}>8 SEPTEMBER - 19 SEPTEMBER · NAINITAL</p>
 
                         <p className={styles["description"]}>
-                            The Nanda Devi Mahotsav is a grand celebration dedicated to Goddess Nanda Devi, the revered deity of the Kumaon region. This vibrant festival, which takes place annually in Nainital, is deeply ingrained in the cultural fabric of Uttarakhand. It is believed to have started centuries ago to honor Nanda Devi, who is considered the protector of the region. The festival is marked by colorful processions, traditional dance performances, and rituals that attract devotees and tourists alike. The highlight of the event is the ‘Nanda Jaat Yatra,’ where a grand procession of devotees carries a palanquin of the goddess through the scenic landscapes of Uttarakhand, symbolizing her journey to her maternal home.                        </p>
+                            The Nanda Devi Mahotsav is a grand celebration dedicated to Goddess Nanda Devi, the revered
+                            deity of the Kumaon region. This vibrant festival, which takes place annually in Nainital,
+                            is deeply ingrained in the cultural fabric of Uttarakhand. It is believed to have started
+                            centuries ago to honor Nanda Devi, who is considered the protector of the region. The
+                            festival is marked by colorful processions, traditional dance performances, and rituals that
+                            attract devotees and tourists alike. The highlight of the event is the ‘Nanda Jaat Yatra,’
+                            where a grand procession of devotees carries a palanquin of the goddess through the scenic
+                            landscapes of Uttarakhand, symbolizing her journey to her maternal home. </p>
                         <div className={styles["link-container"]}>
                             <div className={styles["link-container1"]}><Link href={"#"}>READ MORE</Link></div>
 

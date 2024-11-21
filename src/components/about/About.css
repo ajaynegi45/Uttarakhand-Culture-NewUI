@@ -42,7 +42,7 @@
 
 .section-content {
     flex: 1;
-    font-size:x-large;
+    font-size: x-large;
     margin: 10px;
     padding: 10px;
 }
@@ -53,10 +53,11 @@
     border-radius: 12px;
     object-fit: cover;
 }
-.section-content p{
+
+.section-content p {
     color: #11181f;
     font-size: large;
-    line-height:30px;
+    line-height: 30px;
     margin-top: 20px;
 }
 

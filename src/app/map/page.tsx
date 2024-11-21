@@ -60,7 +60,7 @@ const Map = () => {
             {/*<div>*/}
             {/*    <Image src={"/mapClick.svg"} alt={""} width={100} height={100} />*/}
             {/*</div>*/}
-            
+
             <div>
                 <div className={styles["uttarakhand-map"]}>
                     <h1 className={styles["uttarakhand-map-heading"]}>Map of Uttarakhand</h1>

@@ -1,4 +1,4 @@
-.dropdown-menu-container{
+.dropdown-menu-container {
     display: none;
 }
 
@@ -8,10 +8,7 @@
 }
 
 
-
-
-
-.search-section{
+.search-section {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -20,7 +17,7 @@
 
 }
 
-.search-container{
+.search-container {
     width: 500px;
     height: 40px;
     min-width: 300px;
@@ -33,18 +30,18 @@
     border: 1px solid #E1E4E8;
 }
 
-.item{
+.item {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.item > p{
+.item > p {
     color: var(--black);
 }
 
 
-.card-container{
+.card-container {
     width: 100%;
     display: flex;
     flex-direction: column;

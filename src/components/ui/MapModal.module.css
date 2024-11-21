@@ -1,72 +1,72 @@
 .modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 50; /* Lower than navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50; /* Lower than navbar */
 
 }
-  
+
 .modalContent {
-  display: flex;
-  width: 80%;
-  max-width: 900px;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(calc(var(--navbar-height, 50px) + 10px)); /* Adjust height as necessary */
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(calc(var(--navbar-height, 50px) + 10px)); /* Adjust height as necessary */
 }
-  
-  .leftColumn {
+
+.leftColumn {
     width: 90%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  
-  .mapContainer {
+}
+
+.mapContainer {
     width: 100%;
     height: 100%; /* Ensures the map fills the entire left column */
     min-height: 400px; /* A minimum height to prevent collapsing */
     position: relative;
-  }
-  
-  .rightColumn {
+}
+
+.rightColumn {
     width: fit-content;
     padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
-  
-  .subTitle{
+}
+
+
+.subTitle {
     width: fit-content;
-  }
-  
-  .imageSection {
+}
+
+.imageSection {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-top: 8px;
     width: fit-content;
-  }
-  
-  .imageSection img {
+}
+
+.imageSection img {
     width: 250px;
     height: auto;
     border-radius: 4px;
     object-fit: cover;
-  }
-  
-  .closeButton {
+}
+
+.closeButton {
     margin-top: 16px;
     padding: 8px 16px;
     background-color: #333;
@@ -75,19 +75,20 @@
     border-radius: 4px;
     cursor: pointer;
     background-color: #333;
-  }
-  .closeButton:hover{
+}
+
+.closeButton:hover {
     background-color: black;
-  }
-  
-  .mapLinks {
+}
+
+.mapLinks {
     margin-top: 10px;
     gap: 2px;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .mapLinks a {
+}
+
+.mapLinks a {
     white-space: nowrap;
     color: white;
     background-color: #333;
@@ -97,54 +98,56 @@
     text-align: center;
     border-radius: 4px;
     font-weight: 500;
-  }
-  
-  .mapLinks a:hover {
+}
+
+.mapLinks a:hover {
     background-color: black;
-  }
-  .mapLinks .icon {
+}
+
+.mapLinks .icon {
     position: relative;
     display: inline-flex;
     margin-right: 2px;
     top: 2px;
-  }
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .modalContent {
-      flex-direction: column; /* Stack columns vertically */
-      width: 80%; /* Full width on mobile */
-      max-height: 80%; /* Prevent the modal from exceeding the viewport */
-      overflow-y: auto; /* Enable vertical scrolling */
-     
+        flex-direction: column; /* Stack columns vertically */
+        width: 80%; /* Full width on mobile */
+        max-height: 80%; /* Prevent the modal from exceeding the viewport */
+        overflow-y: auto; /* Enable vertical scrolling */
+
     }
-  
+
     .leftColumn,
     .rightColumn {
-      width: 100%; /* Full width for both columns */
-      padding: 12px; /* Adjust padding for mobile */
+        width: 100%; /* Full width for both columns */
+        padding: 12px; /* Adjust padding for mobile */
     }
-  
+
     .mapContainer {
-      min-height: 200px; /* Reduce minimum height for mobile */
-      flex-grow: 1; /* Allow the map container to grow and take available space */
+        min-height: 200px; /* Reduce minimum height for mobile */
+        flex-grow: 1; /* Allow the map container to grow and take available space */
     }
-  
+
     .imageSection img {
-      width: 100%; /* Full width for images on mobile */
-      height: auto; /* Maintain aspect ratio */
+        width: 100%; /* Full width for images on mobile */
+        height: auto; /* Maintain aspect ratio */
     }
-  
+
     .closeButton {
-      margin-top: 12px; /* Adjust margin for mobile */
-      width: 100%; /* Full width for button */
+        margin-top: 12px; /* Adjust margin for mobile */
+        width: 100%; /* Full width for button */
     }
-  
+
     .mapLinks {
-      flex-direction: column; /* Stack links vertically */
-      gap: 8px; /* Add spacing between links */
+        flex-direction: column; /* Stack links vertically */
+        gap: 8px; /* Add spacing between links */
     }
-  
+
     .mapLinks a {
-      width: 100%; /* Full width for each link */
-      text-align: center; /* Center text for links */
+        width: 100%; /* Full width for each link */
+        text-align: center; /* Center text for links */
     }
-  }
+}

@@ -1,9 +1,7 @@
 import React from 'react';
 import styles from "@/components/ui/sectionCard.module.css";
 import Link from "next/link";
-import Image from "next/image";
-import {StaticImageData} from 'next/image';
-import GheeSankranti from "/public/Ghee_Sankranti.jpeg"
+import Image, {StaticImageData} from "next/image";
 
 type SectionCardProps = {
     cardTitle: string
@@ -16,7 +14,7 @@ type SectionCardProps = {
 }
 
 
-const SectionCard = ( props : SectionCardProps) => {
+const SectionCard = (props: SectionCardProps) => {
     return (
         <section className={styles.sectionCardContainer}>
 
@@ -33,7 +31,8 @@ const SectionCard = ( props : SectionCardProps) => {
                     <p className={styles.description}>{props.description}</p>
 
                     <div className={styles.linkContainer}>
-                        <div className={styles.linkContainer1}><Link href={props.readMoreLink ? props.readMoreLink : '#'}>READ MORE</Link></div>
+                        <div className={styles.linkContainer1}><Link
+                            href={props.readMoreLink ? props.readMoreLink : '#'}>READ MORE</Link></div>
                         {props.location && (
                             <div className={styles.linkContainer2}>
                                 <Link

@@ -1,4 +1,4 @@
-.language-hero-container{
+.language-hero-container {
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
@@ -9,7 +9,7 @@
 
 }
 
-.language-text-container{
+.language-text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,28 +19,31 @@
     width: 100%;
 
 }
+
 .language-text-container > p {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-top: 1rem;
 }
-.language-img-container{
+
+.language-img-container {
     overflow: hidden;
     max-width: 600px;
     width: 100%;
 }
 
-.language-img-container > img{
+.language-img-container > img {
     filter: drop-shadow(0 0 0.40rem #A0A5AC);
 
 }
 
-.language-importance-container{
+.language-importance-container {
     margin-top: 10rem;
     border-top: 1px solid var(--line-grey);
     width: 100%;
 }
-.language-importance-title-container > p{
+
+.language-importance-title-container > p {
     text-transform: uppercase;
     margin-top: 0.3rem;
     margin-left: 2px;
@@ -48,7 +51,8 @@
     font-size: 12px;
 
 }
-.language-importance-item-container{
+
+.language-importance-item-container {
     display: flex;
     flex-direction: row;
     /*align-items: center;*/
@@ -58,21 +62,21 @@
     margin-top: 1.5rem;
 }
 
-.uttarakhand-language-title-container{
+.uttarakhand-language-title-container {
     width: 100%;
     border-top: 1px solid var(--line-grey);
     margin-top: 5rem;
     margin-bottom: -6rem;
 }
 
-.uttarakhand-language-title-container > p{
+.uttarakhand-language-title-container > p {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
 
 }
 
-.uttarakhand-language-container{
+.uttarakhand-language-container {
     width: 95%;
 }
 
@@ -86,47 +90,53 @@
         font-size: 45px;
         letter-spacing: 2px;
     }
-    .language-img-container > img{
+
+    .language-img-container > img {
         width: 430px;
         height: 400px;
 
     }
-    .language-hero-container{
+
+    .language-hero-container {
         padding: 0 2rem 0 2rem;
     }
 }
 
 @media (max-width: 1000px) {
-    .language-hero-container{
+    .language-hero-container {
         padding: 0 1.5rem 0 1.5rem;
     }
+
     .language-text-container > p {
         font-size: 12px;
         letter-spacing: 1px;
         text-align: center;
     }
+
     .language-text-container > h1 {
         font-size: 30px;
         letter-spacing: 1px;
     }
-    .language-img-container > img{
+
+    .language-img-container > img {
         width: 323px;
         height: 300px;
     }
 }
 
 @media (max-width: 700px) {
-    .language-hero-container{
+    .language-hero-container {
         flex-direction: column-reverse;
         padding: 0 0 0 0;
         margin-top: 2.5rem;
     }
-    .language-img-container{
+
+    .language-img-container {
         width: 100%;
         text-align: center;
     }
 
-    .language-img-container > img{
+    .language-img-container > img {
         rotate: -30deg;
         width: 300px;
         height: 278px;
@@ -134,14 +144,15 @@
         /*padding-left: 15px;*/
     }
 
-    .uttarakhand-language-container{
+    .uttarakhand-language-container {
         margin-top: 3rem;
         position: relative;
         width: 100%;
     }
 }
+
 @media (max-width: 500px) {
-    .language-importance-title-container > p{
+    .language-importance-title-container > p {
         text-align: center;
     }
 }
