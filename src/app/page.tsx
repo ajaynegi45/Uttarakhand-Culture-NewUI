@@ -12,6 +12,7 @@ import Notify_Banner from "/public/notify-early-banner.jpg"
 import PahadiWomen from "/public/bhotiaWoman.webp"
 import Faq from "@/components/Faq";
 import Proverbs from "@/components/ui/Proverbs";
+import Festivals from "@/components/Festivals";
 
 export default function Home() {
     return (
@@ -100,6 +101,8 @@ export default function Home() {
                 </div>
 
             </section>
+
+            <Festivals/>
 
 
             {/* UPCOMING FESTIVAL */}
