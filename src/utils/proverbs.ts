@@ -19,6 +19,7 @@ export const proverbs: Proverb[] = [
 
 export const getRandomProverb = (): Proverb => {
     const randomIndex = Math.floor(Math.random() * proverbs.length);
+
     // return proverbs[randomIndex];
 
     return proverbs[0];

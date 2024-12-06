@@ -41,9 +41,9 @@ export default function Footer() {
                     </div>
                     <div className={styles["footer-right-link-container"]}>
                         <p>Contribution</p>
-                        <Link href={""}>Issues</Link>
+                        <Link href={"https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/issues"}>Issues</Link>
                         <Link href={"/about"}>About us</Link>
-                        <Link href={""}>Contribution</Link>
+                        <Link href={"https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/graphs/contributors"}>Contribution</Link>
                     </div>
                 </div>
             </div>

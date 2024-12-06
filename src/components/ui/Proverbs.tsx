@@ -2,12 +2,6 @@ import React from 'react';
 import Style from "./Proverbs.module.css";
 import {getRandomProverb} from "@/utils/proverbs";
 
-type ProverbProps = {
-    hindi: String,
-    english: string,
-    meaning?: String
-}
-
 const Proverbs = () => {
     const Proverb = getRandomProverb();
     return (

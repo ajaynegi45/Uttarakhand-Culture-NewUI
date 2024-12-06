@@ -124,6 +124,7 @@ export default function Auth() {
     };
 
     return (
+        <section className={styles.authenticationContainer}>
         <div className={styles.container}>
             <h2 className={styles.title}>{isSignup ? "Sign Up" : "Login"}</h2>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -212,11 +213,12 @@ export default function Auth() {
 
                         <div className={styles.alerts}>
                             <input
+                                id="alerts-checkbox"
                                 disabled={isLoading}
                                 type="checkbox"
                                 {...register("alerts")}
                             />
-                            <label className={styles.label}>
+                            <label className={styles.label} htmlFor="alerts-checkbox">
                                 Get Upcoming Uttarakhand Festival & Fair Alerts!
                             </label>
                         </div>
@@ -284,5 +286,6 @@ export default function Auth() {
                     : "Don't have an account? Sign Up"}
             </p>
         </div>
+        </section>
     );
 }
