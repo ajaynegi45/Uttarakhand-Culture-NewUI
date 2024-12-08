@@ -1,0 +1,242 @@
+<script>
+        const mapData = [{
+            name: 'Explore The Unexplored',
+            text: `A mystical land of mountains and mythologies, exquisite landscapes and exhilarating adventure, and  wellness and yoga, Uttarakhand has something to offer every traveller. Popularly known as Devbhoomi, or the land of gods, the state is framed by the Himalayas and divided into two main regions, Garhwal and Kumaon. While Uttarakhand has several well-known destinations like Nainital, Mussoorie, Corbett National Park and Auli, and pilgrimage sites like Kedarnath, Badrinath, Rishikesh and Haridwar, explore the 13 lesser-known destinations from the state's 13 districts.`,
+            img: '/themes/utdb_frontend/images/Uttarakhand_Destination_Banner.jpg'
+        },
+        {
+            name: 'Jakhol village & Mori (Uttarkashi)',
+            text: `A picturesque village nestled in the Garhwal Himalayas, culturally-rich Jakhol of
+                    Uttarkashi district is a perfect destination for an off-the-grid vacation. Mori is a beautiful township surrounded by dense forests on the bank of Tons river. (Enjoy rafting and beach walks.)`,
+            img: '/themes/utdb_frontend/images/Uttarkashi.jpg'
+        },
+        {
+            name: 'Lakhamandal (Dehradun)',
+            text: `This ancient Lord Shiva temple in Dehradun district is famous for an episode from the
+                    epic Mahabharata. It is said this is the “Laksha Griha” or the complex made of wax
+                    where an attempt was made on the lives of the five Pandava princes.`,
+            img: '/themes/utdb_frontend/images/Dehradun.jpg'
+        },
+        {
+            name: 'Tehri Lake (Tehri)',
+            text: `A beautiful lake in the New Tehri town, the Tehri Jheel is popular for exhilarating water sports and treks.`,
+            img: '/themes/utdb_frontend/images/New%20tehri.jpg'
+        },
+        {
+            name: 'Chirbatia (Rudraprayag)',
+            text: `Located in the Rudraprayag district, Chirbatia is a peaceful hamlet surrounded by
+                    rhododendron, oak and deodar forests, and gushing waterfalls.`,
+            img: '/themes/utdb_frontend/images/Rudraprayag.jpg'
+        },
+        {
+            name: 'Gairsain (Chamoli)',
+            text: `This picturesque town in Chamoli district surrounded by rolling lush meadows and
+                    green hills is perfect for a summer vacation.`,
+            img: '/themes/utdb_frontend/images/Chamoli.jpg'
+        },
+        {
+            name: '52 Shakti Peeth Theme Park (Haridwar)',
+            text: `A magnificent religious theme park based on 52 Shakti Peeth being developed at Kankhal in Haridwar district. Kankhal is a heritage and spiritual destination with references made in the Mahabharata.`,
+            img: '/themes/utdb_frontend/images/Haridwar.jpg'
+        },
+        {
+            name: 'Khairasain Lake & Satpuli (Pauri)',
+            text: `A serene lake near Satpauli in Pauri district, Khairasain is a scenic destination ideal for a
+                    trip away from the crowd. A floating restaurant in the lake adds to its charms. Satpuli is a picturesque village by the Purvi Nayar Ghati River, known for angling and canoeing.`,
+            img: '/themes/utdb_frontend/images/Pauri.jpg'
+        },
+        {
+            name: 'Katarmal (Almora)',
+            text: `This quaint village in Almora district is known for a magnificent 9 th century sun temple.`,
+            img: '/themes/utdb_frontend/images/Almora.jpg'
+        },
+        {
+            name: 'Garur valley (Bageshwar)',
+            text: `A lush and scenic valley covered by forests and dotted with temples, Bageshwar
+                    district&#39;s Garur valley is a mesmerising holiday destination and a popular camping site.`,
+            img: '/themes/utdb_frontend/images/Bageshwar.jpg'
+        },
+        {
+            name: 'Mostamanu (Pithoragarh)',
+            text: `A striking white and gold temple, Mostamanu in Pithoragarh district is dedicated to Lord
+                    Mosta, a local deity. Well-known for a vibrant fair in the months of August and
+                    September.`,
+            img: '/themes/utdb_frontend/images/Pithoragarh.jpg'
+        },
+        {
+            name: 'Drona Sagar Lake (Udham Singh Nagar)',
+            text: `Nestled in Udham Singh Nagar district, this pristine lake is associated with
+                    Dronacharya, the royal teacher of the Kauravas and Pandavas of the epic Mahabharata.`,
+            img: '/themes/utdb_frontend/images/Rudrapur.jpg'
+        },
+        {
+            name: 'Mukteshwar (Nainital)',
+            text: `This town in the apple country of the Nainital district is most popular for a centuries old Shiva temple.`,
+            img: '/themes/utdb_frontend/images/Nainital.jpg'
+        },
+        {
+            name: 'Devidhura (Champawat)',
+            text: `An ancient town, Devidhura in Champawat district is a site of archaeological
+                    importance, with ruins dating back to the megalithic era. Also known for the Barahi
+                    temple and the Bagwal festival.`,
+            img: '/themes/utdb_frontend/images/Champawat.jpg'
+
+        }];
+
+        const mapAndTrip = document.querySelector('.map-and-trip');
+        const mapAndTripBgImage = document.querySelector('.map-and-trip-bg-image');
+        const regions = document.querySelectorAll('.regions');
+        const aboutRegion = document.querySelector('.about-region');
+        const aboutRegionHeading = document.querySelector('.about-region h2');
+        const aboutRegionText = document.querySelector('.about-region p');
+        const regionText = document.querySelectorAll('.text');
+        const regionPointer = document.querySelectorAll('.pointer');
+        // console.log(aboutRegionAfter)
+
+        regions.forEach((e,index)=>{
+            e.addEventListener('mouseenter',(event)=>{
+                e.classList.add('active');
+            })
+            e.addEventListener('mouseleave',()=>{
+                e.classList.remove('active');
+            })
+            e.addEventListener('mouseenter',()=>{
+                console.log(index+1);
+                aboutRegionHeading.innerHTML=mapData[index+1].name;
+                aboutRegionText.innerHTML=mapData[index+1].text;
+                            })
+        })
+
+        regionText.forEach((e,index)=>{
+            e.addEventListener('mouseenter',(event)=>{
+                regions[index].classList.add('active');
+            })
+            e.addEventListener('mouseleave',()=>{
+                regions[index].classList.remove('active');
+            })
+            e.addEventListener('mouseenter',()=>{
+                aboutRegionHeading.innerHTML=mapData[index+1].name;
+                aboutRegionText.innerHTML=mapData[index+1].text;
+                            })
+        })
+
+        regionPointer.forEach((e,index)=>{
+            e.addEventListener('mouseenter',(event)=>{
+                regions[index].classList.add('active');
+            })
+            e.addEventListener('mouseleave',()=>{
+                regions[index].classList.remove('active');
+            })
+            e.addEventListener('mouseenter',()=>{
+                aboutRegionHeading.innerHTML=mapData[index+1].name;
+                aboutRegionText.innerHTML=mapData[index+1].text;
+                            })
+        })
+
+        // aboutRegion.forEach((e)=>{
+
+        // })
+    </script>
+
+
+
+
+    <div class="row p-0 m-0 align-items-center max-w-85 mx-auto">
+                <div class="col-lg-4" style="">
+                    <div class="about-region p-2" style="max-width: 500px; text-align: center; margin: 0 auto; background:rgba(0,0,0,0.5); color: #fff; border-radius: 5px;">
+                        <h2>Explore The Unexplored</h2>
+                        <p>A mystical land of mountains and mythologies, exquisite landscapes and exhilarating adventure, and  wellness and yoga, Uttarakhand has something to offer every traveller. Popularly known as Devbhoomi, or the land of gods, the state is framed by the Himalayas and divided into two main regions, Garhwal and Kumaon. While Uttarakhand has several well-known destinations like Nainital, Mussoorie, Corbett National Park and Auli, and pilgrimage sites like Kedarnath, Badrinath, Rishikesh and Haridwar, explore the 13 lesser-known destinations from the state's 13 districts.</p>
+                    </div>
+                    <div class="region-seprator text-center pt-3">
+                        <span class="gh">Garhwal Region</span>
+                        <span class="ku">Kumaon Region</span>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <svg viewBox="0 0 1250 1125" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+      <defs>
+        <style bx:fonts="Roboto Slab">@font-face { font-family: "Roboto Slab"; font-style: normal; font-weight: 100; font-stretch: normal; font-unicode-range: U+0-10FFFF; font-variant: normal; font-feature-settings: normal; src: url("data:font/ttf;base64,AAEAAAASAQAABAAgR0RFRv8I9ZYAAgDQAAACREdQT1M/Sdo7AAIDFAAAjMZHU1VCzrUkyQACj9wAAA9aT1MvMnO+AAEAAQD3AAAAAQABAAgAAQAAABQAAQAAABwAAndnaHQBAAAAAAIAAQAAAAABBgOEAAAAAA=="); }
+        </style>
+      </defs>
+
+      <path class="regions gharwal region1" d="M647.357 198.972L641.967  189.752V195.374" fill="#FF0000"></path>
+
+      <path class="pointer" d="M325.5 325C331.299 325 336 320.299 336 314.5C336 308.701 331.299 304 325.5 304C319.701 304 315 308.701 315 314.5C315 320.299 319.701 325 325.5 325Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M259.519 294.344L261.057 294.133C261.098  296.91 362.254 296.91C362.834 296.91 363.329 296.758 363.739 296.453C364.149 296.148 364.475 295.662 364.715 294.994ZM359.521 292.437H364.732C364.662 291.651 364.463 291.062 364.135 290.67C363.631 290.061 362.978 289.756 362.175 289.756C361.448 289.756 360.836 289.999 360.338 290.485C359.846 290.972 359.573 291.622 359.521 292.437Z" fill="black"></path>
+
+      <path class="regions gharwal region2" d="M172.494 508.568L174.277  506.75" fill="#FF0000"></path>
+
+      <path class="pointer" d="M154.5 379C160.299 379 165 374.299 165 368.5C165 362.701 160.299 358 154.5 358C148.701 358 144 362.701 144 368.5C144 374.299 148.701 379 154.5 379Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M104.318 343V330.115H106.023V341.479H112.369V343H104.318ZM120.297 341.849C119.711 342.347  339.593 204.276 338.896V338.315ZM208.302 343V330.115H209.884V343H208.302Z" fill="black"></path>
+
+      <path class="regions gharwal region3" d="M295.919 556.339L288.912 556.339Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M340.5 457C346.299 457 351 452.299 351 446.5C351 440.701 346.299 436 340.5 436C334.701 436 330 440.701 330 446.5C330 452.299 334.701 457 340.5 457Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="regions gharwal region4" d="M487.214 503.896L486.192  506.287L487.214 503.896Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M509.5 500C515.299 500 520 495.299 520 489.5C520 483.701 515.299 479 509.5 479C503.701 479 499 483.701 499 489.5C499 495.299 503.701 500 509.5 500Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M488.582 459.482L490.287 459.913C489.93 461.313 489.285 462.383 488.354 463.121C487.428 463.854 486.294 464.22 484.952 464.22C483.563 464.22 482.433 463.938 481.56 463.376C480.692 462.808 480.03 461.987 479.573 460.915C479.122 459.843 478.896 458.691 478.896 457.461C478.896 456.119 479.151 454.95 479.661 453.954C480.177 452.952 480.906 452.193 481.85 451.678C482.799 462.972 545.456 462.84 545.931 462.576C546.405 462.307 546.754 461.94 546.977 461.478C547.146 461.12 547.231 460.593 547.231 459.896V459.315Z" fill="black"></path>
+
+      <path class="regions gharwal region5" d="M551.65 517.104L553.678 520.349L551.65 517.104Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M618.5 438C624.299 438 629 433.299 629 427.5C629 421.701 624.299 417 618.5 417C612.701 417 608 421.701 608 427.5C608 433.299 612.701 438 618.5 438Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M593.418 452.946V451.435L598.876 451.426V456.207C598.038  450.468C646.07 450.896 645.827 451.707 645.827 452.902V458H644.245Z" fill="black"></path>
+
+      <path class="regions gharwal region6" d="M301.753 692.205L295.513 685.519L301.753 678.388Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M236.5 630C242.299 630 247 625.299 247 619.5C247 613.701 242.299 609 236.5 609C230.701 609 226 613.701 226 619.5C226 625.299 230.701 630 236.5 630Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="regions gharwal region7" d="M605.192 612.831L600.865  597.147L598.161 600.933L594.916 605.8L601.406 608.505L605.733 612.29" fill="#FF0000"></path>
+
+      <path class="pointer" d="M449.5 549C455.299 549 460 544.299 460 538.5C460 532.701 455.299 528 449.5 528C443.701 528 439 532.701 439 538.5C439 544.299 443.701 549 449.5 549Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M405.318 568V555.115H407.023V561.505L413.422  525.597 561.622 525.544 562.437Z" fill="black"></path>
+
+      <path class="regions kumaon region8" d="M877.772 776.163L876.69 779.408L871.282  728.57L848.567 735.6L851.271 744.794L852.893 752.366L854.516 756.693L856.138 763.724L863.71 767.509H870.2L875.068 771.836L877.772 776.163Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M728.5 738C734.299 738 739 733.299 739 727.5C739 721.701 734.299 717 728.5 717C722.701 717 718 721.701 718 727.5C718 733.299 722.701 738 728.5 738Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M683.318 706V693.115H685.023V699.505L691.422  701.896V701.315ZM751.214 706V693.115H752.796V706H751.214Z" fill="black"></path>
+
+      <path class="regions kumaon region9" d="M846.214 476.868L848.144  491.836L807.796 495.329L815.779 493.832L821.766 487.844L828.252 484.352L832.244 486.348L836.236 487.844L841.724 482.855L846.214 476.868Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M772.5 666C778.299 666 783 661.299 783 655.5C783 649.701 778.299 645 772.5 645C766.701 645 762 649.701 762 655.5C762 661.299 766.701 666 772.5 666Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M731.418 630.946V629.435L736.876 629.426V634.207C736.038 634.875 735.174  813.593 639.724 813.218 639.595Z" fill="black"></path>
+
+      <path class="regions kumaon region10" d="M946.494 803.567L946.458 804.286H941.59L933.478 803.745L927.528 801.041L920.498 801.582L915.089 797.255L906.977 794.01L901.568 789.684L895.078 783.734L890.211 777.244H881.017L879.394 777.785L877.772 787.636L946.025 789.042L943.214 793.727L945.557 798.881L946.494 803.567Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M903.5 760C909.299 760 914 755.299 914 749.5C914 743.701 909.299 739 903.5 739C897.701 739 893 743.701 893 749.5C893 755.299 897.701 760 903.5 760Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M862.336 729V716.115H864.902L867.952 725.238C868.233  727.729 951.07 727.488C951.486 727.242 951.779 726.911 951.949 726.495C952.125 726.073 952.213 725.464 952.213 724.667V719.666H953.795V729H952.38Z" fill="black"></path>
+
+      <path class="regions kumaon region11" d="M888.888 1021.49L886.211 1022.75L882.972 996.823L888.098 1010.43L888.888 1021.49Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M637.5 976C643.299 976 648 971.299 648 965.5C648 959.701 643.299 955 637.5 955C631.701 955 627 959.701 627 965.5C627 971.299 631.701 976 637.5 976Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M587.389 991V978.115H591.827C592.829 978.115 593.594 978.177 594.121  725.875 982.999 725.377 983.485C724.885 983.972 724.612 984.622 724.56 985.437Z" fill="black"></path>
+
+      <path class="regions kumaon region12" d="M855.598 950.852L853.434 956.801L845.863  935.168L846.944 938.413L851.812 947.607L855.598 950.852Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M662.5 826C668.299 826 673 821.299 673 815.5C673 809.701 668.299 805 662.5 805C656.701 805 652 809.701 652 815.5C652 821.299 656.701 826 662.5 826Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M620.336 850V837.115H622.902L625.952 846.238C626.233  713.969 842.195 713.693 842.406C713.418 842.611 713.222 842.898 713.104 843.268C712.929 843.83 712.841 844.445 712.841 845.113V850H711.259Z" fill="black"></path>
+
+      <path class="regions kumaon region13" d="M859.383 946.525L855.598 950.852L851.812 947.607L846.944  946.525L863.169 941.658L858.843 941.117L859.383 946.525Z" fill="#FF0000"></path>
+
+      <path class="pointer" d="M865.5 839C871.299 839 876 834.299 876 828.5C876 822.701 871.299 818 865.5 818C859.701 818 855 822.701 855 828.5C855 834.299 859.701 839 865.5 839Z" fill="#FF0000" stroke="white" stroke-width="4"></path>
+
+      <path class="text" d="M831.389 861V848.115H835.827C836.829 848.115  856.896V856.315Z" fill="black"></path>
+
+      <text style="fill: rgb(0, 0, 0); font-family: &quot;Roboto Slab&quot;; font-size: 19px; white-space: pre;"><tspan x="172.76" y="651.965">52 Shakti Peeth</tspan><tspan x="172.76" dy="1em">​</tspan><tspan>Theme Park</tspan></text>
+
+      <text style="fill: rgb(0, 0, 0); font-family: &quot;Roboto Slab&quot;; font-size: 19px; white-space: pre;" x="281.764" y="481.261">Tehri Lake</text>
+    </svg>
+
+                </div>
+            </div>

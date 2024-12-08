@@ -1,0 +1,132 @@
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Card styles */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Title styles */
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Subtitle styles */
+.subtitle {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.lastsubtitle{
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input group styles */
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+/* Label styles */
+.label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+    text-align: left;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input field styles */
+.input,
+.textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: #0070f3;
+}
+
+/* Textarea styles */
+.textarea {
+    height: auto;
+    min-height: 120px;
+    resize: vertical;
+    transition: height 0.2s ease;
+
+}
+
+/* Button styles */
+.button {
+    padding: 12px 24px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #444444;
+}
+
+/* Status message styles */
+.status {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #0070f3;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}

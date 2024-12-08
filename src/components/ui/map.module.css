@@ -1,0 +1,23 @@
+.about-region {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.region-seprator {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.gh,
+.ku {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.regions:hover {
+    fill: #FF9900;
+}

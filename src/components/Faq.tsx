@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import Image from "next/image";
 import styles from "../components/ui/Faq.module.css";
 import Chat from "/public/chat.svg";
+import Link from "next/link";
+import Page from "@/app/contactform/page";
 
 const Faq: React.FC = () => {
     const [faqs, setFaqs] = useState([
@@ -65,7 +67,9 @@ const Faq: React.FC = () => {
                 <Image src={Chat} alt={"FAQ Icon"} width={65} height={65}/>
             </div>
             <h3 className={styles.faqTitle}>Still have questions?</h3>
-            <button className={styles.contactButton}>Contact us</button>
+            <Link href={"/contactform"}>
+                <button className={styles.contactButton}>Contact us</button>
+            </Link>
         </section>
     );
 };

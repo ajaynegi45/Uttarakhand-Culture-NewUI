@@ -6,7 +6,6 @@
     margin-top: 5rem;
 
     user-select: none; /* Prevent text selection for the entire container */
-
 }
 
 .faqContainer h1 {
@@ -104,12 +103,15 @@
     overflow: hidden;
     transition: all 0.2s ease-in-out;
     text-align: left;
+    line-height: 20px;
+    color: var(--slate-black);
+    font-size: 18px;
 }
 
 .faq.open .faqAnswer {
     opacity: 1;
     max-height: 500px;
-    margin-top: 10px;
+    margin-top: 1.5rem;
 }
 
 .contactButton {

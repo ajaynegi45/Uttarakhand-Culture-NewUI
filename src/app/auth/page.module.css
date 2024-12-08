@@ -8,9 +8,7 @@
 }
 
 .container {
-    width: 100%; /* Make the container take full available width */
-    max-width: 500px; /* Limit the container width to 500px */
-    /*min-width: 300px; !* Ensure it doesn't go below 300px *!*/
+    width: 500px; /* Limit the container width to 500px */
     margin: 0 auto; /* Center it horizontally */
     padding: 40px 30px; /* Add padding */
     background-color: #fff; /* Soft white background */
@@ -150,7 +148,10 @@
 
 /* Responsive design: Stack elements on small screens */
 @media (max-width: 480px) {
+
     .container {
+        max-width: 500px;
+        width: 100%;
         padding: 20px;
     }
 

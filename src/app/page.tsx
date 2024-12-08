@@ -13,6 +13,11 @@ import PahadiWomen from "/public/bhotiaWoman.webp"
 import Faq from "@/components/Faq";
 import Proverbs from "@/components/ui/Proverbs";
 import {getUpcomingFestival} from "@/utils/festivals";
+import MakarSankranti from "/public/MakarSankranti.jpg";
+import Map from "@/components/ui/map";
+import MapModal from "@/components/ui/MapModal";
+// import MakarSankranti from "/public/makarsankranti.jpeg"
+
 
 export default function Home() {
     const festival = getUpcomingFestival();
@@ -116,10 +121,10 @@ export default function Home() {
 
             <SectionCard
                 cardTitle={"UPCOMING FESTIVAL"}
-                title={festival.name}
-                subTitle={festival.date+" · UTTARAKHAND"}
+                title={festival.title}
+                subTitle={festival.subTitle.date + " · " + festival.subTitle.location}
                 description={festival.description}
-                image={GheeSankranti}
+                image={MakarSankranti}
                 readMoreLink={""}
                 location={""}
             />
@@ -160,6 +165,9 @@ export default function Home() {
             {/* FAQ */}
             <Faq/>
             {/* FAQ */}
+
+
+            {/*<Map/>*/}
 
         </>
     );
