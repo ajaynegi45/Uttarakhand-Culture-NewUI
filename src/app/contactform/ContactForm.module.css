@@ -84,7 +84,7 @@
 
 .input:focus,
 .textarea:focus {
-    border-color: #0070f3;
+    border-color: var(--green);
 }
 
 /* Textarea styles */

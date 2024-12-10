@@ -26,28 +26,28 @@ export default function ContactForm() {
     };
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        // e.preventDefault();
-        //
-        // try {
-        //     const res = await fetch('/api/contact', {
-        //         method: 'POST',
-        //         headers: { 'Content-Type': 'application/json' },
-        //         body: JSON.stringify(formData),
-        //     });
-        //
-        //     if (res.ok) {
-        //         toast.success("Thank you for contacting us! Your message has been sent.");
-        //         setFormData({ name: '', email: '', reason: '', message: '' });
-        //     } else {
-        //         toast.error("There was a problem sending the message. Please try again");
-        //     }
-        // } catch (error) {
-        //     toast.error("An unexpected error occurred. Please try again.");
-        // }
+        e.preventDefault();
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (res.ok) {
+                toast.success("Thank you for contacting us! Your message has been sent.");
+                setFormData({ name: '', email: '', reason: '', message: '' });
+            } else {
+                toast.error("There was a problem sending the message. Please try again");
+            }
+        } catch (error) {
+            toast.error("An unexpected error occurred. Please try again.");
+        }
 
 
     };
-    toast.info("Currently Working on this form!");
+    // toast.info("Currently Working on this form!");
 
     return (
         <div className={styles.container}>

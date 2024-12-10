@@ -29,6 +29,8 @@ export async function POST(request: Request) {
                 </div>
             `,
         });
+        console.log(process.env.SENDER_EMAIL);
+        console.log(process.env.CONTACT_FORM_RECEIVER_EMAIL);
 
         return NextResponse.json({ message: 'Email sent successfully.' }, { status: 200 });
     } catch (error) {
