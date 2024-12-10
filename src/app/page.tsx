@@ -3,10 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import HeroMap from "/public/heroMapImage.webp"
-import Srinagar from "/public/Srinagar.webp"
-import GoriGanga from "/public/goriGanga.webp"
 import SectionCard from "@/components/ui/SectionCard";
-import GheeSankranti from "/public/Ghee_Sankranti.jpeg";
 import Nanda_Sunanda from "/public/Nanda-Sunanda.webp";
 import Notify_Banner from "/public/notify-early-banner.jpg"
 import PahadiWomen from "/public/bhotiaWoman.webp"
@@ -14,10 +11,7 @@ import Faq from "@/components/Faq";
 import Proverbs from "@/components/ui/Proverbs";
 import {getUpcomingFestival} from "@/utils/festivals";
 import MakarSankranti from "/public/MakarSankranti.jpg";
-import Map from "@/components/ui/map";
-import MapModal from "@/components/ui/MapModal";
-// import MakarSankranti from "/public/makarsankranti.jpeg"
-
+import UttarayaniMela from "/public/UttarayaniMela.jpg"
 
 export default function Home() {
     const festival = getUpcomingFestival();
@@ -47,12 +41,13 @@ export default function Home() {
                     <p>EXPERIENCE THE SOUL OF UTTARAKHAND</p>
                     <Link className={styles.headerbuttonLink} href={"/explore"}>Start Your Journey</Link>
                 </div>
-
             </header>
 
-            {/*<Screen/>*/}
 
+            {/* Uttarakhand Proverbs */}
             <Proverbs/>
+
+
 
             {/*<section className={styles["home-story-container"]}>*/}
             {/*    */}
@@ -132,13 +127,24 @@ export default function Home() {
             {/* UPCOMING FAIR */}
             <SectionCard
                 cardTitle={"UPCOMING FAIR"}
-                title={"Nanda Devi Mahotsav"}
-                subTitle={"8 SEPTEMBER - 19 SEPTEMBER · NAINITAL"}
-                description={"The Nanda Devi Mahotsav is a grand celebration dedicated to Goddess Nanda Devi, the revered deity of the Kumaon region. This vibrant festival, which takes place annually in Nainital, is deeply ingrained in the cultural fabric of Uttarakhand. It is believed to have started centuries ago to honor Nanda Devi, who is considered the protector of the region. The festival is marked by colorful processions, traditional dance performances, and rituals that attract devotees and tourists alike. The highlight of the event is the ‘Nanda Jaat Yatra,’ where a grand procession of devotees carries a palanquin of the goddess through the scenic landscapes of Uttarakhand, symbolizing her journey to her maternal home."}
-                image={Nanda_Sunanda}
+                title={"Uttarayani Mela"}
+                subTitle={"JANUARY · UTTARAKHAND"}
+                description={"The Uttarayani Fair, celebrated on Makara Sankranti in January, is a vibrant cultural festival in Uttarakhand, with the grandest celebrations in Bageshwar. Held at the confluence of the Sarayu, Gomti, and Sunder Bhagirathi rivers, the fair draws thousands of devotees and tourists. Devotees take a holy dip, seeking blessings for a prosperous year, while the air resonates with folk songs like Jhoras, Chancharis, and Bairas. The mela showcases colorful traditional attire, captivating folk performances, and a culinary paradise of sweet and savory delicacies. Celebrations also thrive in Almora, Nainital, and Haridwar."}
+                image={UttarayaniMela}
                 readMoreLink={""}
-                location={"https://www.google.com/maps/place/Maa+Nanda+Devi+Temple,+Almora/@29.5998843,79.6584971,17z/data=!3m1!4b1!4m6!3m5!1s0x39a0b76914898c8b:0x887deeed7e5d3c82!8m2!3d29.5998843!4d79.661072!16s%2Fg%2F11fmrk8bnv?hl=en&entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"}
+                location={""}
             />
+
+
+            {/*<SectionCard*/}
+            {/*    cardTitle={"UPCOMING FAIR"}*/}
+            {/*    title={"Uttarayani Mela"}*/}
+            {/*    subTitle={"8 SEPTEMBER - 19 SEPTEMBER · NAINITAL"}*/}
+            {/*    description={"The Nanda Devi Mahotsav is a grand celebration dedicated to Goddess Nanda Devi, the revered deity of the Kumaon region. This vibrant festival, which takes place annually in Nainital, is deeply ingrained in the cultural fabric of Uttarakhand. It is believed to have started centuries ago to honor Nanda Devi, who is considered the protector of the region. The festival is marked by colorful processions, traditional dance performances, and rituals that attract devotees and tourists alike. The highlight of the event is the ‘Nanda Jaat Yatra,’ where a grand procession of devotees carries a palanquin of the goddess through the scenic landscapes of Uttarakhand, symbolizing her journey to her maternal home."}*/}
+            {/*    image={Nanda_Sunanda}*/}
+            {/*    readMoreLink={""}*/}
+            {/*    location={"https://www.google.com/maps/place/Maa+Nanda+Devi+Temple,+Almora/@29.5998843,79.6584971,17z/data=!3m1!4b1!4m6!3m5!1s0x39a0b76914898c8b:0x887deeed7e5d3c82!8m2!3d29.5998843!4d79.661072!16s%2Fg%2F11fmrk8bnv?hl=en&entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"}*/}
+            {/*/>*/}
 
 
             <section className={styles.notifyBannerContainer}>
@@ -166,8 +172,6 @@ export default function Home() {
             <Faq/>
             {/* FAQ */}
 
-
-            {/*<Map/>*/}
 
         </>
     );
