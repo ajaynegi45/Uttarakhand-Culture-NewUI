@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import mailer from '@/lib/mailer';
 
+const senderEmail = process.env.SENDER_EMAIL;
+const receiverEmail = process.env.CONTACT_FORM_RECEIVER_EMAIL
 export async function POST(request: Request) {
     try {
         const { name, email, reason, message } = await request.json();
@@ -11,8 +13,8 @@ export async function POST(request: Request) {
 
         // Send the email using Nodemailer
         await mailer.sendMail({
-            from: process.env.SENDER_EMAIL,
-            to: process.env.CONTACT_FORM_RECEIVER_EMAIL,
+            from: `Contact Form <${senderEmail}>`,
+            to: receiverEmail,
             subject: `Contact Form: ${reason}`,
             html: `
                 <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">

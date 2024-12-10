@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from './ContactForm.module.css';
 import {toast} from "sonner";
@@ -36,7 +37,8 @@ export default function ContactForm() {
             });
 
             if (res.ok) {
-                toast.success("Thank you for contacting us! Your message has been sent.");
+                console.log(res);
+                toast.success("Thank you for contacting us! Your message has been sent." ,);
                 setFormData({ name: '', email: '', reason: '', message: '' });
             } else {
                 toast.error("There was a problem sending the message. Please try again");
