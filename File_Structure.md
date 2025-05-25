@@ -104,7 +104,7 @@
 │   │   ├── not-found.tsx                                   - 404 Not Found page component.
 │   │   ├── page.module.css                                 - General CSS module.
 │   │   ├── page.tsx                                        - Main app entry page.
-│   │   └── working-error.tsx                               - Component for displaying error messages.
+│   │   └── page.tsx                               - Component for displaying error messages.
 │   ├── components/                                         - Reusable UI components.
 │   ├── font/                                               - Font files used in the project.
 │   ├── lib                                                 - Library files for utility functions.

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const WorkingError = () => {
+const Page = () => {
     return (
         <div style={{
             display: 'flex',
@@ -44,7 +44,7 @@ const WorkingError = () => {
             }}>
                 Sorry, this page is currently under construction. We’re working hard to get it ready for you.
             </p>
-            <Link href="/" style={{
+            <Link href="/public" style={{
                 padding: '10px 20px',
                 backgroundColor: '#000000',
                 color: '#ffffff',
@@ -66,4 +66,4 @@ const WorkingError = () => {
     );
 };
 
-export default WorkingError;
+export default Page;

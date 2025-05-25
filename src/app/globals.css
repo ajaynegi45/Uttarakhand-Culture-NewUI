@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+
 :root {
     /*--max-width: 110px;*/
     /*--border-radius: 12px;*/
@@ -73,7 +77,7 @@ p {
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    letter-spacing: 1px;
+    /*letter-spacing: 0.5px;*/
     color: var(--grey);
     text-decoration: none;
     text-transform: none;
@@ -92,6 +96,7 @@ main {
 }
 
 h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 60px;
     font-style: normal;
     font-weight: 350;

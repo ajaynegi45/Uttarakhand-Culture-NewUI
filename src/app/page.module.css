@@ -701,3 +701,137 @@
 /*@media (min-width: 701px) and (max-width: 1120px) {*/
 
 /*}*/
+
+
+
+
+
+
+
+.lawSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    Margin-top: 5rem;
+    padding: 40px 40px;
+    background: #f7f5eb;
+    border-radius: 15px;
+}
+
+
+.lawSectionContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+.lawImageContainer {
+    min-width: 200px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lawImageContainer img {
+    width: 100%;
+    border-radius: 10px;
+    height:  100%;
+    max-height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lawContentContainer {
+    /*margin-left: 30px;*/
+    flex: 1;
+
+    min-width: 397px;
+    width: 100%;
+    /*max-width: 900px;*/
+
+}
+
+.lawContentContainer h2 {
+    color: #2a5725; /* Deep green for headlines */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.lawContentContainer p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.lawContentContainer ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 23px;
+}
+.lawContentContainer ul > li {
+    margin-bottom: 12px;
+    color: #555;
+}
+.lawContentContainer ul > li > strong {
+    color: black;
+}
+
+.readMoreButton {
+    background: #e67e22; /* Bright orange */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.readMoreButton:hover {
+    background: #d35400; /* Darker orange */
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .lawSection {
+        padding: 25px 25px;
+    }
+
+    .lawContentContainer h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+}
+
+@media (max-width: 768px) {
+    .lawSection {
+        padding: 15px 15px;
+    }
+
+    .lawSectionContainer {
+        flex-direction: column;
+    }
+
+    .lawContentContainer {
+
+        min-width: 100px;
+        width: 100%;
+    }
+    .lawImageContainer {
+        min-width: 100px;
+        width: 100%;
+    }
+}
+
+

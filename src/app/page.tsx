@@ -12,6 +12,7 @@ import Proverbs from "@/components/ui/Proverbs";
 import {getUpcomingFestival} from "@/utils/festivals";
 import MakarSankranti from "/public/MakarSankranti.jpg";
 import UttarayaniMela from "/public/UttarayaniMela.jpg"
+import Law from "/public/LandLaw.jpg";
 
 export default function Home() {
     const festival = getUpcomingFestival();
@@ -47,6 +48,44 @@ export default function Home() {
             {/* Uttarakhand Proverbs */}
             <Proverbs/>
 
+
+
+            <section className={styles.lawSection}>
+                <div className={styles.lawSectionContainer}>
+                    {/* Left Column */}
+                    <div className={styles.lawImageContainer}>
+                        <Image
+                            src={Law}
+                            alt="Uttarakhand Land and Indigenous Rights"
+                            width={500}
+                            height={300}
+                            // placeholder="blur"
+                        />
+                    </div>
+
+                    {/* Right Column */}
+                    <div className={styles.lawContentContainer}>
+                        <h2>Securing Our Land, Honoring Our Roots</h2>
+                        <p>
+                            With rapid urbanization, the identity of Uttarakhand faces challenges. The land
+                            of the mountains is not just a resource but a legacy. Protecting indigenous rights
+                            and ensuring responsible land policies are crucial steps to preserving our culture
+                            and heritage.
+                        </p>
+                        <ul>
+                            <li><strong>भू-कानून:</strong> A critical step towards sustainable development.</li>
+                            <li><strong>मूल निवास:</strong> Securing rights for indigenous communities.</li>
+                            <li>Empowering local voices to shape a sustainable future.</li>
+                        </ul>
+
+                        <Link href="/under-construction">  {/*/land-law-details*/}
+                            <button className={styles.readMoreButton}>
+                                Learn How You Can Help
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+            </section>
 
 
             {/*<section className={styles["home-story-container"]}>*/}
