@@ -57,6 +57,8 @@
     transition: transform 0.20s ease-out, box-shadow 0.20s ease-out;
     text-decoration: none;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+    overflow: hidden;
 }
 
 .card:hover, .commitCard:hover {
