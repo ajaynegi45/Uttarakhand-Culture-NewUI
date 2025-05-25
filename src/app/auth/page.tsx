@@ -11,7 +11,9 @@ import {useRouter, useSearchParams} from "next/navigation";
 import eye from "../../../public/eye.png";
 import hide from "../../../public/eye-hide.png";
 import Image from 'next/image';
-import GoogleSignIn from './GoogleSignIn'; // import GoogleSignIn component
+import type { SignInResponse } from "next-auth/react";
+import GoogleSignIn from './GoogleSignIn';
+import {never} from "zod"; // import GoogleSignIn component
 
 export default function Auth() {
     const [isSignup, setIsSignup] = useState(false);
@@ -85,36 +87,65 @@ export default function Auth() {
         } else {
             try {
                 setIsLoading(true);
-                const handler = new Promise((resolve, reject) => {
-                    setIsLoading(true);
 
-                    signIn("credentials", {
-                        ...data,
-                        redirect: false,
-                    })
-                        .then((res) => {
-                            if (res?.error) {
-                                throw Error("Invalid credentials");
-                            } else {
-                                if (callback) {
-                                    router.push(callback);
-                                    resolve("");
-                                } else {
-                                    router.push("/");
-                                    resolve("");
-                                }
-                            }
-                        })
-                        .catch(reject);
-                });
+                await toast.promise(
+                    (async () => {
+                        const res = await signIn("credentials", {
+                            ...data,
+                            redirect: false,
+                        }) as unknown as SignInResponse;
 
-                toast.promise(handler, {
-                    loading: "Loading...",
-                    success: () => {
-                        return "Login success.";
-                    },
-                    error: (err) => `${err}`,
-                });
+                        if (res?.error) {
+                            throw new Error("Invalid credentials");
+                        }
+
+                        router.push(callback ?? "/");
+                    })(),
+                    {
+                        loading: "Loading...",
+                        success: () => "Login success.",
+                        error: (err) => `${err.message || err}`,
+                    }
+                );
+
+
+
+                // const handler = new Promise((resolve, reject) => {
+                //     setIsLoading(true);
+                //
+                //     signIn("credentials", {
+                //         ...data,
+                //         redirect: false,
+                //     })
+                //         // .then((res) => {
+                //         .then((res: SignInResponse | undefined) => {
+                //             if (res?.error) {
+                //                 throw Error("Invalid credentials");
+                //             }
+                //
+                //             else {
+                //                 if (callback) {
+                //                     router.push(callback);
+                //                     resolve("");
+                //                 } else {
+                //                     router.push("/");
+                //                     resolve("");
+                //                 }
+                //             }
+                //         })
+                //         .catch(reject);
+                // });
+                //
+                //
+                //
+                // await toast.promise(handler, {
+                //     loading: "Loading...",
+                //     success: () => {
+                //         return "Login success.";
+                //     },
+                //     error: (err) => `${err}`,
+                // });
+
             } catch (error) {
                 toast.error("Check your credentials and Try again");
             } finally {
