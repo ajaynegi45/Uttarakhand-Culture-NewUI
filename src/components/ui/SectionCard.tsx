@@ -9,7 +9,7 @@ type SectionCardProps = {
     subTitle: string;
     description: string;
     image: StaticImageData;
-    readMoreLink: string
+    readMoreLink?: string
     location?: string
 }
 
@@ -31,8 +31,11 @@ const SectionCard = (props: SectionCardProps) => {
                     <p className={styles.description}>{props.description}</p>
 
                     <div className={styles.linkContainer}>
+                        {props.readMoreLink && (
                         <div className={styles.linkContainer1}><Link
                             href={props.readMoreLink ? props.readMoreLink : '#'}>READ MORE</Link></div>
+                        )}
+
                         {props.location && (
                             <div className={styles.linkContainer2}>
                                 <Link

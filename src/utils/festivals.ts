@@ -19,7 +19,7 @@ export interface Festival {
         location: string;
     }
     description: string;
-    image?: StaticImageData;
+    image: StaticImageData;
     location?: string;
 }
 
