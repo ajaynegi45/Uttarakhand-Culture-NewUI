@@ -2,19 +2,20 @@
 const nextConfig = {
   // output: "export"
   reactStrictMode: true,
-  // images:{
-  //     // You can use any one
-  //     domain:process.env.NEXT_PUBLIC_DOMAIN, // Here you can give specific image
-  //
-  //     // Here you can give allow all image with that url
-  //     remotePatterns: [{
-  //         protocol: "https",
-  //         hostname: "website url",
-  //     }, {
-  //         protocol: "https",
-  //       hostname: "*.google.com",
-  //     }]
-  // }
+  devIndicators: false,
+  images:{
+      // You can use any one
+      // domain:process.env.NEXT_PUBLIC_DOMAIN, // Here you can give specific image
+
+      // Here you can give allow all image with that url
+      remotePatterns: [{
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        }
+        // , {     protocol: "https",
+        //   hostname: "*.google.com",}
+        ]
+  }
 
   // webpack: (config, { isServer }) => {
   //     // Handle TypeScript files

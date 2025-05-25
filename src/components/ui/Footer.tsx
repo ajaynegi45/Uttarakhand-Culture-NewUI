@@ -43,6 +43,7 @@ export default function Footer() {
                         <p>Contribution</p>
                         <Link href={"https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/issues"}>Issues</Link>
                         <Link href={"/about"}>About us</Link>
+                        <Link href={"/about/contributors"}>Contributors</Link>
                         <Link href={"https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI/graphs/contributors"}>Contribution</Link>
                     </div>
                 </div>

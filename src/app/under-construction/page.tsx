@@ -44,7 +44,7 @@ const Page = () => {
             }}>
                 Sorry, this page is currently under construction. We’re working hard to get it ready for you.
             </p>
-            <Link href="/public" style={{
+            <Link href="/" style={{
                 padding: '10px 20px',
                 backgroundColor: '#000000',
                 color: '#ffffff',

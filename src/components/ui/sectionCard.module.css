@@ -50,13 +50,12 @@
 
 .description {
     margin-top: 1rem;
-    font-size: 13px;
+    font-size: 16px;
     color: var(--black);
     overflow: hidden;
     height: 9em;
 
-    /*font-family: Inter;*/
-
+    line-height: 20px;
     display: -webkit-box;
     -webkit-line-clamp: 8; /* Number of lines to show */
     -webkit-box-orient: vertical;

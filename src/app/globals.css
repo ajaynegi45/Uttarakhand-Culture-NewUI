@@ -15,11 +15,15 @@
     --slate-black: #667085;
     --mist-grey: #f2f2f2;
 
+    --subheading: rgb(212 212 216); /* D4D4D8FF */
+
     --light-green: #22c55e;
     --light-yellow: #ffc107;
     --light-blue: #3b82f6;
     --light-red: #ff3737;
     --light-red2: #ff69b4;
+
+    --orange: #FF9800;
 
     --green: #2e865f;
     --soil: #eeb27b;
