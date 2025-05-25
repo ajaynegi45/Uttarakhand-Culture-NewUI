@@ -48,7 +48,7 @@ const SectionCard = (props: SectionCardProps) => {
                 </div>
 
                 <div className={styles.imageContainer}>
-                    <Image src={props.image} alt={""} width={300} height={200} placeholder={"blur"}/>
+                    <Image src={props.image.src} alt={""} width={300} height={200} />
                 </div>
 
             </div>

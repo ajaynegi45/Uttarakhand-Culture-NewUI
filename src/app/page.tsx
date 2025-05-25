@@ -158,7 +158,7 @@ export default function Home() {
                 title={festival.title}
                 subTitle={festival.subTitle.date + " · " + festival.subTitle.location}
                 description={festival.description}
-                image={MakarSankranti}
+                image={festival.image}
                 readMoreLink={""}
                 location={""}
             />
