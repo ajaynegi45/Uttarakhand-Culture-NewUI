@@ -14,7 +14,7 @@ export default function ContributeBanner() {
                 </p>
 
                 <p>
-                    <strong>Want to contribute?</strong> Whether you're a coder, designer,
+                    <strong>Want to contribute?</strong> Whether you&apos;re a coder, designer,
                     writer, or culture enthusiast—there’s a place for you here!
                 </p>
 
