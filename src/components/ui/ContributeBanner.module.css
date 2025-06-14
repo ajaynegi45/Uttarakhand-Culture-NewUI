@@ -1,0 +1,38 @@
+.contributeSection {
+    padding: 4rem 1rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.contentContainer {
+    margin: 0 auto;
+}
+
+.contentContainer h2 {
+    font-size: 2rem;
+    color: #2e3a59;
+    margin-bottom: 1rem;
+}
+
+.contentContainer p {
+    font-size: 1rem;
+    color: #444;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.contributeButton {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.3rem;
+    background-color: #0a6c47;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contributeButton:hover {
+    background-color: #075b3a;
+}

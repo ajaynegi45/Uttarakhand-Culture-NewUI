@@ -43,29 +43,29 @@ export default async function ContributorsPage() {
                 </div>
             </div>
 
-            <div className={styles.section}>
-                <h2>Forked Users</h2>
-                <div className={styles.grid}>
-                    {forks.map((fork: any) => (
-                        <Link key={fork.id} href={fork.owner.html_url} className={styles.card}>
-                            <Image src={fork.owner.avatar_url} alt={fork.owner.login} width={60} height={60} className={styles.avatar} />
-                            <p className={styles.username}  >{fork.owner.login}</p>
-                        </Link>
-                    ))}
-                </div>
-            </div>
+            {/*<div className={styles.section}>*/}
+            {/*    <h2>Forked Users</h2>*/}
+            {/*    <div className={styles.grid}>*/}
+            {/*        {forks.map((fork: any) => (*/}
+            {/*            <Link key={fork.id} href={fork.owner.html_url} className={styles.card}>*/}
+            {/*                <Image src={fork.owner.avatar_url} alt={fork.owner.login} width={60} height={60} className={styles.avatar} />*/}
+            {/*                <p className={styles.username}  >{fork.owner.login}</p>*/}
+            {/*            </Link>*/}
+            {/*        ))}*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
-            <div className={styles.section}>
-                <h2>Stargazers</h2>
-                <div className={styles.grid}>
-                    {stargazers.map((star: any) => (
-                        <Link key={star.id} href={star.html_url} className={styles.card}>
-                            <Image src={star.avatar_url} alt={star.login} width={60} height={60} className={styles.avatar} />
-                            <p className={styles.username} >{star.login}</p>
-                        </Link>
-                    ))}
-                </div>
-            </div>
+            {/*<div className={styles.section}>*/}
+            {/*    <h2>Stargazers</h2>*/}
+            {/*    <div className={styles.grid}>*/}
+            {/*        {stargazers.map((star: any) => (*/}
+            {/*            <Link key={star.id} href={star.html_url} className={styles.card}>*/}
+            {/*                <Image src={star.avatar_url} alt={star.login} width={60} height={60} className={styles.avatar} />*/}
+            {/*                <p className={styles.username} >{star.login}</p>*/}
+            {/*            </Link>*/}
+            {/*        ))}*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
             <div className={styles.section}>
                 <h2>Recent Commits</h2>
