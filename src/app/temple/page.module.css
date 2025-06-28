@@ -1,0 +1,97 @@
+.temple-container{
+}
+
+.temple-banner > img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200/468;
+    object-fit: cover;
+    margin-bottom: 1em;
+    margin-top: -2.1rem;
+
+    /* Blur Effect */
+    /*-webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0));*/
+    /*mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0));*/
+}
+
+.temple-container > .temple-description{
+    color: black;
+}
+
+.temple-container > .temple-description > .yatra-list{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 1em 0 1em;
+    gap: 1em;
+}
+
+.temple-container > .temple-description > .yatra-list > div > h3{
+    margin-top: 1em;
+    color: var(--green);
+}
+
+.temple-container > .temple-description > .yatra-list > div > ul > li {
+    margin-left: 3em;
+    margin-top: 5px;
+    /*border: 1px solid red;*/
+}
+
+.temple-container > .temple-description > .yatra-list > div > ul > li > span {
+    font-weight: bold;
+}
+
+.temple-description > dl > dt {
+    margin-top: 2em;
+}
+
+.temple-description > dl > dd {
+    margin-left: 2em;
+}
+
+/* Title */
+
+.explore-uttarakhand-title{
+    text-align: center;
+    color: #FF9800;
+    font-size: 2rem;
+    margin-top: 2em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@media only screen and (max-width: 800px) {
+    .explore-uttarakhand-title{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .explore-uttarakhand-title{
+        font-size: 25px;
+    }
+}
+
+
+/* Card */
+.temple-container > .temple-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 1em;
+    margin: 0 1em 0 1em;
+}
+@media only screen and (max-width: 450px) {
+    .temple-container > .temple-card-container{
+        margin: 0 2px 0 2px;
+        gap: 3px;
+    }
+}
+.temple-district-title {
+    font-size: 1.2rem;
+    color: var(--green);
+    font-weight: 600;
+    text-align: center;
+    margin: 3em 0 1.5em 0;
+}
