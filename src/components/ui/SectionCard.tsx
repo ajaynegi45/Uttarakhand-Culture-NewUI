@@ -16,7 +16,11 @@ type SectionCardProps = {
 
 const SectionCard = (props: SectionCardProps) => {
     return (
+        <>
+        <Link
+        href={props.readMoreLink ? props.readMoreLink : '#'}>
         <section className={styles.sectionCardContainer}>
+
 
             <div className={styles.sectionCardTitle}>
                 <div className={styles.sectionCardTitleLine}></div>
@@ -55,7 +59,10 @@ const SectionCard = (props: SectionCardProps) => {
                 </div>
 
             </div>
+
         </section>
+        </Link>
+    </>
     );
 };
 

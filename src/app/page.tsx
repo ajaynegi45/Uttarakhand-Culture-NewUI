@@ -79,11 +79,11 @@ export default function Home() {
                             <li>Empowering local voices to shape a sustainable future.</li>
                         </ul>
 
-                        <Link href="/under-construction">  {/*/land-law-details*/}
-                            <button className={styles.readMoreButton}>
-                                Learn How You Can Help
-                            </button>
-                        </Link>
+                        {/*<Link href="/under-construction"> */}
+                        {/*    <button className={styles.readMoreButton}>*/}
+                        {/*        Learn How You Can Help*/}
+                        {/*    </button>*/}
+                        {/*</Link>*/}
                     </div>
                 </div>
             </section>
