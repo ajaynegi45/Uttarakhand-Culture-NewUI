@@ -18,6 +18,13 @@
     --subheading: rgb(212 212 216); /* D4D4D8FF */
 
     --card-border: rgb(38 38 38/1);
+
+
+    --text: #B0B0B8;
+    --text1: #A1A1A6; /* 6.88 */
+    --text2: #9B9B9B;
+    --text3: rgb(150, 150, 150);
+    --text4: #86868b;
     --text5: rgb(115 115 115);
 
     --light-green: #22c55e;

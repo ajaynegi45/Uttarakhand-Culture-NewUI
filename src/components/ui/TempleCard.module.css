@@ -67,11 +67,12 @@
 
 
 .card-container > .card-description-container > .card-description {
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 5px;
     margin-bottom: 5px;
     overflow: hidden;
     height: auto;
+    color: var(--text4);
 }
 
 
@@ -89,7 +90,7 @@
     text-decoration: none;
     color: black;
 
-    border: 1px solid var(--line-grey);
+    border: 1px solid var(--card-border);
 }
 
 .card-container > .card-description-container > a > .card-description-button {
