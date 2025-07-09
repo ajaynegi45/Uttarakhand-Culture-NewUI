@@ -1,4 +1,4 @@
-"use client"; // Marking this as a client component
+"use client";
 import styles from "./page.module.css";
 import Image from "next/image";
 import TrekCard from "@/components/ui/TrekCard";
@@ -19,8 +19,6 @@ export default function Trekking() {
     };
 
     // Extract unique districts from trekDetails
-
-
     const filterTreks = trekDetails.filter(trek => {
         const matchesDifficulty = difficultyLevel === "" || trek.difficultyLevel.toLowerCase() === difficultyLevel.toLowerCase();
         const matchesDistrict = district === "" || trek.district.toLowerCase() === district.toLowerCase();

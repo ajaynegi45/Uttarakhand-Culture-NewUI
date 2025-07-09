@@ -1,7 +1,7 @@
 export interface Proverb {
-    hindi: String,
-    english: string,
-    meaning?: String
+    hindi: string;
+    english: string;
+    meaning?: string;
 }
 
 export const proverbs: Proverb[] = [
@@ -12,15 +12,22 @@ export const proverbs: Proverb[] = [
     },
     {
         hindi: "अति रुख्यार रूख हूं छुटुछ अति तैरक गाड़ हूं बगछ",
-        english: "Even the most skillful climbers fall and the most skillful swimmers drown."
+        english: "Even the most skillful climbers fall and the most skillful swimmers drown.",
+        meaning: "No matter how talented or experienced, anyone can face failure or danger."
+    },
+    {
+        hindi: "बोली बात बीती रात दुबरा नि आन्द।",
+        english: "Spoken words and past nights never return.",
+        meaning: "Words once spoken and time once passed can never be taken back—use both wisely."
+    },
+    {
+        hindi: "जैकू भात नि खाण, विकू गीत क्या गाण।",
+        english: "One who doesn’t eat rice, how can they sing its praise?",
+        meaning: "Only those who experience something can truly speak about it."
     }
 ];
 
-
 export const getRandomProverb = (): Proverb => {
     const randomIndex = Math.floor(Math.random() * proverbs.length);
-
-    // return proverbs[randomIndex];
-
-    return proverbs[0];
+    return proverbs[randomIndex];
 };

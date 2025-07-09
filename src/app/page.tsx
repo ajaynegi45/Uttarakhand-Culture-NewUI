@@ -41,7 +41,10 @@ export default function Home() {
                     <h1>We love <span className={styles.greenText}>Uttarakhand</span> and the people</h1>
                     <h1> who <span className={styles.soilText}>preserve</span> it.</h1>
                     <p>EXPERIENCE THE SOUL OF UTTARAKHAND</p>
-                    <Link className={styles.headerbuttonLink} href={"/explore"}>Start Your Journey</Link>
+                    <div className={styles.headerButtonContainer}>
+                        <Link className={styles.headerbuttonLink} href="/explore">Explore Culture</Link>
+                        <Link className={`${styles.headerbuttonLink} ${styles.secondaryButton}`} href="https://github.com/ajaynegi45/Uttarakhand-Culture-NewUI">Contribute Now</Link>
+                    </div>
                 </div>
             </header>
 
