@@ -1,5 +1,17 @@
 import Link from 'next/link';
 
+/**
+ * Renders a stylized 404 Page Not Found component with navigation options.
+ * @example
+ * renderNotFoundPage()
+ * <div>...</div>
+ * @returns {JSX.Element} The JSX element containing the 404 error message and navigation links.
+ * @description
+ *   - Uses inline styles to maintain consistent appearance across different UI themes.
+ *   - Includes a semi-transparent backdrop with blur effect to focus user attention on the error message.
+ *   - Provides a link for quick navigation back to the homepage.
+ *   - Encourages users to check the URL or explore other available navigation options.
+ */
 const Custom404 = () => {
     return (
         <div style={{

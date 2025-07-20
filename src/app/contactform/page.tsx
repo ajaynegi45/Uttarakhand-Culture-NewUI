@@ -11,6 +11,19 @@ interface FormData {
     message: string;
 }
 
+/**
+ * Renders a contact form which allows users to submit their inquiries.
+ * @example
+ * ContactForm()
+ * <div>...</div>
+ * @param {FormData} formData - Contains user's input data including name, email, reason, and message.
+ * @returns {JSX.Element} The rendered contact form component.
+ * @description
+ *   - Utilizes state to manage form data and submission status.
+ *   - Sends form data to the server via POST request to '/api/contact'.
+ *   - Provides visual feedback to user via toast notifications upon form submission.
+ *   - Resets form fields upon successful message submission.
+ */
 export default function ContactForm() {
     const [formData, setFormData] = useState<FormData>({
         name: '',
@@ -26,6 +39,19 @@ export default function ContactForm() {
         setFormData({ ...formData, [name]: value });
     };
 
+    /**
+     * Handles the submission of a contact form and sends data to the server.
+     * @example
+     * sync(e)
+     * undefined
+     * @param {FormEvent<HTMLFormElement>} e - The event triggered by the form submission.
+     * @returns {Promise<void>} A promise that resolves when the form submission is handled.
+     * @description
+     *   - Sends a POST request to the server endpoint '/api/contact' with form data.
+     *   - Utilizes the 'fetch' API for network requests.
+     *   - Displays success or error messages using the 'toast' library based on response.
+     *   - Resets the form data upon successful submission.
+     */
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 

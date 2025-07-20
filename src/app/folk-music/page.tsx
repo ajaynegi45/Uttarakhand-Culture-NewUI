@@ -33,6 +33,17 @@ const folkMusicForms = [
     }
 ];
 
+/**
+ * Renders the Folk Music page highlighting various traditional forms of Uttarakhand's music.
+ * @example
+ * FolkMusic()
+ * Returns a JSX fragment including headings, paragraphs, and descriptions of folk music forms.
+ * @returns {JSX.Element} The main content area of the folk music page.
+ * @description
+ *   - Utilizes styles from an imported styles object for consistent design across the page.
+ *   - Provides descriptive text about music forms such as Māngal Geet and Vidai Geet, reflecting cultural heritage.
+ *   - Dynamically generates sections based on the `folkMusicForms` array passed to the component.
+ */
 export default function FolkMusic() {
     return (
         <main className={styles.pageContainer}>

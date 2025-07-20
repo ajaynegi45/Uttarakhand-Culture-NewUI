@@ -1,5 +1,16 @@
 import Link from 'next/link';
 
+/**
+ * Renders a styled 'Page Under Construction' message.
+ * @example
+ * renderConstructionPage()
+ * Returns a JSX element displaying a message that the page is under construction.
+ * @returns {JSX.Element} A JSX element containing the construction message with styled elements.
+ * @description
+ *   - Utilizes inline styles for custom presentation.
+ *   - Contains a link to redirect users back to the home page.
+ *   - Applies a background blur effect over the div element.
+ */
 const Page = () => {
     return (
         <div style={{

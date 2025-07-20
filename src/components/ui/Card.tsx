@@ -12,6 +12,22 @@ type CardProps = {
     readMoreLink?: string
 }
 
+/**
+ * Renders a card component with title, subtitle, description, and links.
+ * @example
+ * Card({ title: 'Sample Title', subTitle: 'Sample Subtitle', description: 'Sample description', readMoreLink: 'https://example.com' })
+ * <Card> JSX element with structured information including title, subtitle, and interactive links.
+ * @param {object} props - Properties used to render the card.
+ * @param {string} props.title - The title text displayed on the card.
+ * @param {string} props.subTitle - The subtitle text displayed below the title.
+ * @param {string} props.description - The description text providing more details in the card.
+ * @param {string} [props.readMoreLink] - The URL for the "VIEW LOCATION" link, defaults to '#' if not provided.
+ * @returns {JSX.Element} A structured card component containing a title, subtitle, description, and two functional links.
+ * @description
+ *   - The "READ MORE" link is currently a placeholder pointing to "#".
+ *   - Styles are applied via the `styles` object accessing CSS module classes.
+ *   - The `Image` component uses a placeholder for blurred loading effect.
+ */
 export default function Card(props: CardProps) {
     return (
         <section className={styles["card"]}>

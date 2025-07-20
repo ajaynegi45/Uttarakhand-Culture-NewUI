@@ -26,6 +26,17 @@ type CardProps = {
     readMoreLink?: string;
 };
 
+/**
+ * Renders a TrekCard component that displays information about a trek.
+ * @example
+ * <TrekCard title="Mount Everest" subTitle="The highest mountain" trekDetails={trekDetails} readMoreLink="link"/>
+ * @param {CardProps} props - An object containing details such as title, subTitle, trekDetails, and readMoreLink.
+ * @returns {JSX.Element} A rendered TrekCard component showcasing detailed trek information.
+ * @description
+ *   - Utilizes state to manage the expansion of additional trek details.
+ *   - Includes conditional rendering for 'READ MORE' and 'READ LESS' functionality.
+ *   - Integrates a modal managed by 'isMapOpen' to display the trek location on a map.
+ */
 export default function TrekCard(props: CardProps) {
     const {title, subTitle, trekDetails, readMoreLink} = props; // Destructure props
     const [isExpanded, setIsExpanded] = useState(false); // State to track the expanded content

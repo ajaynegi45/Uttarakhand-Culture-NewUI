@@ -83,6 +83,18 @@ export const festivals: Festival[] = [
 
 // Define a function 'getUpcomingFestival' which returns the festival happening today or the next upcoming festival,
 // and if all festivals for the current year have passed, it returns the first festival of the next year.
+/**
+ * Determines the next upcoming festival based on the current date.
+ * @example
+ * getNextFestival([{date: '02-14', name: 'Valentine\'s Day'}, {date: '12-25', name: 'Christmas'}])
+ * // returns {date: '02-14', name: 'Valentine\'s Day'} if today's date is February 13th
+ * @param {Array} {festivals} - Array of festival objects containing `date` in 'MM-DD' format and `name`.
+ * @returns {Object} Next upcoming festival object from the current date.
+ * @description
+ *   - Uses the current year for date comparison to handle annual occurrence.
+ *   - Sorts upcoming festivals by their date to ensure the earliest festival is chosen.
+ *   - Automatically returns the first festival of the next year if no future festivals are available from the current date.
+ */
 export const getUpcomingFestival = (): Festival => {
 
     // Get the current date.

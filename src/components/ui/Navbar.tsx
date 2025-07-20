@@ -5,6 +5,17 @@ import {useSession} from "next-auth/react";
 import {useRouter} from "next/navigation";
 import Image from "next/image";
 
+/**
+ * Renders a navigational bar with user authentication and avatar functionality.
+ * @example
+ * Navbar()
+ * Renders the navigation bar with login/auth links regardless of authentication status.
+ * @returns {JSX.Element} The rendered navigation bar component.
+ * @description
+ *   - Utilizes Next.js's useSession for authentication status.
+ *   - Navigation link changes depending on user authentication status.
+ *   - Clicking avatar redirects to user's profile page.
+ */
 export default function Navbar() {
     const session = useSession();
     const router = useRouter();

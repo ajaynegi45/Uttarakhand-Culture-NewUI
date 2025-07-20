@@ -4,6 +4,19 @@ import styles from "../components/ui/Faq.module.css";
 import Chat from "/public/chat.svg";
 import Link from "next/link";
 
+/**
+ * This component displays a list of FAQs for users to interact with.
+ * @example
+ * toggleFAQ(2)
+ * Toggles the 'open' state of the FAQ at index 2.
+ * @param {number} index - The index of the FAQ to toggle.
+ * @returns {void} No return value, it updates the state of FAQs.
+ * @description
+ *   - The component maintains the open state of each FAQ for interaction.
+ *   - Clicking on an FAQ toggles its expanded state, allowing users to view answers.
+ *   - Only one FAQ can be open at a time to ensure focused viewing.
+ *   - Uses `useState` to manage FAQ state within the component.
+ */
 const Faq: React.FC = () => {
     const [faqs, setFaqs] = useState([
         {
