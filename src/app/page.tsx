@@ -15,6 +15,18 @@ import UttarayaniMela from "/public/UttarayaniMela.jpg"
 import Law from "/public/LandLaw.jpg";
 import ContributeBanner from "@/components/ui/ContributeBanner";
 
+/**
+ * Main component rendering the homepage with images, text, sections, and banners.
+ * @example
+ * Home()
+ * Returns the main homepage with various components and sections.
+ * @returns {JSX.Element} The homepage component structure.
+ * @description
+ *   - Dynamically fetches upcoming festival data to display in the festival section.
+ *   - Utilizes several child components for different sections, including proverbs, section cards, and banners.
+ *   - Incorporates styles from a styles object to ensure consistent design and layout.
+ *   - Includes links to external contributions and exploration of cultural aspects.
+ */
 export default function Home() {
     const festival = getUpcomingFestival();
     return (

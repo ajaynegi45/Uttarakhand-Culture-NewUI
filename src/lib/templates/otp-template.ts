@@ -1,3 +1,17 @@
+/**
+* Generates an HTML template for an OTP email using the provided name and OTP.
+* @example
+* generateOtpEmailTemplate("John Doe", "123456")
+* returns the HTML string with the personalized OTP for John Doe.
+* @param {string} name - The name of the recipient to personalize the greeting in the email.
+* @param {string} otp - The OTP (One Time Password) that will be displayed in the email for verification purposes.
+* @returns {string} An HTML string representing the OTP email template with placeholders filled with the provided name and OTP.
+* @description
+*   - The template is specifically styled for viewing on different device sizes using viewport settings.
+*   - It uses a clean design with attention to text visibility and readability.
+*   - The color scheme is subtle, focusing on a professional presentation.
+*   - The OTP is displayed prominently in a styled button-like format within the email content.
+*/
 const otpEmailTemplate = (name: string, otp: string) => `
   <!doctype html>
   <html lang="en">

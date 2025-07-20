@@ -24,6 +24,24 @@ interface MapModalProps {
     subTitle: string;
 }
 
+/**
+ * Renders a modal with embedded Mapbox map and address information.
+ * @example
+ * MapModal({ isOpen: true, onClose: () => {}, center: [78.9629, 20.5937], zoom: 5, markerLocation: [78.9629, 20.5937], info: { title: 'Location', address: 'Address', image: 'image.jpg' }, subTitle: 'Sub-title' })
+ * A modal with an interactive Mapbox map and links to external maps (Google and Apple) is displayed.
+ * @param {boolean} isOpen - Specifies whether the modal should be displayed.
+ * @param {function} onClose - Callback function to close the modal when triggered.
+ * @param {Array<number>} center - The geographical coordinates to center the map, formatted as [longitude, latitude].
+ * @param {number} zoom - The zoom level for the map.
+ * @param {Array<number>} markerLocation - The geographical coordinates to place the map marker, formatted as [longitude, latitude].
+ * @param {Object} info - Contains information to display in the modal, including title, address, and an image URL.
+ * @param {string} subTitle - The subtitle text displayed under the title.
+ * @returns {JSX.Element | null} Returns the JSX code for rendering the modal if `isOpen` is true, otherwise returns null.
+ * @description
+ *   - Initializes and configures a Mapbox map instance with a specified style and markers.
+ *   - Generates URLs for mapping services, dynamically providing directions for both Google Maps and Apple Maps.
+ *   - Handles modal closure by invoking the `onClose` callback when the overlay is clicked.
+ */
 const MapModal: React.FC<MapModalProps> = ({
                                                isOpen,
                                                onClose,

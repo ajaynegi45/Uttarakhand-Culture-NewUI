@@ -2,6 +2,19 @@ import React, {useEffect} from 'react';
 import {gapi} from 'gapi-script';
 import './GoogleSignIn.css';
 
+/**
+ * Initializes Google API client and provides a button for Google sign-in.
+ * @example
+ * GoogleSignIn()
+ * Returns a button to authenticate Google users
+ * @param {void} No arguments taken.
+ * @returns {JSX.Element} A button element for initiating Google authentication.
+ * @description
+ *   - Uses `useEffect` to initialize the Google API client upon component mount.
+ *   - Utilizes Google's OAuth sign-in mechanism to authenticate users.
+ *   - Logs the authenticated user's information in the console.
+ *   - Relies on the `gapi.auth2` library to manage the user authentication process.
+ */
 const GoogleSignIn = () => {
     useEffect(() => {
         const start = () => {
@@ -13,6 +26,17 @@ const GoogleSignIn = () => {
         gapi.load('client:auth2', start);
     }, []);
 
+    /**
+     * Authenticates and retrieves user's basic profile information using Google's auth2 library.
+     * @example
+     * googleSignIn()
+     * { name: 'John Doe', email: 'john.doe@example.com', imageUrl: 'https://example.com/johndoe.jpg' }
+     * @returns {Object} Returns an object containing user's name, email, and image URL.
+     * @description
+     *   - Utilizes gapi.auth2 to handle Google authentication.
+     *   - Uses then method to asynchronously process the authenticated Google user data.
+     *   - Outputs user data to the console, which can be sent to a backend for further processing.
+     */
     const handleLogin = () => {
         const auth2 = gapi.auth2.getAuthInstance();
         auth2.signIn().then((googleUser: { getBasicProfile: () => any; }) => {

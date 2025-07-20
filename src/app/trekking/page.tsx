@@ -6,6 +6,17 @@ import TrekkingHeroImage from "/public/heroImage.png";
 import {trekDetails} from './location-detail';
 import {useState} from "react";
 
+/**
+ * Renders a trekking page with filters to select treks based on difficulty, district, and altitude.
+ * @example
+ * Trekking()
+ * <div className="page-header">...</div>
+ * @returns {JSX.Element} The JSX content for the trekking page.
+ * @description
+ *   - Utilizes React useState to manage filter states for difficulty level, district, and altitude.
+ *   - Filters treks dynamically based on user-selected criteria from dropdowns.
+ *   - Displays trek cards if matching treks are found, otherwise shows a message for no available treks.
+ */
 export default function Trekking() {
     const [difficultyLevel, setDifficultyLevel] = useState("");
     const [district, setDistrict] = useState("");

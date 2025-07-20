@@ -5,6 +5,19 @@ import map from "/public/mapUk.svg";
 import styles from "./page.module.css";
 import Image from "next/image";
 
+/**
+ * Renders a detailed map of Uttarakhand with zoom in and zoom out functionality.
+ * @example
+ * renderUttarakhandMap()
+ * Displays a map component with zoom controls.
+ * @param {none} None - This function does not take any arguments.
+ * @returns {JSX.Element} Returns a React component encapsulating a map and zoom controls.
+ * @description
+ *   - Utilizes refs to control the zoom level and positioning of the map image.
+ *   - Adjusts the aspect ratio of the map container dynamically during zoom operations.
+ *   - Ensures smooth updates to map styling by using requestAnimationFrame.
+ *   - References critical map elements to manage transformations and animations.
+ */
 const Map = () => {
     console.log("Map.tsx");
 

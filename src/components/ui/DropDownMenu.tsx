@@ -4,6 +4,18 @@ type DropDownMenuProps = {
     title: string,
 }
 
+/**
+* Renders a dropdown menu with items like difficulty level, location, and altitude.
+* @example
+* DropDownMenu(props)
+* <DropDownMenu props={sampleProps} />
+* @param {DropDownMenuProps} props - Properties for configuring the component style and items.
+* @returns {JSX.Element} A React component for a styled dropdown menu.
+* @description
+*   - Uses SVG icons to visually indicate dropdown functionality.
+*   - Encapsulates each dropdown item in a styled 'div'.
+*   - Assumes `styles` object contains CSS class definitions corresponding to component structure.
+*/
 export default function DropDownMenu(props: DropDownMenuProps) {
     return (
         <>

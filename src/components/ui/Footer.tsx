@@ -1,6 +1,18 @@
 import styles from "./Footer.module.css"
 import Link from "next/link";
 
+/**
+ * Renders the footer component containing newsletter subscription, social media links, and site information.
+ * @example
+ * Footer()
+ * <footer>...</footer>
+ * @returns {JSX.Element} JSX representation of the footer component.
+ * @description
+ *   - The email input for newsletter subscription is disabled, necessitating backend adjustment for activation.
+ *   - Styling leverages modular CSS classes from imported `styles` object.
+ *   - Contains links to social platforms, promoting `Uttarakhand Culture`.
+ *   - Footer includes essential textual information about privacy, culture, and contribution information.
+ */
 export default function Footer() {
     return (
         <footer className={styles["footer-container"]}>

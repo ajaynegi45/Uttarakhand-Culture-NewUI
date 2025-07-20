@@ -15,6 +15,19 @@ import type { SignInResponse } from "next-auth/react";
 import GoogleSignIn from './GoogleSignIn';
 import {never} from "zod"; // import GoogleSignIn component
 
+/**
+ * Handles user authentication by providing a form for sign-up and login.
+ * @example
+ * Auth()
+ * React component that renders authentication form
+ * @param {none} No parameters are taken directly by this component.
+ * @returns {JSX.Element} A section containing the authentication form.
+ * @description
+ *   - Switches between login and signup modes using state management.
+ *   - Uses React Hook Form, Zod for form validation, and Next.js routing.
+ *   - Utilizes `fetch` for API calls and `signIn` for handling sign-in process.
+ *   - Displays errors and success messages with toast notifications.
+ */
 export default function Auth() {
     const [isSignup, setIsSignup] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -37,6 +50,18 @@ export default function Auth() {
         reset();
     }, [isSignup, reset]);
 
+    /**
+    * Handles user registration or login based on the signup flag.
+    * @example
+    * sync({ email: "user@example.com", password: "password123" })
+    * Success or error message related to registration or login process.
+    * @param {object} data - User details needed for sign up or login, including email and password.
+    * @returns {Promise<void>} Resolves successfully with a toast message or throws an error toast message.
+    * @description
+    *   - Utilizes toast to handle asynchronous operations with loading, success, and error messages.
+    *   - Redirects the user upon successful registration to email verification page.
+    *   - Redirects the user to a callback route or home upon successful login.
+    */
     const onSubmit = async (data: any) => {
         if (isSignup) {
             try {

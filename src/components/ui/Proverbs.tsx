@@ -2,6 +2,17 @@ import React from 'react';
 import Style from "./Proverbs.module.css";
 import {getRandomProverb} from "@/utils/proverbs";
 
+/**
+ * Render a proverb card displaying random Uttarakhandi proverbs.
+ * @example
+ * renderProverbCard()
+ * <JSX snippet displaying a proverb>
+ * @returns {JSX.Element} A JSX element containing the styled proverb card.
+ * @description
+ *   - The function retrieves a random proverb using the `getRandomProverb()` method.
+ *   - Displays both Hindi and English versions of the proverb.
+ *   - Adds the meaning if available.
+ */
 const Proverbs = () => {
     const Proverb = getRandomProverb();
     return (

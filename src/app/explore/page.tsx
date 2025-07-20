@@ -7,6 +7,17 @@ import Trekking from "/public/trekking.avif";
 import Music from "/public/music.avif";
 import Tungnath from "/public/temple/Tungnath.avif";
 
+/**
+ * Renders the Explore page showcasing various aspects of Uttarakhand.
+ * @example
+ * Explore()
+ * Component rendering sections for trekking, temples, folk music, and language in Uttarakhand.
+ * @returns {JSX.Element} Div containing page headers and section cards about Uttarakhand.
+ * @description
+ *  - Utilizes the `styles.pageHeader` for consistent page header styling.
+ *  - Incorporates a series of `SectionCard` components to display detailed sections.
+ *  - Embeds images and read more links corresponding to each section for enhanced user engagement.
+ */
 export default function Explore() {
     return (
         <>

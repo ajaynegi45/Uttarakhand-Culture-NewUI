@@ -4,6 +4,18 @@ import Image from "next/image";
 import GheeSankranti from "/public/Ghee_Sankranti.jpeg"
 import Nanda_Sunanda from "/public/Nanda-Sunanda.webp"
 
+/**
+ * Represents a card component showcasing upcoming festivals and fairs.
+ * @example
+ * FestivalCard()
+ * <FestivalCard /> component rendering the festival and fair details.
+ * @returns {JSX.Element} A JSX element representing the festival and fair card component.
+ * @description
+ *   - Contains information about "Ghee Sankranti" and "Nanda Devi Mahotsav."
+ *   - Utilizes Next.js components such as Link and Image.
+ *   - Displays festival details like names, descriptions, and associated images.
+ *   - Provides links for users to read more and view locations on Google Maps.
+ */
 export default function FestivalCard() {
     return (
         <>

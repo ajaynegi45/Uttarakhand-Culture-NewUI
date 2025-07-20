@@ -4,6 +4,17 @@ import LanguageHeroImage from "/public/languageHeroImage.webp";
 import InfoItem from "@/components/ui/InfoItem";
 import Card from "@/components/ui/Card";
 
+/**
+* A functional component that renders the language information section for Uttarakhand, highlighting the importance of mother tongue.
+* @example
+* Language()
+* <Language />
+* @returns {JSX.Element} A JSX element comprising multiple sections detailing language significance and language cards for Kumaoni, Garhwali, and Jaunsari.
+* @description
+*   - Displays various reasons why speaking the mother tongue is important in a set of InfoItems.
+*   - Features Card components for each major language providing detailed descriptions and emphasizing cultural heritage.
+*   - Utilizes styles from a CSS module to apply styling to different sections.
+*/
 export default function Language() {
     return (
         <>
