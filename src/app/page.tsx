@@ -10,13 +10,17 @@ import PahadiWomen from "/public/bhotiaWoman.webp"
 import Faq from "@/components/Faq";
 import Proverbs from "@/components/ui/Proverbs";
 import {getUpcomingFestival} from "@/utils/festivals";
+import {getUpcomingFair} from "@/utils/fair";
 import MakarSankranti from "/public/MakarSankranti.jpg";
 import UttarayaniMela from "/public/UttarayaniMela.jpg"
 import Law from "/public/LandLaw.jpg";
 import ContributeBanner from "@/components/ui/ContributeBanner";
+import FeaturedStory from "@/components/ui/FeaturedStory";
 
 export default function Home() {
     const festival = getUpcomingFestival();
+    const fair = getUpcomingFair();
+
     return (
         <>
             <header className={styles.headerContainer}>
@@ -102,16 +106,16 @@ export default function Home() {
             />
 
             {/* UPCOMING FAIR */}
+
             <SectionCard
                 cardTitle={"UPCOMING FAIR"}
-                title={"Uttarayani Mela"}
-                subTitle={"JANUARY · UTTARAKHAND"}
-                description={"The Uttarayani Fair, celebrated on Makara Sankranti in January, is a vibrant cultural festival in Uttarakhand, with the grandest celebrations in Bageshwar. Held at the confluence of the Sarayu, Gomti, and Sunder Bhagirathi rivers, the fair draws thousands of devotees and tourists. Devotees take a holy dip, seeking blessings for a prosperous year, while the air resonates with folk songs like Jhoras, Chancharis, and Bairas. The mela showcases colorful traditional attire, captivating folk performances, and a culinary paradise of sweet and savory delicacies. Celebrations also thrive in Almora, Nainital, and Haridwar."}
-                image={UttarayaniMela}
+                title={fair.title}
+                subTitle={fair.subTitle.date + " · " + fair.subTitle.location}
+                description={fair.description}
+                image={fair.image}
                 readMoreLink={""}
                 location={""}
             />
-
 
             {/*<SectionCard*/}
             {/*    cardTitle={"UPCOMING FAIR"}*/}
@@ -123,6 +127,9 @@ export default function Home() {
             {/*    location={"https://www.google.com/maps/place/Maa+Nanda+Devi+Temple,+Almora/@29.5998843,79.6584971,17z/data=!3m1!4b1!4m6!3m5!1s0x39a0b76914898c8b:0x887deeed7e5d3c82!8m2!3d29.5998843!4d79.661072!16s%2Fg%2F11fmrk8bnv?hl=en&entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"}*/}
             {/*/>*/}
 
+
+
+            <FeaturedStory/>
 
             <section className={styles.notifyBannerContainer}>
                 <div className={styles.colorBlend}></div>

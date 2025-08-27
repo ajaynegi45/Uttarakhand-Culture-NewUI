@@ -5,6 +5,9 @@
 import GheeSankranti from "/public/Ghee_Sankranti.jpeg";
 import Ghughutiya from "/public/MakarSankranti.jpg";
 import Harela from "/public/festival/harela.jpg"
+import DussehraImg from "/public/festival/dussehra.avif";
+import DiwaliImg from "/public/festival/diwali.avif";
+import EgaasImg from "/public/festival/egaas.jpeg";
 import {StaticImageData} from "next/image";
 
 
@@ -32,7 +35,11 @@ export const festivals: Festival[] = [
 
     // {name: "Nanda Devi Raj Jat", date: "05-09", description:" "},
     // {name: "Kauthig", date: "22-02", description:" "},
-    // {name: "Egaas Bhagwal", date: "12-11", description:"Egaas Bagwal is a unique festival celebrated 11 days after Diwali in the hilly regions of Uttarakhand. According to local belief, Lord Rama returned from exile late to these areas, which is why people here celebrate Egaas with great enthusiasm. The festival involves preparing traditional delicacies, performing joyful folk dances, and lighting up homes, much like Diwali. A standout tradition is spinning a flaming rope called \"Bhailo\", where villagers twirl a fire-lit rope, creating a mesmerizing display symbolizing light’s triumph over darkness. Egaas Bagwal reflects Uttarakhand’s rich cultural heritage, offering a glimpse into the community’s deep-rooted traditions and festive spirit. For the people of Uttarakhand, it’s not just a festival, but a meaningful tribute to their ancestors and the vibrant life of the hills."},
+
+
+    // {name: "Egaas Bhagwal", date: "12-11",
+    //
+    // description:"Egaas Bagwal is a unique festival celebrated 11 days after Diwali in the hilly regions of Uttarakhand. According to local belief, Lord Rama returned from exile late to these areas, which is why people here celebrate Egaas with great enthusiasm. The festival involves preparing traditional delicacies, performing joyful folk dances, and lighting up homes, much like Diwali. A standout tradition is spinning a flaming rope called \"Bhailo\", where villagers twirl a fire-lit rope, creating a mesmerizing display symbolizing light’s triumph over darkness. Egaas Bagwal reflects Uttarakhand’s rich cultural heritage, offering a glimpse into the community’s deep-rooted traditions and festive spirit. For the people of Uttarakhand, it’s not just a festival, but a meaningful tribute to their ancestors and the vibrant life of the hills."},
 
 
     {
@@ -78,43 +85,100 @@ export const festivals: Festival[] = [
         image: Ghughutiya
 
     },
-
+    {
+        date: "02-10",
+        title: "Dussehra (Vijayadashami)",
+        subTitle: {
+            date: `Tenth day of Navaratri`,
+            location: "UTTARAKHAND"
+        },
+        description:
+            "Dussehra (Vijayadashami) commemorates Lord Rama’s victory over Ravana and the triumph of good over evil. In Uttarakhand, it is marked by Ramlila performances (dramatic retellings of the Ramayana), the burning of Ravana effigies, processions, and fairs. Villagers and townsfolk participate in community events, and it’s also a popular time for seasonal markets and family outings. The date moves each year with the lunar calendar.",
+        image: DussehraImg
+    },
+    {
+        date: "21-10",
+        title: "Diwali (Deepawali)",
+        subTitle: {
+            date: `21 OCTOBER ${currentDate.getFullYear()}`,
+            location: "UTTARAKHAND"
+        },
+        description:
+            "Diwali — the Festival of Lights — is celebrated across Uttarakhand with clay lamps (diyas), rangoli, fireworks, Lakshmi puja, and feasts. Homes and temples are cleaned and decorated, sweets and gifts are exchanged, and families gather for prayers and social visits. In the hills, Diwali is also a time to remember ancestors and celebrate the end of the harvest season. (Date follows the Hindu lunar calendar and changes every year.)",
+        image: DiwaliImg
+    },
+    {
+        date: "01-11",
+        title: "Egaas Bagwal",
+        subTitle: {
+            date: `~11 days after Diwali`,
+            location: "UTTARAKHAND"
+        },
+        description: "Egaas Bagwal is a unique Uttarakhand festival observed roughly 11 days after Diwali. It is celebrated with singing, dancing, local delicacies, and a striking fire-rope tradition called 'Bhailo' where villagers spin a flaming rope — a dramatic symbol of light’s triumph over darkness. Homes are decorated, families come together for meals and rituals, and traditional folk performances are common. The festival reflects the region’s ancestral customs and communal spirit.",
+        image: EgaasImg
+    }
 ];
 
-// Define a function 'getUpcomingFestival' which returns the festival happening today or the next upcoming festival,
-// and if all festivals for the current year have passed, it returns the first festival of the next year.
+// // Define a function 'getUpcomingFestival' which returns the festival happening today or the next upcoming festival,
+// // and if all festivals for the current year have passed, it returns the first festival of the next year.
+// export const getUpcomingFestival = (): Festival => {
+//
+//     // Get the current date.
+//     const currentDate = new Date();
+//     const currentDay = currentDate.getDate();
+//     const currentMonth = currentDate.getMonth() + 1; // Months are zero-indexed in JS, so add 1.
+//
+//     // Function to compare festival date with current date, accounting for annual recurrence.
+//     const compareDate = (festivalDate: string): number => {
+//         const [day, month] = festivalDate.split('-').map(Number);
+//
+//         // Create date objects with the current year.
+//         const festivalThisYear = new Date(currentDate.getFullYear(), month - 1, day);
+//         const today = new Date(currentDate.getFullYear(), currentMonth - 1, currentDay);
+//
+//         // Calculate the difference in time (in milliseconds).
+//         return festivalThisYear.getTime() - today.getTime();
+//     };
+//
+//     // Filter the 'festivals' array to only keep future festivals or today's festival.
+//     const upcomingFestivals = festivals
+//         .filter(festival => compareDate(festival.date) >= 0)
+//         .sort((a, b) => compareDate(a.date) - compareDate(b.date));
+//
+//     // If there are upcoming festivals for the current year, return the first one.
+//     if (upcomingFestivals.length > 0) {
+//         return upcomingFestivals[0];
+//     }
+//
+//     // If no festivals are left for this year, return the first festival of the next year.
+//     // Assume the festivals repeat annually.
+//     return festivals.sort((a, b) => compareDate(a.date) - compareDate(b.date))[0];
+// };
+
+
+
+
 export const getUpcomingFestival = (): Festival => {
+    const now = new Date();
+    // Normalize 'today' to midnight so comparisons aren't affected by time-of-day.
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-    // Get the current date.
-    const currentDate = new Date();
-    const currentDay = currentDate.getDate();
-    const currentMonth = currentDate.getMonth() + 1; // Months are zero-indexed in JS, so add 1.
-
-    // Function to compare festival date with current date, accounting for annual recurrence.
-    const compareDate = (festivalDate: string): number => {
+    // Returns milliseconds until the next occurrence of the festival (>= 0).
+    const msUntilNext = (festivalDate: string): number => {
         const [day, month] = festivalDate.split('-').map(Number);
+        let fest = new Date(now.getFullYear(), month - 1, day);
 
-        // Create date objects with the current year.
-        const festivalThisYear = new Date(currentDate.getFullYear(), month - 1, day);
-        const today = new Date(currentDate.getFullYear(), currentMonth - 1, currentDay);
+        // If this year's date is already past, use next year's date.
+        if (fest.getTime() < today.getTime()) {
+            fest.setFullYear(fest.getFullYear() + 1);
+        }
 
-        // Calculate the difference in time (in milliseconds).
-        return festivalThisYear.getTime() - today.getTime();
+        return fest.getTime() - today.getTime();
     };
 
-    // Filter the 'festivals' array to only keep future festivals or today's festival.
-    const upcomingFestivals = festivals
-        .filter(festival => compareDate(festival.date) >= 0)
-        .sort((a, b) => compareDate(a.date) - compareDate(b.date));
+    // Make a shallow copy and sort by time until next occurrence.
+    const sorted = festivals.slice().sort((a, b) => msUntilNext(a.date) - msUntilNext(b.date));
 
-    // If there are upcoming festivals for the current year, return the first one.
-    if (upcomingFestivals.length > 0) {
-        return upcomingFestivals[0];
-    }
-
-    // If no festivals are left for this year, return the first festival of the next year.
-    // Assume the festivals repeat annually.
-    return festivals.sort((a, b) => compareDate(a.date) - compareDate(b.date))[0];
+    return sorted[0];
 };
-
 

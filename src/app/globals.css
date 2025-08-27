@@ -37,6 +37,22 @@
 
     --green: #2e865f;
     --soil: #eeb27b;
+
+
+
+
+
+
+
+    --color-deep-russet: #8B3A3A;
+    --color-forest-green: #2E5C2E;
+    --color-mustard-yellow: #D9A900;
+    --color-off-white: #F5F5F0;
+    --color-dark-text: #3a3a3a;
+
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Lora', serif;
+
 }
 
 /*  reset everything*/

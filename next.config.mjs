@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: "export"
-  reactStrictMode: true,
-  devIndicators: false,
+  // reactStrictMode: true,
+  // devIndicators: false,
   images:{
       // You can use any one
       // domain:process.env.NEXT_PUBLIC_DOMAIN, // Here you can give specific image
