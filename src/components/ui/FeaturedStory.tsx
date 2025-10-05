@@ -11,7 +11,7 @@ export default function FeaturedStory() {
                     <p className={styles.description}>
                         Explore the tale of the patron goddess of the Uttarakhand Himalayas, a story of devotion, power, and the profound connection between the people and their sacred peaks. The Nanda Devi Raj Jat, one of the most challenging pilgrimages, honors her journey.
                     </p>
-                    <a href="#" className={styles.link}>Read the full legend →</a>
+                    <a href="/explore" className={styles.link}>Read the full legend →</a>
                 </div>
                 <div className={styles.imageWrapper}>
                     <Image
