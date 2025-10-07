@@ -1,70 +1,104 @@
 import {db} from "@/lib/drizzle";
-import {otps} from "@/lib/schema";
+import {pending_users} from "@/lib/schema";
 import {NextRequest, NextResponse} from "next/server";
 import {z} from "zod";
-
 import otpEmailTemplate from "@/lib/templates/otp-template";
-import {auth} from "@/auth";
 import mailer from "@/lib/mailer";
+import {eq} from "drizzle-orm";
 
-// `onboarding@uk-culture.org` email is for development only
 const senderEmail = process.env.SENDER_EMAIL || "onboarding@uk-culture.org";
+
+// In-memory store for rate limiting
+const rateLimit = new Map<string, { requests: number; lastRequestTime: number }>();
+
+const MAX_REQUESTS = 3;
+const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
+
+function checkRateLimit(email: string): boolean {
+    const currentTime = Date.now();
+    const userData = rateLimit.get(email);
+
+    if (userData) {
+        if (currentTime - userData.lastRequestTime > WINDOW_MS) {
+            rateLimit.set(email, {requests: 1, lastRequestTime: currentTime});
+            return false;
+        }
+        if (userData.requests < MAX_REQUESTS) {
+            rateLimit.set(email, {
+                requests: userData.requests + 1,
+                lastRequestTime: currentTime,
+            });
+            return false;
+        }
+        return true;
+    } else {
+        rateLimit.set(email, {requests: 1, lastRequestTime: currentTime});
+        return false;
+    }
+}
 
 export async function POST(req: NextRequest) {
     try {
-        const session = await auth();
-        if (!session) throw new Error("Login first to verify email");
+        const {email} = await req.json();
 
-        const userWithEmail = await db.query.users.findFirst({
-            where: (users, {eq}) => eq(users.email, session.user.email!),
+        if (!email) throw new Error("Email is required");
+
+        // Check rate limit
+        if (checkRateLimit(email)) {
+            return NextResponse.json(
+                {error: "Rate limit exceeded. Please try again after 5 minutes."},
+                {status: 429}
+            );
+        }
+
+        // Find pending user
+        const pendingUser = await db.query.pending_users.findFirst({
+            where: (pending_users, {eq}) => eq(pending_users.email, email),
         });
 
-        if (!userWithEmail) throw new Error("User with email not exists.");
+        if (!pendingUser) {
+            throw new Error("No pending signup found. Please sign up first.");
+        }
 
-        const prevOtps = await db.query.otps.findMany({
-            where: (otps, {eq}) => eq(otps.userId, userWithEmail.id),
-            orderBy: (otps, {desc}) => desc(otps.expiresAt),
-        });
-
-        // Check if there is a valid OTP
+        // Check if last OTP is still valid (prevent spam)
         const now = new Date();
-        const validOtp = prevOtps.find((otp) => otp.expiresAt > now);
+        const timeSinceLastOtp = now.getTime() - pendingUser.createdAt.getTime();
+        const minTimeBetweenOtps = 60 * 1000; // 1 minute
 
-        if (validOtp) {
-            const remainingTimeInSeconds = Math.floor(
-                (validOtp.expiresAt.getTime() - now.getTime()) / 1000
-            ); // Time in seconds
-            const minutes = Math.floor(remainingTimeInSeconds / 60); // Full minutes
-            const seconds = remainingTimeInSeconds % 60; // Remaining seconds
-
+        if (timeSinceLastOtp < minTimeBetweenOtps && pendingUser.expiresAt > now) {
+            const remainingSeconds = Math.ceil((minTimeBetweenOtps - timeSinceLastOtp) / 1000);
             return NextResponse.json(
                 {
-                    message: `Please wait ${minutes} minutes and ${seconds} seconds before resending the OTP.`,
+                    error: `Please wait ${remainingSeconds} seconds before requesting a new OTP.`,
                 },
                 {status: 429}
             );
         }
 
-        const otp = Math.floor(100000 + Math.random() * 900000).toString(); // 6-digit OTP
-        // Set expiration time (e.g., 10 minutes from now)
-        const expiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes in the future
+        // Generate new OTP
+        const otp = Math.floor(100000 + Math.random() * 900000).toString();
+        const expiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
 
-        await db.insert(otps).values({
-            expiresAt,
-            otp,
-            userId: userWithEmail.id,
-            createdAt: new Date(),
-        });
+        // Update pending user with new OTP
+        await db
+            .update(pending_users)
+            .set({
+                otp,
+                expiresAt,
+                createdAt: new Date(), // Update timestamp
+            })
+            .where(eq(pending_users.email, email));
 
+        // Send email
         await mailer.sendMail({
             from: `Uttarakhand Culture <${senderEmail}>`,
-            to: [userWithEmail.email!],
-            subject: "Verify you email with OTP",
-            html: otpEmailTemplate(userWithEmail.name!, otp),
+            to: [email],
+            subject: "Verify your email with OTP",
+            html: otpEmailTemplate(pendingUser.name, otp),
         });
 
         return NextResponse.json({
-            message: `OTP has been resent to your email.`,
+            message: "OTP has been resent to your email.",
         });
     } catch (error: any) {
         if (error instanceof z.ZodError) {

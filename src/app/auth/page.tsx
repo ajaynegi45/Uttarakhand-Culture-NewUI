@@ -37,122 +37,78 @@ export default function Auth() {
         reset();
     }, [isSignup, reset]);
 
-    const onSubmit = async (data: any) => {
-        if (isSignup) {
-            try {
-                setIsLoading(true);
 
-                const handler = new Promise((resolve, reject) => {
-                    fetch("/api/auth/register", {
-                        method: "POST",
-                        body: JSON.stringify(data),
-                    })
-                        .then((res) => {
-                            res
-                                .json()
-                                .then((ms) => {
-                                    if (res.status !== 200) {
-                                        reject(new Error(ms.error));
-                                    } else {
-                                        signIn("credentials", {
-                                            loginIdentifier: data.email,
-                                            password: data.password,
-                                            redirect: false,
-                                        })
-                                            .then((m) => {
-                                                if (m?.error) throw Error();
-                                                router.push("/auth/verify");
-                                                resolve("");
-                                            })
-                                            .catch(reject);
-                                    }
-                                })
-                                .catch(reject);
-                        })
-                        .catch(reject);
-                });
+ const onSubmit = async (data: any) => {
+    if (isSignup) {
+      // ----- SIGNUP FLOW -----
+      try {
+        setIsLoading(true);
+        const toastId = toast.loading("Creating account...");
 
-                toast.promise(handler, {
-                    loading: "Loading...",
-                    success: () => {
-                        return "User registered, Verify Email.";
-                    },
-                    error: (err) => `${err}`,
-                });
-            } catch (error: any) {
-                toast.error(error.message || "Failed to register. Try again");
-            } finally {
-                setIsLoading(false);
-            }
-        } else {
-            try {
-                setIsLoading(true);
+        const res = await fetch("/api/auth/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
 
-                await toast.promise(
-                    (async () => {
-                        const res = await signIn("credentials", {
-                            ...data,
-                            redirect: false,
-                        }) as unknown as SignInResponse;
+        const result = await res.json();
+        toast.dismiss(toastId);
 
-                        if (res?.error) {
-                            throw new Error("Invalid credentials");
-                        }
-
-                        router.push(callback ?? "/");
-                    })(),
-                    {
-                        loading: "Loading...",
-                        success: () => "Login success.",
-                        error: (err) => `${err.message || err}`,
-                    }
-                );
-
-
-
-                // const handler = new Promise((resolve, reject) => {
-                //     setIsLoading(true);
-                //
-                //     signIn("credentials", {
-                //         ...data,
-                //         redirect: false,
-                //     })
-                //         // .then((res) => {
-                //         .then((res: SignInResponse | undefined) => {
-                //             if (res?.error) {
-                //                 throw Error("Invalid credentials");
-                //             }
-                //
-                //             else {
-                //                 if (callback) {
-                //                     router.push(callback);
-                //                     resolve("");
-                //                 } else {
-                //                     router.push("/");
-                //                     resolve("");
-                //                 }
-                //             }
-                //         })
-                //         .catch(reject);
-                // });
-                //
-                //
-                //
-                // await toast.promise(handler, {
-                //     loading: "Loading...",
-                //     success: () => {
-                //         return "Login success.";
-                //     },
-                //     error: (err) => `${err}`,
-                // });
-
-            } catch (error) {
-                toast.error("Check your credentials and Try again");
-            } finally {
-                setIsLoading(false);
-            }
+        if (!res.ok) {
+          toast.error(result.error || "Signup failed. Try again.");
+          return;
         }
-    };
+
+        toast.success("Signup successful! Please verify your email via OTP.");
+        if (result.redirectTo) {
+            router.push(result.redirectTo);
+        } else {
+             router.push(`/auth/verify?email=${data.email}`);
+        }
+        // window.location.href = `/auth/verify?email=${data.email}`;
+      } catch (err: any) {
+        toast.dismiss();
+        toast.error(err.message || "Something went wrong. Please try again.");
+      } finally {
+        setIsLoading(false);
+      }
+    } else {
+      // ----- LOGIN FLOW -----
+      try {
+        setIsLoading(true);
+        const toastId = toast.loading("Signing in...");
+
+        const res = (await signIn("credentials", {
+          ...data,
+          redirect: false,
+        })) as unknown as SignInResponse;
+
+        toast.dismiss(toastId);
+
+       if (res?.error) {
+        if (res.error.includes("unverified")) {
+            toast.error("You were unverified earlier. Please create an account again with a verified email.");
+        } else {
+            toast.error(res.error || "Invalid credentials. Please try again.");
+        }
+         return;
+        }
+
+
+        toast.success("Login successful!");
+        router.push(callback ?? "/");
+      } catch (err: any) {
+        toast.dismiss();
+        toast.error(err.message || "Login failed. Please try again.");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+  };
+
+
+
+
 
     return (
         <section className={styles.authenticationContainer}>
