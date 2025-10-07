@@ -16,10 +16,18 @@ const OtpPage: React.FC = () => {
     };
 
     const searchParams = useSearchParams();
-    const callback = searchParams.get("callbackUrl");
+    const email = searchParams.get("email");
+    // const callback = searchParams.get("callbackUrl");
 
     const onSubmit = async (e: any) => {
         e.preventDefault();
+
+        if (!email) {
+            toast.error("Email not found. Please sign up again.");
+            router.push("/auth");
+            return;
+        }
+
         if (otp.length != 6) {
             toast.error("Please fill OTP wisely.");
             return;
@@ -28,23 +36,18 @@ const OtpPage: React.FC = () => {
             setIsLoading(true);
             const response = await fetch("/api/auth/verify-otp", {
                 method: "POST",
-                body: JSON.stringify({otp}),
+                body: JSON.stringify({otp,email}),
             });
 
             const data = await response.json();
 
             if (response.status != 200) throw new Error(data.error);
 
-            toast.success("Email Verified!");
-
-            if (callback) {
-                router.push(`${callback}`);
-            } else {
-                router.push("/");
-            }
+            toast.success("Email Verified!Account created successfully");
+            router.push("/auth");
         } catch (error: any) {
             console.log(error);
-            toast.error(error.message);
+            toast.error(error.message|| "Verification failed. Please try again.");
         } finally {
             setIsLoading(false);
         }
@@ -52,13 +55,19 @@ const OtpPage: React.FC = () => {
 
     const handleResendOtp = async () => {
         if (isResending) return;
+            if (!email) {
+                toast.error("Email not found. Please sign up again.");
+                router.push("/auth");
+                return;
+            }
 
         setIsResending(true);
-        setCountdown(30);
+        setCountdown(60);
         try {
-            setIsLoading(true);
+            // setIsLoading(true);
             const response = await fetch("/api/auth/resend-otp", {
                 method: "POST",
+                body: JSON.stringify({email}),
             });
 
             const data = await response.json();
@@ -67,9 +76,10 @@ const OtpPage: React.FC = () => {
             setOtp("");
             toast.success("OTP has been resent to your email.");
         } catch (error: any) {
-            toast.error(error.message);
+            toast.error(error.message || "Failed to resend OTP.");
         } finally {
             setIsLoading(false);
+            setCountdown(0);
         }
     };
 
@@ -86,6 +96,9 @@ const OtpPage: React.FC = () => {
     return (
         <div className={styles.container}>
             <h2 className={styles.title}>Enter OTP</h2>
+            <p className={styles.subtitle}>
+                We have sent a 6-digit code to <strong>{email}</strong>
+            </p>
             <form onSubmit={onSubmit} className={styles.form}>
                 <OtpInput
                     value={otp}
@@ -113,7 +126,7 @@ const OtpPage: React.FC = () => {
                     {isResending ? `Resend OTP (${countdown}s)` : "Resend OTP"}
                 </button>
                 <button type="submit" className={styles.button} disabled={isLoading}>
-                    Verify OTP
+                    {isLoading ? "Verifying..." : "Verify OTP"}
                 </button>
             </form>
         </div>

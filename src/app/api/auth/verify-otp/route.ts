@@ -1,5 +1,5 @@
 import {db} from "@/lib/drizzle";
-import {otps, users} from "@/lib/schema";
+import {pending_users, users} from "@/lib/schema";
 import {NextRequest, NextResponse} from "next/server";
 import {z} from "zod";
 import {auth} from "@/auth";
@@ -41,70 +41,58 @@ function checkRateLimit(userId: string): boolean {
 
 export async function POST(req: NextRequest) {
     try {
-        const session = await auth();
-        if (!session) throw new Error("Login first to verify email");
+        // const session = await auth();
+        // if (!session) throw new Error("Login first to verify email");
 
-        const userId = session.user.id;
+        // const userId = session.user.id;
+
+        const {email, otp} = await req.json();
+
+        if (!email || !otp) throw new Error("Email and OTP are required");
 
         // Check rate limit
-        if (checkRateLimit(userId)) {
+        if (checkRateLimit(email)) {
             return NextResponse.json(
                 {error: "limit exceeded. Please try again after 5 minutes."},
                 {status: 429}
             );
         }
 
-        if (session.user.emailVerified) {
-            return NextResponse.json(
-                {message: "Email is already verified!"},
-                {status: 200}
-            );
-        }
-
-        const {otp} = await req.json();
-        if (!otp) throw new Error("OTP is required");
-
-        const userWithEmail = await db.query.users.findFirst({
-            where: (users, {eq}) => eq(users.email, session.user.email!),
+      const pending = await db.query.pending_users.findFirst({
+            where: (pending_users, { eq }) => eq(pending_users.email, email),
         });
 
-        if (!userWithEmail) throw new Error("User with email does not exist.");
+        if (!pending) throw new Error("No pending signup found for this email.");
 
-        const latestOtp = await db.query.otps.findFirst({
-            where: (otps, {eq}) => eq(otps.userId, userWithEmail.id),
-            orderBy: (otps, {desc}) => desc(otps.expiresAt),
-        });
+        // Check OTP match
+        if (pending.otp !== otp) throw new Error("Invalid OTP.");
 
-        if (!latestOtp) throw new Error("No OTP found for this user.");
-
-        // Check if the OTP is valid (not expired)
+        // Check OTP expiry
         const now = new Date();
-        if (latestOtp.expiresAt < now) {
-            throw new Error("OTP has expired.");
-        }
+        if (pending.expiresAt < now) throw new Error("OTP has expired.");
 
-        // Check if the provided OTP matches
-        if (latestOtp.otp !== otp) {
-            throw new Error("Invalid OTP.");
-        }
+        // Create actual user in `users`
+        await db.insert(users).values({
+            email: pending.email,
+            name: pending.name,
+            username: pending.username,
+            password: pending.password,
+            alerts: pending.alerts,
+            emailVerified: new Date(),
+        });
 
-        // Mark email as verified
-        await db
-            .update(users)
-            .set({emailVerified: new Date()})
-            .where(eq(users.id, userWithEmail.id));
-
-        await db.delete(otps).where(eq(otps.userId, userWithEmail.id));
+        // Delete pending user entry
+        await db.delete(pending_users).where(eq(pending_users.email, email));
 
         return NextResponse.json(
-            {message: "Email verified successfully!"},
-            {status: 200}
+            { message: "Email verified and account created successfully!" },
+            { status: 200 }
         );
     } catch (error: any) {
         if (error instanceof z.ZodError) {
-            return NextResponse.json({error: error.errors}, {status: 500});
+            return NextResponse.json({ error: error.errors }, { status: 400 });
         }
-        console.log("[OTP_ERROR]: ", error);
-        return NextResponse.json({error: error.message}, {status: 500});
+        console.log("[OTP_VERIFY_ERROR]: ", error);
+        return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }

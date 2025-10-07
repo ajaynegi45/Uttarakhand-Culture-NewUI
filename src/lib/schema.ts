@@ -1,6 +1,17 @@
 import {boolean, integer, pgTable, primaryKey, text, timestamp,} from "drizzle-orm/pg-core"
 import type {AdapterAccountType} from "next-auth/adapters"
 
+export const pending_users = pgTable("pending_users",{
+    id:text("id").primaryKey().$defaultFn(()=>crypto.randomUUID()),
+    name:text("name").notNull(),
+    email:text("email").notNull().unique(),
+    username:text("username").notNull().unique(),
+    password:text("password").notNull(),
+    alerts:boolean("alerts"),
+    otp:text("otp").notNull(),
+    expiresAt:timestamp("expiresAt",{ mode: "date" }).notNull(),
+    createdAt:timestamp("createdAt",{mode:"date"}).notNull(),
+})
 
 export const users = pgTable("user", {
     id: text("id")
