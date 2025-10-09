@@ -300,8 +300,10 @@ export default function Auth() {
                 </button>
             </form>
 
-            {/* Google Sign-In */}
-            {/*<GoogleSignIn/>*/}
+
+            {/*Google Sign-In */}
+            {isSignup ? <GoogleSignIn signUp /> : <GoogleSignIn login />}
+
 
             <p
                 onClick={() => {

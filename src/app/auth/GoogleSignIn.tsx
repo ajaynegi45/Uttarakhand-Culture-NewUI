@@ -1,8 +1,13 @@
-import React, {useEffect} from 'react';
-import {gapi} from 'gapi-script';
+import React, { useEffect } from 'react';
+import { gapi } from 'gapi-script';
 import './GoogleSignIn.css';
 
-const GoogleSignIn = () => {
+interface GoogleSignInProps {
+    signUp?: boolean;
+    login?: boolean;
+}
+
+const GoogleSignIn: React.FC<GoogleSignInProps> = ({ signUp, login }) => {
     useEffect(() => {
         const start = () => {
             gapi.client.init({
@@ -15,24 +20,27 @@ const GoogleSignIn = () => {
 
     const handleLogin = () => {
         const auth2 = gapi.auth2.getAuthInstance();
-        auth2.signIn().then((googleUser: { getBasicProfile: () => any; }) => {
+        auth2.signIn().then((googleUser: { getBasicProfile: () => any }) => {
             const profile = googleUser.getBasicProfile();
             const userObj = {
                 name: profile.getName(),
                 email: profile.getEmail(),
                 imageUrl: profile.getImageUrl(),
             };
-            console.log('User data:', userObj);
-            // You can now send the user data to your backend for further processing
+            console.log(`${signUp ? 'Signup' : 'Login'} user data:`, userObj);
+
+            // You can now send the user data to your backend
+            // Maybe include a flag like userObj.mode = signUp ? 'signup' : 'login'
         });
     };
 
     return (
-        <div>
-            <br></br>
-            <p>OR</p>
-            <br></br>
-            <button onClick={handleLogin} className="google-sign-in-btn" text-align="centre">Sign in with Google
+        <div className="google-sign-in-container">
+            <br />
+            <p className="or-text">OR</p>
+            <br />
+            <button onClick={handleLogin} className="google-sign-in-btn">
+                {signUp ? 'Sign up with Google' : 'Sign in with Google'}
             </button>
         </div>
     );

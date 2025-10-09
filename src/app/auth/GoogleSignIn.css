@@ -1,25 +1,41 @@
 /* GoogleSignIn.css */
+.google-sign-in-container{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.or-text{
+    margin-top: -10px;
+    margin-bottom: -10px;
+    display: flex;
+}
+
 .google-sign-in-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px; /* Space between icon and text */
+    width: 100%;
     background-color: #4285f4;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
     transition: background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
 }
 
 .google-sign-in-btn:hover {
     background-color: #357ae8;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    transform: scale(1.02); /* Slight zoom effect */
+    /*transform: scale(1.02); !* Slight zoom effect *!*/
 }
 
 .google-sign-in-btn:active {
